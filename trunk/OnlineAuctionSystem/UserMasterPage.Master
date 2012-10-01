@@ -1,0 +1,164 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="UserMasterPage.master.cs"
+    Inherits="OnlineAuctionSystem.UserMasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"[]>
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US" xml:lang="en">
+<head>
+    <!--
+    Created by Artisteer v3.1.0.48375
+    Base template (without user's data) checked by http://validator.w3.org : "This page is valid XHTML 1.0 Transitional"
+    -->
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Home</title>
+    <link rel="stylesheet" href="css/style.css" type="text/css" media="screen" />
+    <!--[if IE 6]><link rel="stylesheet" href="css/style.ie6.css" type="text/css" media="screen" /><![endif]-->
+    <!--[if IE 7]><link rel="stylesheet" href="css/style.ie7.css" type="text/css" media="screen" /><![endif]-->
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
+</head>
+<body>
+    <div id="art-page-background-glare-wrapper">
+        <div id="art-page-background-glare">
+        </div>
+    </div>
+    <div id="art-main">
+        <div class="cleared reset-box">
+        </div>
+        <div class="art-box art-sheet">
+            <div class="art-box-body art-sheet-body">
+                <div class="art-header">
+                    <div class="art-headerobject">
+                    </div>
+                    <script type="text/javascript" src="js/swfobject.js"></script>
+                    <script type="text/javascript">
+                        jQuery((function (swf) {
+                            return function () {
+                                swf.switchOffAutoHideShow();
+                                swf.registerObject("art-flash-object", "9.0.0", "expressInstall.swf");
+                            }
+                        })(swfobject));
+                    </script>
+                    <div id="art-flash-area">
+                        <div id="art-flash-container">
+                            <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="1006" height="260"
+                                id="art-flash-object">
+                                <param name="movie" value="container.swf" />
+                                <param name="quality" value="high" />
+                                <param name="scale" value="default" />
+                                <param name="wmode" value="transparent" />
+                                <param name="flashvars" value="color1=0xFFFFFF&amp;alpha1=.50&amp;framerate1=12&amp;loop=true&amp;wmode=transparent&amp;clip=images/flash.swf&amp;radius=7&amp;clipx=-17&amp;clipy=0&amp;initalclipw=900&amp;initalcliph=225&amp;clipw=1040&amp;cliph=260&amp;width=1006&amp;height=260&amp;textblock_width=0&amp;textblock_align=no&amp;hasTopCorners=true&amp;hasBottomCorners=true" />
+                                <param name="swfliveconnect" value="true" />
+                                <!--[if !IE]>-->
+                                <object type="application/x-shockwave-flash" data="container.swf" width="1006" height="260">
+                                    <param name="quality" value="high" />
+                                    <param name="scale" value="default" />
+                                    <param name="wmode" value="transparent" />
+                                    <param name="flashvars" value="color1=0xFFFFFF&amp;alpha1=.50&amp;framerate1=12&amp;loop=true&amp;wmode=transparent&amp;clip=images/flash.swf&amp;radius=7&amp;clipx=-17&amp;clipy=0&amp;initalclipw=900&amp;initalcliph=225&amp;clipw=1040&amp;cliph=260&amp;width=1006&amp;height=260&amp;textblock_width=0&amp;textblock_align=no&amp;hasTopCorners=true&amp;hasBottomCorners=true" />
+                                    <param name="swfliveconnect" value="true" />
+                                    <!--<![endif]-->
+                                    <div class="art-flash-alt">
+                                        <a href="http://www.adobe.com/go/getflashplayer">
+                                            <img src="http://www.adobe.com/images/shared/download_buttons/get_flash_player.gif"
+                                                alt="Get Adobe Flash player" /></a></div>
+                                    <!--[if !IE]>-->
+                                </object>
+                                <!--<![endif]-->
+                            </object>
+                        </div>
+                    </div>
+                    <div class="art-logo">
+                        <h1 class="art-logo-name">
+                            <a href="#">Sàn Đấu Giá Trực Tuyến</a></h1>
+                        <h2 class="art-logo-text">
+                            Uy tín, chất lượng, giá cả hợp lý</h2>
+                    </div>
+                    <div class="art-bar art-nav">
+                        <div class="art-nav-outer">
+                            <div class="art-nav-wrapper">
+                                <div class="art-nav-inner">
+                                    <ul class="art-hmenu">
+                                        <li><a href="#" class="active">Home</a> </li>
+                                        <li><a href="#">Menu Item</a>
+                                            <ul>
+                                                <li><a href="#">Menu Subitem 1</a>
+                                                    <ul>
+                                                        <li><a href="#">Menu Subitem 1.1</a> </li>
+                                                        <li><a href="#">Menu Subitem 1.2</a> </li>
+                                                        <li><a href="#">Menu Subitem 1.3</a> </li>
+                                                    </ul>
+                                                </li>
+                                                <li><a href="#">Menu Subitem 2</a> </li>
+                                                <li><a href="#">Menu Subitem 3</a> </li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="#">About</a> </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="art-layout-wrapper">
+                    <div class="art-content-layout">
+                        <div class="art-content-layout-row">
+                            <div class="art-layout-cell art-sidebar1">
+                                <div class="art-box art-vmenublock">
+                                    <div class="art-box-body art-vmenublock-body">
+                                        <div class="art-bar art-vmenublockheader">
+                                            <h3 class="t">
+                                                Menu</h3>
+                                        </div>
+                                        <div class="art-box art-vmenublockcontent">
+                                            <div class="art-box-body art-vmenublockcontent-body">
+                                                <ul class="art-vmenu">
+                                                    <li><a href="#">Item</a> </li>
+                                                    <li><a href="#">News</a> </li>
+                                                    <li><a href="#">Video</a> </li>
+                                                    <li><a href="#">Archive</a> </li>
+                                                    <li><a href="#">Forum</a> </li>
+                                                    <li><a href="#">About</a> </li>
+                                                    <li><a href="#">Contact</a> </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="art-box art-block">
+                                    <div class="art-box-body art-block-body">
+                                        <div class="art-box art-blockcontent">
+                                            <div class="art-box-body art-blockcontent-body">
+                                                <div>
+                                                    <input type="text" value="" name="email" id="s" style="width: 95%;" />
+                                                    <input type="button" name="search" class="art-button" value="Subscribe" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="art-layout-cell art-content">
+                                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                                </asp:ContentPlaceHolder>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="art-footer">
+                    <div class="art-footer-body">
+                        <div class="art-footer-text">
+                            <p>
+                                <a href="#">Link1</a> | <a href="#">Link2</a> | <a href="#">Link3</a></p>
+                            <p>
+                                Copyright © 2012. All Rights Reserved.</p>
+                        </div>
+                        <div class="cleared">
+                        </div>
+                    </div>
+                </div>
+                <div class="cleared">
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
