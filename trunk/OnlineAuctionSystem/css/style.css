@@ -51,7 +51,6 @@ h1, h2, h3, h4, h5, h6, p, a, ul, ol, li
    font-weight: normal;
    font-size: 28px;
    text-decoration: none;
-   text-transform: uppercase;
 }
 
 .art-postcontent a
@@ -777,7 +776,6 @@ ul.art-hmenu>li>a:after
    font-weight: bold;
    text-align: left;
    text-decoration: none;
-   text-transform: uppercase;
 }
 
 ul.art-hmenu>li>a.active:before {
@@ -1006,7 +1004,6 @@ ul.art-vmenu a
    font-style: normal;
    font-weight: normal;
    font-size: 14px;
-   text-transform: uppercase;
    margin-left:0;
    margin-right:0;
    position:relative;
@@ -1188,7 +1185,6 @@ span.art-button-wrapper>button.art-button
    font-style: normal;
    font-weight: bold;
    font-size: 12px;
-   text-transform: uppercase;
    position:relative;
    top:0;
    display: inline-block;
@@ -1244,7 +1240,6 @@ input, select, textarea
    font-style: normal;
    font-weight: bold;
    font-size: 12px;
-   text-transform: uppercase;
 }
 
 div.art-block select 

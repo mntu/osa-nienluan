@@ -106,18 +106,18 @@
                                     <div class="art-box-body art-vmenublock-body">
                                         <div class="art-bar art-vmenublockheader">
                                             <h3 class="t">
-                                                Menu</h3>
+                                                Nhóm Sản Phẩm</h3>
                                         </div>
                                         <div class="art-box art-vmenublockcontent">
                                             <div class="art-box-body art-vmenublockcontent-body">
                                                 <ul class="art-vmenu">
-                                                    <li><a href="#">Item</a> </li>
-                                                    <li><a href="#">News</a> </li>
-                                                    <li><a href="#">Video</a> </li>
-                                                    <li><a href="#">Archive</a> </li>
-                                                    <li><a href="#">Forum</a> </li>
-                                                    <li><a href="#">About</a> </li>
-                                                    <li><a href="#">Contact</a> </li>
+                                                    <li><a href="#">Điện Thoại</a> </li>
+                                                    <li><a href="#">Sim Số</a> </li>
+                                                    <li><a href="#">Máy Tính</a> </li>
+                                                    <li><a href="#">Linh Kiện Máy Tính</a> </li>
+                                                    <li><a href="#">Hàng Độc - Hàng Lạ</a> </li>
+                                                    <li><a href="#">Quần Áo</a> </li>
+                                                    <li><a href="#">Giầy Dép</a> </li>
                                                 </ul>
                                             </div>
                                         </div>
@@ -129,7 +129,7 @@
                                             <div class="art-box-body art-blockcontent-body">
                                                 <div>
                                                     <input type="text" value="" name="email" id="s" style="width: 95%;" />
-                                                    <input type="button" name="search" class="art-button" value="Subscribe" />
+                                                    <input type="button" name="search" class="art-button" value="Tìm Kiếm" />
                                                 </div>
                                             </div>
                                         </div>
