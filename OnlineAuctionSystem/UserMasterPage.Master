@@ -1,5 +1,7 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="UserMasterPage.master.cs"
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="UserMasterPage.master.cs" Debug="true"
     Inherits="OnlineAuctionSystem.UserMasterPage" %>
+
+<%@ Register src="UserControl/ctrlLogin.ascx" tagname="ctrlLogin" tagprefix="uc1" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"[]>
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US" xml:lang="en">
@@ -17,6 +19,8 @@
     <script type="text/javascript" src="js/script.js"></script>
 </head>
 <body>
+<form id="form1" runat="server">
+
     <div id="art-page-background-glare-wrapper">
         <div id="art-page-background-glare">
         </div>
@@ -77,25 +81,26 @@
                             <div class="art-nav-wrapper">
                                 <div class="art-nav-inner">
                                     <ul class="art-hmenu">
-                                        <li><a href="#" class="active">Home</a> </li>
-                                        <li><a href="#">Menu Item</a>
+                                        <li><a href="#" class="active">Trang Chủ</a> </li>
+                                        <li><a href="#">Đăng Ký</a>
                                             <ul>
-                                                <li><a href="#">Menu Subitem 1</a>
-                                                    <ul>
-                                                        <li><a href="#">Menu Subitem 1.1</a> </li>
-                                                        <li><a href="#">Menu Subitem 1.2</a> </li>
-                                                        <li><a href="#">Menu Subitem 1.3</a> </li>
-                                                    </ul>
-                                                </li>
-                                                <li><a href="#">Menu Subitem 2</a> </li>
-                                                <li><a href="#">Menu Subitem 3</a> </li>
+                                            <%for (int i = 1; i < 6; i++)
+                                              { %>
+                                                <li><a href="#">Menu Subitem <%=i %></a></li>
+                                                <% } %>
                                             </ul>
                                         </li>
-                                        <li><a href="#">About</a> </li>
+                                        
+                                        <li><a href="#">Góp Ý</a> </li>
+                                        <li><a href="#">Liên Hệ</a> </li>
                                     </ul>
+                                </div>
+                                <div class="login">
+                                <uc1:ctrlLogin ID="ctrlLogin1" runat="server" />
                                 </div>
                             </div>
                         </div>
+                        
                     </div>
                 </div>
                 <div class="art-layout-wrapper">
@@ -160,5 +165,6 @@
             </div>
         </div>
     </div>
+    </form>
 </body>
 </html>
