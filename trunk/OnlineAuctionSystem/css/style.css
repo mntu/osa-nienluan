@@ -509,11 +509,18 @@ div.art-logo
 {
    display: block;
    position: absolute;
-   top: 133px;
+   top: 130px;
    left: 3%;
    margin-left: -15px;
 }
-
+div.art-logo1
+{
+   display: block;
+   position: absolute;
+   top: 20px;
+   left: 3%;
+   margin-left: -15px;
+}
 .art-logo-name
 {
    display: block;
