@@ -1690,4 +1690,14 @@ div.art-footer img
 }
 /* end LayoutCell, sidebar1 */
 
-
+.login
+{
+    display:block;
+    position:relative;
+    float:right;
+    text-align:right;
+    font-family: Verdana,Geneva,Arial,Helvetica,Sans-Serif;
+    font-weight: bold;
+    color:#FFFFFF;
+    padding-top:10px;
+}
