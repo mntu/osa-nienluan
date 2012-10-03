@@ -7,7 +7,7 @@
             <b>Tài khoản:</b>
         </td>
         <td>
-            <asp:TextBox ID="txtUsername" runat="server" MaxLength="20" TextMode="Password" 
+            <asp:TextBox ID="txtUsername" runat="server" MaxLength="20" 
                 Width="100px"></asp:TextBox>
         </td>
         <td>
