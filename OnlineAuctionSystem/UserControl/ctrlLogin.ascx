@@ -14,7 +14,8 @@
             &nbsp;<b>Mật Khẩu:</b>
         </td>
         <td>
-            <asp:TextBox ID="txtPassword" runat="server" MaxLength="20" Width="100px"></asp:TextBox>
+            <asp:TextBox ID="txtPassword" runat="server" MaxLength="20" Width="100px" 
+                TextMode="Password"></asp:TextBox>
         </td>
         <td>
             <asp:Button ID="btnLogin" runat="server" CssClass="art-button" Text="Đăng Nhập" />
