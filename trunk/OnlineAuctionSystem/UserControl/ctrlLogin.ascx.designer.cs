@@ -19,16 +19,16 @@ namespace OnlineAuctionSystem.UserControl {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtUsername;
+        protected global::DevExpress.Web.ASPxEditors.ASPxTextBox txtUsername;
         
         /// <summary>
-        /// txtPassword control.
+        /// ASPxTextBox2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtPassword;
+        protected global::DevExpress.Web.ASPxEditors.ASPxTextBox ASPxTextBox2;
         
         /// <summary>
         /// btnLogin control.

@@ -17,6 +17,6 @@ namespace OnlineAuctionSystem.Entities
         public int RoleId { get; set; }
         public string Question { get; set; }
         public string Answer { get; set; }
-        public bool bit { get; set; }
+        public bool Online { get; set; }
     }
 }
