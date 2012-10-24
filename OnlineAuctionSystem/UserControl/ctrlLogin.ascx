@@ -7,18 +7,33 @@
             <b>Tài khoản:</b>
         </td>
         <td>
-            <asp:TextBox ID="txtUsername" runat="server" MaxLength="20" 
-                Width="100px"></asp:TextBox>
+            <dx:ASPxTextBox ID="txtUsername" runat="server" Width="100px" 
+                CssFilePath="~/App_Themes/Aqua/{0}/styles.css" CssPostfix="Aqua" 
+                NullText="Tài khoản..." SpriteCssFilePath="~/App_Themes/Aqua/{0}/sprite.css">
+                <ValidationSettings>
+                    <ErrorFrameStyle ImageSpacing="4px">
+                        <ErrorTextPaddings PaddingLeft="4px" />
+                    </ErrorFrameStyle>
+                </ValidationSettings>
+            </dx:ASPxTextBox>
         </td>
         <td>
             &nbsp;<b>Mật Khẩu:</b>
         </td>
         <td>
-            <asp:TextBox ID="txtPassword" runat="server" MaxLength="20" Width="100px" 
-                TextMode="Password"></asp:TextBox>
+            <dx:ASPxTextBox ID="ASPxTextBox2" runat="server" Width="100px" Password=True 
+                CssFilePath="~/App_Themes/Aqua/{0}/styles.css" CssPostfix="Aqua" 
+                NullText="password" SpriteCssFilePath="~/App_Themes/Aqua/{0}/sprite.css">
+                <ValidationSettings>
+                    <ErrorFrameStyle ImageSpacing="4px">
+                        <ErrorTextPaddings PaddingLeft="4px" />
+                    </ErrorFrameStyle>
+                </ValidationSettings>
+            </dx:ASPxTextBox>
         </td>
         <td>
-            <asp:Button ID="btnLogin" runat="server" CssClass="art-button" Text="Đăng Nhập" />
+            <asp:Button ID="btnLogin" runat="server" CssClass="art-button" Text="Đăng Nhập" 
+                onclick="btnLogin_Click" />
         </td>
     </tr>
 </table>
