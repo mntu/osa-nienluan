@@ -106,9 +106,11 @@
   <ItemGroup>
     <Compile Include="DAL\BaseDAL.cs" />
     <Compile Include="DAL\CardTypesDAL.cs" />
+    <Compile Include="DAL\CategoriesDAL.cs" />
     <Compile Include="DAL\CreditCardsDAL.cs" />
     <Compile Include="DAL\FeedbacksDAL.cs" />
     <Compile Include="DAL\IBaseDAL.cs" />
+    <Compile Include="DAL\ListingsDAL.cs" />
     <Compile Include="DAL\ProductsDAL.cs" />
     <Compile Include="DAL\RolesDAL.cs" />
     <Compile Include="DAL\UsersDAL.cs" />

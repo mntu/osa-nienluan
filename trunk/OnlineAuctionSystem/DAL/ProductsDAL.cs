@@ -53,7 +53,7 @@ namespace OnlineAuctionSystem.DAL
             try
             {
                 Products o = (Products)obj;
-                string sql = "INSERT INTO Products(ProName,Description,StartPrice,ImageURL,Amount,Duration,DatePosted,NumView,Status,CateId,Username) ";
+                string sql = "INSERT INTO Products(ProName,[Description],StartPrice,ImageURL,Amount,Duration,DatePosted,NumView,[Status],CateId,Username) ";
                 sql += "VALUES(N'{0}',N'{1}',{2},'{3}',{4},{5},DEFAULT,{6},{7},{8},'{9}')";
                 sql = String.Format(sql,o.ProName,o.Description,o.StarPrice,o.ImageURL,o.Amount,o.Duration,o.NumView,o.Status,o.CateId,o.Username);
                 return ExecuteNonQuery(sql);
@@ -66,7 +66,7 @@ namespace OnlineAuctionSystem.DAL
             try
             {
                 Products o = (Products)obj;
-                string sql = "UPDATE Products SET ProName=N'{0}',Description=N'{1}',StartPrice={2},ImageURL='{3}',Amount={4},Duration={5},DatePosted=getDate(),NumView={6},Status={7},CateId={8},Username='{9}' ";
+                string sql = "UPDATE Products SET ProName=N'{0}',[Description]=N'{1}',StartPrice={2},ImageURL='{3}',Amount={4},Duration={5},DatePosted=getDate(),NumView={6},[Status]={7},CateId={8},Username='{9}' ";
                 sql += "WHERE ProId={10}";
                 sql = String.Format(sql, o.ProName, o.Description, o.StarPrice, o.ImageURL, o.Amount, o.Duration, o.NumView, o.Status, o.CateId, o.Username,o.ProId);
                 return ExecuteNonQuery(sql);
