@@ -37,8 +37,8 @@ namespace OnlineAuctionSystem.DAL
                     obj.SubAddress = tmp.Rows[0]["SubAddress"] + "";
                     obj.Question = tmp.Rows[0]["Question"] + "";
                     obj.Answer = tmp.Rows[0]["Answer"] + "";
-                    obj.Online = Convert.ToBoolean(tmp.Rows[0]["Online"] + "");
-                    obj.RoleId = Convert.ToInt32(tmp.Rows[0]["RoleId"] + "");
+                    obj.Online = Convert.ToBoolean(tmp.Rows[0]["Online"]);
+                    obj.RoleId = Convert.ToInt32(tmp.Rows[0]["RoleId"]);
                     return obj;
                 }
                 return null;
