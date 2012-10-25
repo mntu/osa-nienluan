@@ -6,9 +6,8 @@ using System.Data;
 using OnlineAuctionSystem.Entities;
 namespace OnlineAuctionSystem.DAL
 {
-    public class RolesDAL : BaseDAL, IBaseDAL
+    public class CardTypesDAL : BaseDAL, IBaseDAL
     {
-
         public int Count()
         {
             return Select().Rows.Count;
@@ -16,21 +15,21 @@ namespace OnlineAuctionSystem.DAL
 
         public DataTable Select()
         {
-            return ExecuteQuery("select * from Roles");
+            return ExecuteQuery("select * from CardTypes");
         }
 
         public object Select(int id)
         {
             try
             {
-                string sql = "select * from Roles where RoleId={0}";
+                string sql = "select * from CardTypes where TypeId={0}";
                 sql = String.Format(sql, id);
                 DataTable tmp = ExecuteQuery(sql);
                 if (tmp != null && tmp.Rows.Count > 0)
                 {
-                    Roles obj = new Roles();
-                    obj.RoleId = Convert.ToInt32(tmp.Rows[0]["RoleId"]);
-                    obj.RoleName = tmp.Rows[0]["RoleName"] + "";
+                    CardTypes obj = new CardTypes();
+                    obj.TypeId = Convert.ToInt32(tmp.Rows[0]["TypeId"]);
+                    obj.TypeName = tmp.Rows[0]["TypeName"] + "";
                     return obj;
                 }
                 return null;
@@ -42,9 +41,9 @@ namespace OnlineAuctionSystem.DAL
         {
             try
             {
-                Roles o = (Roles)obj;
-                string sql = "INSERT INTO Roles(RoleName) VALUES(N'{0}')";
-                sql = String.Format(sql, o.RoleName);
+                CardTypes o=(CardTypes)obj;
+                string sql = "INSERT INTO CardTypes(TypeName) VALUES(N'{0}')";
+                sql = String.Format(sql, o.TypeName);
                 return ExecuteNonQuery(sql);
             }
             catch { return -1; }
@@ -54,9 +53,9 @@ namespace OnlineAuctionSystem.DAL
         {
             try
             {
-                Roles o = (Roles)obj;
-                string sql = "UPDATE Roles SET RoleName=N'{0}' WHERE RoleId={1}";
-                sql = String.Format(sql, o.RoleName, o.RoleId);
+                CardTypes o = (CardTypes)obj;
+                string sql = "UPDATE CardTypes SET TypeName=N'{0}' WHERE TypeId={1}";
+                sql = String.Format(sql, o.TypeName,o.TypeId);
                 return ExecuteNonQuery(sql);
             }
             catch { return -1; }
@@ -66,7 +65,7 @@ namespace OnlineAuctionSystem.DAL
         {
             try
             {
-                string sql = "DELETE FROM Roles WHERE RoleId={0}";
+                string sql = "DELETE FROM CardTypes WHERE TypeId={0}";
                 sql = String.Format(sql, id);
                 return ExecuteNonQuery(sql);
             }
