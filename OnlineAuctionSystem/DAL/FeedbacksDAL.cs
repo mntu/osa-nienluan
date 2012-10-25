@@ -6,7 +6,7 @@ using System.Data;
 using OnlineAuctionSystem.Entities;
 namespace OnlineAuctionSystem.DAL
 {
-    public class FeedbacksDAL:BaseDAL,IBaseDAL
+    public class FeedbacksDAL : BaseDAL, IBaseDAL
     {
 
         public int Count()
@@ -32,7 +32,7 @@ namespace OnlineAuctionSystem.DAL
                     obj.FeedbackId=Convert.ToInt32(tmp.Rows[0]["FeedbackId"]);
                     obj.Title = tmp.Rows[0]["Title"] + "";
                     obj.Content = tmp.Rows[0]["Content"] + "";
-                    obj.DatePosted = Convert.ToDateTime(tmp.Rows[0[]["DatePosted"]);
+                    obj.DatePosted = Convert.ToDateTime(tmp.Rows[0]["DatePosted"]);
                     obj.Username=tmp.Rows[0]["Username"]+"";
                     return obj;
                 }
@@ -46,9 +46,9 @@ namespace OnlineAuctionSystem.DAL
             try
             {
                 Feedbacks o = (Feedbacks)obj;
-                string sql="INSERT INTO Feedbacks(Title,Content,Username) ";
+                string sql = "INSERT INTO Feedbacks(Title,Content,Username) ";
                 sql += "VALUES (N'{0}',N'{1}','{2}')";
-                sql = String.Format(sql,o.Title,o.Content,o.Username);
+                sql = String.Format(sql, o.Title, o.Content, o.Username);
                 return ExecuteNonQuery(sql);
             }
             catch { return -1; }
@@ -60,7 +60,7 @@ namespace OnlineAuctionSystem.DAL
             {
                 Feedbacks o = (Feedbacks)obj;
                 string sql = "UPDATE Feedbacks SET Title=N'{0}',Content=N'{1}',Username='{2}' WHERE FeedbackId={3}";
-                sql = String.Format(sql, o.Title, o.Content, o.Username,o.FeedbackId);
+                sql = String.Format(sql, o.Title, o.Content, o.Username, o.FeedbackId);
                 return ExecuteNonQuery(sql);
             }
             catch { return -1; }
@@ -75,6 +75,17 @@ namespace OnlineAuctionSystem.DAL
                 return ExecuteNonQuery(sql);
             }
             catch { return -1; }
+        }
+
+
+        public object Select(string id)
+        {
+            throw new NotImplementedException();
+        }
+
+        public int Delete(string id)
+        {
+            throw new NotImplementedException();
         }
     }
 }
