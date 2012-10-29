@@ -10,33 +10,24 @@
 namespace OnlineAuctionSystem.UserControl {
     
     
-    public partial class ctrlLogin {
+    public partial class ctrlLoginSuccess {
         
         /// <summary>
-        /// txtUsername control.
+        /// lblUsername control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::DevExpress.Web.ASPxEditors.ASPxTextBox txtUsername;
+        protected global::DevExpress.Web.ASPxEditors.ASPxLabel lblUsername;
         
         /// <summary>
-        /// txtPassword control.
+        /// btnLogout control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::DevExpress.Web.ASPxEditors.ASPxTextBox txtPassword;
-        
-        /// <summary>
-        /// btnLogin control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnLogin;
+        protected global::System.Web.UI.WebControls.Button btnLogout;
     }
 }

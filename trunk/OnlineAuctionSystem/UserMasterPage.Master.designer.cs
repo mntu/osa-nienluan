@@ -22,6 +22,24 @@ namespace OnlineAuctionSystem {
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
+        /// lkRegister control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlAnchor lkRegister;
+        
+        /// <summary>
+        /// lkPersonal control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlAnchor lkPersonal;
+        
+        /// <summary>
         /// ctrlLogin1 control.
         /// </summary>
         /// <remarks>
@@ -29,6 +47,24 @@ namespace OnlineAuctionSystem {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::OnlineAuctionSystem.UserControl.ctrlLogin ctrlLogin1;
+        
+        /// <summary>
+        /// ctrlLoginSuccess1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::OnlineAuctionSystem.UserControl.ctrlLoginSuccess ctrlLoginSuccess1;
+        
+        /// <summary>
+        /// ctrlCategories1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::OnlineAuctionSystem.UserControl.ctrlCategories ctrlCategories1;
         
         /// <summary>
         /// ContentPlaceHolder1 control.
