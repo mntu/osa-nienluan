@@ -55,6 +55,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Admin\Default.aspx" />
     <Content Include="container.swf" />
     <Content Include="Default.aspx" />
     <Content Include="expressInstall.swf" />
@@ -89,12 +90,15 @@
     <Content Include="images\VS.png" />
     <Content Include="js\jquery.js" />
     <Content Include="js\script.js" />
+    <Content Include="Login.aspx" />
     <Content Include="Sql\osa.sql" />
     <Content Include="css\style.css" />
     <Content Include="css\style.ie6.css" />
     <Content Include="css\style.ie7.css" />
     <Content Include="js\swfobject.js" />
+    <Content Include="UserControl\ctrlCategories.ascx" />
     <Content Include="UserControl\ctrlLogin.ascx" />
+    <Content Include="UserControl\ctrlLoginSuccess.ascx" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -104,6 +108,13 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Admin\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
     <Compile Include="DAL\BaseDAL.cs" />
     <Compile Include="DAL\CardTypesDAL.cs" />
     <Compile Include="DAL\CategoriesDAL.cs" />
@@ -129,11 +140,25 @@
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\ctrlCategories.ascx.cs">
+      <DependentUpon>ctrlCategories.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\ctrlCategories.ascx.designer.cs">
+      <DependentUpon>ctrlCategories.ascx</DependentUpon>
     </Compile>
     <Compile Include="UserControl\ctrlLogin.ascx.cs">
       <DependentUpon>ctrlLogin.ascx</DependentUpon>
@@ -141,6 +166,13 @@
     </Compile>
     <Compile Include="UserControl\ctrlLogin.ascx.designer.cs">
       <DependentUpon>ctrlLogin.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\ctrlLoginSuccess.ascx.cs">
+      <DependentUpon>ctrlLoginSuccess.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\ctrlLoginSuccess.ascx.designer.cs">
+      <DependentUpon>ctrlLoginSuccess.ascx</DependentUpon>
     </Compile>
     <Compile Include="UserMasterPage.Master.cs">
       <DependentUpon>UserMasterPage.Master</DependentUpon>
@@ -150,9 +182,7 @@
       <DependentUpon>UserMasterPage.Master</DependentUpon>
     </Compile>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Admin\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="UserMasterPage.Master" />
   </ItemGroup>

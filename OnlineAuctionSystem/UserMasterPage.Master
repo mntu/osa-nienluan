@@ -3,6 +3,10 @@
 
 <%@ Register src="UserControl/ctrlLogin.ascx" tagname="ctrlLogin" tagprefix="uc1" %>
 
+<%@ Register src="UserControl/ctrlLoginSuccess.ascx" tagname="ctrlLoginSuccess" tagprefix="uc2" %>
+
+<%@ Register src="UserControl/ctrlCategories.ascx" tagname="ctrlCategories" tagprefix="uc3" %>
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"[]>
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US" xml:lang="en">
 <head>
@@ -84,22 +88,23 @@
                             <div class="art-nav-wrapper">
                                 <div class="art-nav-inner">
                                     <ul class="art-hmenu">
-                                        <li><a href="#" class="active">Trang Chủ</a> </li>
-                                        <li><a href="#">Đăng Ký</a>
-                                            <ul>
+                                        <li><a href="Default.aspx" class="active">Trang Chủ</a> </li>
+                                        <li><a href="Register.aspx" id="lkRegister" runat="server">Đăng Ký</a>
+                                        <a href="Personal.aspx" id="lkPersonal" runat="server" visible=false>Cá Nhân</a>
+                                            <%--<ul>
                                             <%for (int i = 1; i < 6; i++)
                                               { %>
                                                 <li><a href="#">Menu Subitem <%=i %></a></li>
                                                 <% } %>
-                                            </ul>
+                                            </ul>--%>
                                         </li>
                                         
                                         <li><a href="#">Góp Ý</a> </li>
                                         <li><a href="#">Liên Hệ</a> </li>
                                     </ul>
                                 </div>
-                                <div class="login">
-                                <uc1:ctrlLogin ID="ctrlLogin1" runat="server" />
+                                <div class="login"><uc1:ctrlLogin ID="ctrlLogin1" runat="server" />
+                                    <uc2:ctrlLoginSuccess ID="ctrlLoginSuccess1" runat="server"/>
                                 </div>
                             </div>
                         </div>
@@ -110,39 +115,7 @@
                     <div class="art-content-layout">
                         <div class="art-content-layout-row">
                             <div class="art-layout-cell art-sidebar1">
-                                <div class="art-box art-vmenublock">
-                                    <div class="art-box-body art-vmenublock-body">
-                                        <div class="art-bar art-vmenublockheader">
-                                            <h3 class="t">
-                                                Nhóm Sản Phẩm</h3>
-                                        </div>
-                                        <div class="art-box art-vmenublockcontent">
-                                            <div class="art-box-body art-vmenublockcontent-body">
-                                                <ul class="art-vmenu">
-                                                    <li><a href="#">Điện Thoại</a> </li>
-                                                    <li><a href="#">Sim Số</a> </li>
-                                                    <li><a href="#">Máy Tính</a> </li>
-                                                    <li><a href="#">Linh Kiện Máy Tính</a> </li>
-                                                    <li><a href="#">Hàng Độc - Hàng Lạ</a> </li>
-                                                    <li><a href="#">Quần Áo</a> </li>
-                                                    <li><a href="#">Giầy Dép</a> </li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="art-box art-block">
-                                    <div class="art-box-body art-block-body">
-                                        <div class="art-box art-blockcontent">
-                                            <div class="art-box-body art-blockcontent-body">
-                                                <div>
-                                                    <input type="text" value="" name="email" id="s" style="width: 95%;" />
-                                                    <input type="button" name="search" class="art-button" value="Tìm Kiếm" />
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                                <uc3:ctrlCategories ID="ctrlCategories1" runat="server" />
                             </div>
                             <div class="art-layout-cell art-content">
                                 <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">

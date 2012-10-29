@@ -83,5 +83,21 @@ namespace OnlineAuctionSystem.DAL
             }
             catch { return -1; }
         }
+
+        public int CheckLogin(string username,string password)
+        {
+            try
+            {
+                string sql = "select RoleId from Users where Username='{0}' and Password='{1}'";
+                sql = String.Format(sql, username, password);
+                DataTable tmp = ExecuteQuery(sql);
+                if (tmp.Rows.Count > 0)
+                {
+                    return Convert.ToInt32(tmp.Rows[0]["RoleId"]);
+                }
+                return 0;
+            }
+            catch { return 0; }
+        }
     }
 }

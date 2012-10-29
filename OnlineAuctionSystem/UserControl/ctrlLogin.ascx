@@ -10,25 +10,15 @@
             <dx:ASPxTextBox ID="txtUsername" runat="server" Width="100px" 
                 CssFilePath="~/App_Themes/Aqua/{0}/styles.css" CssPostfix="Aqua" 
                 NullText="Tài khoản..." SpriteCssFilePath="~/App_Themes/Aqua/{0}/sprite.css">
-                <ValidationSettings>
-                    <ErrorFrameStyle ImageSpacing="4px">
-                        <ErrorTextPaddings PaddingLeft="4px" />
-                    </ErrorFrameStyle>
-                </ValidationSettings>
             </dx:ASPxTextBox>
         </td>
         <td>
             &nbsp;<b>Mật Khẩu:</b>
         </td>
         <td>
-            <dx:ASPxTextBox ID="ASPxTextBox2" runat="server" Width="100px" Password=True 
+            <dx:ASPxTextBox ID="txtPassword" runat="server" Width="100px" Password=True 
                 CssFilePath="~/App_Themes/Aqua/{0}/styles.css" CssPostfix="Aqua" 
                 NullText="password" SpriteCssFilePath="~/App_Themes/Aqua/{0}/sprite.css">
-                <ValidationSettings>
-                    <ErrorFrameStyle ImageSpacing="4px">
-                        <ErrorTextPaddings PaddingLeft="4px" />
-                    </ErrorFrameStyle>
-                </ValidationSettings>
             </dx:ASPxTextBox>
         </td>
         <td>
