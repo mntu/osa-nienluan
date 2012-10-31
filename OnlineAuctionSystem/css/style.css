@@ -1708,3 +1708,16 @@ div.art-footer img
     color:#FFFFFF;
     padding-top:10px;
 }
+
+.content-header
+{
+    vertical-align:middle;
+    padding-top:3px;
+    background-image: url('../images/content-header.png');
+    background-repeat:repeat-x;
+    height:25px;
+    font-size: 14px;
+    font-weight:bold;
+    color: White;    
+   
+}

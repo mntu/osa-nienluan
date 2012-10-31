@@ -33,6 +33,9 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="DevExpress.Data.v11.1, Version=11.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.ExpressApp.Web.v11.1, Version=11.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
     <Reference Include="DevExpress.Web.ASPxEditors.v11.1, Version=11.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
     </Reference>
@@ -66,6 +69,7 @@
     <Content Include="images\blockcontentbullets.png" />
     <Content Include="images\Bottom_texture.jpg" />
     <Content Include="images\button.png" />
+    <Content Include="images\content-header.png" />
     <Content Include="images\flash.swf" />
     <Content Include="images\footer.png" />
     <Content Include="images\footerbullets.png" />
@@ -91,6 +95,7 @@
     <Content Include="js\jquery.js" />
     <Content Include="js\script.js" />
     <Content Include="Login.aspx" />
+    <Content Include="Register.aspx" />
     <Content Include="Sql\osa.sql" />
     <Content Include="css\style.css" />
     <Content Include="css\style.ie6.css" />
@@ -153,6 +158,13 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
+    <Compile Include="Register.aspx.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Register.aspx.designer.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+    </Compile>
     <Compile Include="UserControl\ctrlCategories.ascx.cs">
       <DependentUpon>ctrlCategories.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -203,7 +215,7 @@
         <WebProjectProperties>
           <UseIIS>False</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>1223</DevelopmentServerPort>
+          <DevelopmentServerPort>3426</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
           <IISUrl>
           </IISUrl>

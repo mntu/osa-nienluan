@@ -22,7 +22,7 @@ namespace OnlineAuctionSystem.DAL
         {
             try
             {
-                string sql = "select * from Roles where Username='{0}'";
+                string sql = "select * from Users where Username='{0}'";
                 sql = String.Format(sql, id);
                 DataTable tmp = ExecuteQuery(sql);
                 if (tmp != null && tmp.Rows.Count > 0)
@@ -52,7 +52,7 @@ namespace OnlineAuctionSystem.DAL
             {
                 Users o = (Users)obj;
                 string sql = "INSERT INTO Users(Username,[Password],Fullname,Email,Phone,[Address],SubAddress,Question,Answer,[Online],RoleId) ";
-                sql += "VALUES('{0}','{1}',N'{2}','{3}','{4}',N'{5}',N'{6}',N'{7}',N'{8}',{9},{10})";
+                sql += "VALUES('{0}','{1}',N'{2}','{3}','{4}',N'{5}',N'{6}',N'{7}',N'{8}','{9}',{10})";
                 sql = String.Format(sql, o.Username,o.Password,o.Fullname,o.Email,o.Phone,o.Address,o.SubAddress,o.Question,o.Answer,o.Online,o.RoleId);
                 return ExecuteNonQuery(sql);
             }
