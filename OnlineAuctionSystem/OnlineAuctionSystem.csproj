@@ -228,9 +228,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Properties\licenses.licx" />
-  </ItemGroup>
-  <ItemGroup>
     <Content Include="UserMasterPage.Master" />
   </ItemGroup>
   <ItemGroup>

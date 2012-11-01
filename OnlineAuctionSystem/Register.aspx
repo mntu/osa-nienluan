@@ -29,7 +29,7 @@
                         bạn cũng như của website.<br />
                         - Sản phẩm đấu giá phải được gởi đến công ty của chúng tôi trong vào 48 giờ kể từ
                         ngày đăng, nêu không chúng tôi sẽ hủy sản phẩm của bạn.<br />
-                        - Phí đấu giả sẽ được chúng tôi thu theo phần trăm giá của sản phẩm (cụ thể trong
+                        - Phí đấu giá sẽ được chúng tôi thu theo phần trăm giá của sản phẩm (cụ thể trong
                         mục đăng sản phẩm).<br />
                     </p>
                 </div>
