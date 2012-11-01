@@ -115,7 +115,8 @@
                     <div class="art-content-layout">
                         <div class="art-content-layout-row">
                             <div class="art-layout-cell art-sidebar1">
-                                <uc3:ctrlCategories ID="ctrlCategories1" runat="server" />
+                                <uc3:ctrlCategories ID="ctrlCategories1" runat="server" 
+                                    ViewStateMode="Inherit" />
                             </div>
                             <div class="art-layout-cell art-content">
                                 <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">

@@ -50,12 +50,27 @@
                             </td>
                         </tr>
                         <tr>
-                            <td colspan="3" align="center">
+                            <td>
+                            </td>
+                            <td>
+                                <dx:ASPxHyperLink ID="lkLossPassword" runat="server" Text="Quên Mật Khẩu ?" 
+                                    CssFilePath="~/App_Themes/Aqua/{0}/styles.css" CssPostfix="Aqua" 
+                                    NavigateUrl="~/PasswordRecover.aspx">
+                                </dx:ASPxHyperLink>
+                            </td>
+                            <td>
+                                &nbsp;
+                            </td>
+                        </tr>
+                        <tr>
+                        <td></td>
+                            <td >
                                 <dx:ASPxButton ID="btnLogin" runat="server" CssFilePath="~/App_Themes/Aqua/{0}/styles.css"
                                     CssPostfix="Aqua" SpriteCssFilePath="~/App_Themes/Aqua/{0}/sprite.css" Text="Đăng Nhập"
-                                    OnClick="btnLogin_Click">
+                                    OnClick="btnLogin_Click" Width="100px">
                                 </dx:ASPxButton>
                             </td>
+                            <td></td>
                         </tr>
                     </table>
                 </div>
