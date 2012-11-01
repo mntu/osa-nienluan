@@ -12,6 +12,7 @@ namespace OnlineAuctionSystem
         UsersDAL _dal = new UsersDAL();
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (Session["user"] != null) Response.Redirect("Default.aspx");
             lblError.Text = "Vui lòng nhập Tài Khoản và Mật Khẩu của bạn!";
         }
 
