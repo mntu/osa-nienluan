@@ -7,12 +7,13 @@ using System.Web.UI.WebControls;
 
 namespace OnlineAuctionSystem
 {
-    public partial class Default : System.Web.UI.Page
+    public partial class Personal : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            Master.FindControl("ctrlCategories1").Visible = true;
-            Master.FindControl("ctrlPersonalMenu1").Visible = false;
+            if (Session["user"] == null) Response.Redirect("Default.aspx");
+            Master.FindControl("ctrlCategories1").Visible = false;
+            Master.FindControl("ctrlPersonalMenu1").Visible = true;
         }
     }
 }

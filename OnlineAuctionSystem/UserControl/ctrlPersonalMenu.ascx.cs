@@ -5,14 +5,13 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace OnlineAuctionSystem
+namespace OnlineAuctionSystem.UserControl
 {
-    public partial class Default : System.Web.UI.Page
+    public partial class ctrlPersonalMenu : System.Web.UI.UserControl
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            Master.FindControl("ctrlCategories1").Visible = true;
-            Master.FindControl("ctrlPersonalMenu1").Visible = false;
+
         }
     }
 }

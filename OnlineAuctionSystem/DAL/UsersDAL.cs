@@ -65,7 +65,7 @@ namespace OnlineAuctionSystem.DAL
             {
                 Users o = (Users)obj;
                 string sql = "UPDATE Users SET [Password]='{0}',FullName=N'{1}',Email='{2}',Phone='{3}',";
-                sql+="[Address]=N'{4}',SubAddress=N'{5}',Question=N'{6}',Answer=N'{7}',[Online]={8},RoleId={9} ";
+                sql+="[Address]=N'{4}',SubAddress=N'{5}',Question=N'{6}',Answer=N'{7}',[Online]='{8}',RoleId={9} ";
                 sql += "WHERE Username='{10}'";
                 sql = String.Format(sql, o.Password, o.Fullname, o.Email, o.Phone, o.Address, o.SubAddress, o.Question, o.Answer, o.Online, o.RoleId, o.Username);
                 return ExecuteNonQuery(sql);

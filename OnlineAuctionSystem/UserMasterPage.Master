@@ -4,6 +4,7 @@
 <%@ Register Src="UserControl/ctrlLogin.ascx" TagName="ctrlLogin" TagPrefix="uc1" %>
 <%@ Register Src="UserControl/ctrlLoginSuccess.ascx" TagName="ctrlLoginSuccess" TagPrefix="uc2" %>
 <%@ Register Src="UserControl/ctrlCategories.ascx" TagName="ctrlCategories" TagPrefix="uc3" %>
+<%@ Register src="UserControl/ctrlPersonalMenu.ascx" tagname="ctrlPersonalMenu" tagprefix="uc4" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"[]>
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US" xml:lang="en">
 <head>
@@ -111,16 +112,9 @@
                         <div class="art-content-layout-row">
                             <div class="art-layout-cell art-sidebar1">
                                 <uc3:ctrlCategories ID="ctrlCategories1" runat="server" ViewStateMode="Inherit" />
+                                <uc4:ctrlPersonalMenu ID="ctrlPersonalMenu1" runat="server" />
                             </div>
                             <div class="art-layout-cell art-content">
-                                <div class="breadcrumbs">
-                                    <asp:SiteMapPath ID="SiteMapPath1" runat="server" PathSeparator=" : ">
-                                        <CurrentNodeStyle ForeColor="#333333" />
-                                        <NodeStyle Font-Bold="True" ForeColor="#990000" />
-                                        <PathSeparatorStyle Font-Bold="True" ForeColor="#990000" />
-                                        <RootNodeStyle Font-Bold="True" ForeColor="#FF8000" />
-                                    </asp:SiteMapPath>
-                                </div>
                                 <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
                                 </asp:ContentPlaceHolder>
                             </div>
