@@ -13,7 +13,7 @@
         </td>
         <td>
             <asp:Button ID="btnLogout" runat="server" Text="Đăng Xuất" 
-                CssClass="art-button" onclick="btnLogout_Click" />
+                CssClass="art-button" onclick="btnLogout_Click" CausesValidation="False" />
         </td>
     </tr>
 </table>
