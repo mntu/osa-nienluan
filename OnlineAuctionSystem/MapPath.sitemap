@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+  <siteMapNode url="Default.aspx" title="Trang chủ">
+    <siteMapNode url="Register.aspx" title="Đăng ký" />
+    <!--<siteMapNode url="Personal.aspx" title="Cá nhân">
+      <siteMapNode url="PasswordRecover.aspx" title="Phục hồi mật khẩu" />
+    </siteMapNode>-->
+  </siteMapNode>
+</siteMap>

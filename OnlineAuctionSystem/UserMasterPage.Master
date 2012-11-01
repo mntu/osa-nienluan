@@ -1,12 +1,9 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="UserMasterPage.master.cs" Debug="true"
-    Inherits="OnlineAuctionSystem.UserMasterPage" %>
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="UserMasterPage.master.cs"
+    Debug="true" Inherits="OnlineAuctionSystem.UserMasterPage" %>
 
-<%@ Register src="UserControl/ctrlLogin.ascx" tagname="ctrlLogin" tagprefix="uc1" %>
-
-<%@ Register src="UserControl/ctrlLoginSuccess.ascx" tagname="ctrlLoginSuccess" tagprefix="uc2" %>
-
-<%@ Register src="UserControl/ctrlCategories.ascx" tagname="ctrlCategories" tagprefix="uc3" %>
-
+<%@ Register Src="UserControl/ctrlLogin.ascx" TagName="ctrlLogin" TagPrefix="uc1" %>
+<%@ Register Src="UserControl/ctrlLoginSuccess.ascx" TagName="ctrlLoginSuccess" TagPrefix="uc2" %>
+<%@ Register Src="UserControl/ctrlCategories.ascx" TagName="ctrlCategories" TagPrefix="uc3" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"[]>
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US" xml:lang="en">
 <head>
@@ -23,8 +20,7 @@
     <script type="text/javascript" src="js/script.js"></script>
 </head>
 <body>
-<form id="form1" runat="server">
-
+    <form id="form1" runat="server">
     <div id="art-page-background-glare-wrapper">
         <div id="art-page-background-glare">
         </div>
@@ -75,7 +71,7 @@
                         </div>
                     </div>
                     <div class="art-logo1">
-                        <img src="images/abc-logo.png" ></img>
+                        <img src="images/abc-logo.png"></img>
                     </div>
                     <div class="art-logo">
                         <h1 class="art-logo-name">
@@ -89,8 +85,8 @@
                                 <div class="art-nav-inner">
                                     <ul class="art-hmenu">
                                         <li><a href="Default.aspx" class="active">Trang Chủ</a> </li>
-                                        <li><a href="Register.aspx" id="lkRegister" runat="server">Đăng Ký</a>
-                                        <a href="Personal.aspx" id="lkPersonal" runat="server" visible=false>Cá Nhân</a>
+                                        <li><a href="Register.aspx" id="lkRegister" runat="server">Đăng Ký</a> <a href="Personal.aspx"
+                                            id="lkPersonal" runat="server" visible="false">Cá Nhân</a>
                                             <%--<ul>
                                             <%for (int i = 1; i < 6; i++)
                                               { %>
@@ -98,27 +94,33 @@
                                                 <% } %>
                                             </ul>--%>
                                         </li>
-                                        
                                         <li><a href="#">Góp Ý</a> </li>
                                         <li><a href="#">Liên Hệ</a> </li>
                                     </ul>
                                 </div>
-                                <div class="login"><uc1:ctrlLogin ID="ctrlLogin1" runat="server" />
-                                    <uc2:ctrlLoginSuccess ID="ctrlLoginSuccess1" runat="server"/>
+                                <div class="login">
+                                    <uc1:ctrlLogin ID="ctrlLogin1" runat="server" />
+                                    <uc2:ctrlLoginSuccess ID="ctrlLoginSuccess1" runat="server" />
                                 </div>
                             </div>
                         </div>
-                        
                     </div>
                 </div>
                 <div class="art-layout-wrapper">
                     <div class="art-content-layout">
                         <div class="art-content-layout-row">
                             <div class="art-layout-cell art-sidebar1">
-                                <uc3:ctrlCategories ID="ctrlCategories1" runat="server" 
-                                    ViewStateMode="Inherit" />
+                                <uc3:ctrlCategories ID="ctrlCategories1" runat="server" ViewStateMode="Inherit" />
                             </div>
                             <div class="art-layout-cell art-content">
+                                <div class="breadcrumbs">
+                                    <asp:SiteMapPath ID="SiteMapPath1" runat="server" PathSeparator=" : ">
+                                        <CurrentNodeStyle ForeColor="#333333" />
+                                        <NodeStyle Font-Bold="True" ForeColor="#990000" />
+                                        <PathSeparatorStyle Font-Bold="True" ForeColor="#990000" />
+                                        <RootNodeStyle Font-Bold="True" ForeColor="#FF8000" />
+                                    </asp:SiteMapPath>
+                                </div>
                                 <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
                                 </asp:ContentPlaceHolder>
                             </div>
