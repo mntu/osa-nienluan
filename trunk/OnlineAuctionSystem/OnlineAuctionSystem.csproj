@@ -60,6 +60,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Admin\Default.aspx" />
+    <Content Include="ChangePassword.aspx" />
     <Content Include="ChangeProfile.aspx" />
     <Content Include="container.swf" />
     <Content Include="Default.aspx" />
@@ -124,6 +125,13 @@
     </Compile>
     <Compile Include="Admin\Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ChangePassword.aspx.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ChangePassword.aspx.designer.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
     </Compile>
     <Compile Include="ChangeProfile.aspx.cs">
       <DependentUpon>ChangeProfile.aspx</DependentUpon>

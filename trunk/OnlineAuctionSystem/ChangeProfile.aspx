@@ -74,12 +74,12 @@
                                 </dx:ASPxTextBox>
                             </td>
                             <td>
-                                <asp:RegularExpressionValidator ID="revPhone" runat="server" ControlToValidate="txtPhone"
-                                    Display="Dynamic" ErrorMessage="Số điện thoại không hợp lệ!" ForeColor="Red"
-                                    SetFocusOnError="True" ValidationExpression="0\d{9,10}"></asp:RegularExpressionValidator>
                                 <asp:RequiredFieldValidator ID="rfvPhone" runat="server" ControlToValidate="txtPhone"
                                     ErrorMessage="Vui lòng nhập số điện thoại!" ForeColor="Red" SetFocusOnError="True"
                                     Display="Dynamic"></asp:RequiredFieldValidator>
+                                <asp:RegularExpressionValidator ID="revPhone" runat="server" ControlToValidate="txtPhone"
+                                    Display="Dynamic" ErrorMessage="Số điện thoại không hợp lệ!" ForeColor="Red"
+                                    SetFocusOnError="True" ValidationExpression="0\d{9,10}"></asp:RegularExpressionValidator>
                             </td>
                         </tr>
                         <tr>
@@ -170,8 +170,8 @@
                             </td>
                             <td>
                                 <asp:RequiredFieldValidator ID="rfvAnswer" runat="server" ControlToValidate="txtAnswer"
-                                    ErrorMessage="Vui lòng nhập câu trả lời!" ForeColor="Red" SetFocusOnError="True"
-                                    Display="Dynamic"></asp:RequiredFieldValidator>
+                                    ErrorMessage="Vui lòng nhập câu trả lời!" ForeColor="Red" 
+                                    SetFocusOnError="True"></asp:RequiredFieldValidator>
                             </td>
                         </tr>
                         <tr>
@@ -182,13 +182,14 @@
                                 <dx:ASPxButton ID="btnCancel" runat="server" Text="Hủy Bỏ" 
                                     CausesValidation="False" CssFilePath="~/App_Themes/Aqua/{0}/styles.css" 
                                     CssPostfix="Aqua" OnClick="btnCancel_Click" 
-                                    SpriteCssFilePath="~/App_Themes/Aqua/{0}/sprite.css">
+                                    SpriteCssFilePath="~/App_Themes/Aqua/{0}/sprite.css" Width="100px">
                                 </dx:ASPxButton>
                             </td>
                             <td>
                                 <dx:ASPxButton ID="btnUpdate" runat="server" Text="Cập Nhật" 
                                     CssFilePath="~/App_Themes/Aqua/{0}/styles.css" CssPostfix="Aqua" 
-                                    OnClick="btnUpdate_Click" SpriteCssFilePath="~/App_Themes/Aqua/{0}/sprite.css">
+                                    OnClick="btnUpdate_Click" 
+                                    SpriteCssFilePath="~/App_Themes/Aqua/{0}/sprite.css" Width="100px">
                                 </dx:ASPxButton>
                             </td>
                             <td>
