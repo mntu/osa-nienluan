@@ -12,6 +12,8 @@ namespace OnlineAuctionSystem
         UsersDAL _dal = new UsersDAL();
         protected void Page_Load(object sender, EventArgs e)
         {
+            Master.FindControl("ctrlCategories1").Visible = true;
+            Master.FindControl("ctrlPersonalMenu1").Visible = false;
             if (Session["user"] != null) Response.Redirect("Default.aspx");
             lblError.Text = "Vui lòng nhập Tài Khoản và Mật Khẩu của bạn!";
         }
