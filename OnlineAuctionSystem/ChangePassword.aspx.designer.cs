@@ -10,87 +10,96 @@
 namespace OnlineAuctionSystem {
     
     
-    public partial class UserMasterPage {
+    public partial class ChangePassword {
         
         /// <summary>
-        /// form1 control.
+        /// panel control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
+        protected global::DevExpress.Web.ASPxRoundPanel.ASPxRoundPanel panel;
         
         /// <summary>
-        /// lkRegister control.
+        /// lblError control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlAnchor lkRegister;
+        protected global::DevExpress.Web.ASPxEditors.ASPxLabel lblError;
         
         /// <summary>
-        /// lkPersonal control.
+        /// txtOldPass control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlAnchor lkPersonal;
+        protected global::DevExpress.Web.ASPxEditors.ASPxTextBox txtOldPass;
         
         /// <summary>
-        /// lkFeedback control.
+        /// rfvPassword0 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl lkFeedback;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvPassword0;
         
         /// <summary>
-        /// ctrlLogin1 control.
+        /// txtNewPass control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::OnlineAuctionSystem.UserControl.ctrlLogin ctrlLogin1;
+        protected global::DevExpress.Web.ASPxEditors.ASPxTextBox txtNewPass;
         
         /// <summary>
-        /// ctrlLoginSuccess1 control.
+        /// rfvPassword1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::OnlineAuctionSystem.UserControl.ctrlLoginSuccess ctrlLoginSuccess1;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvPassword1;
         
         /// <summary>
-        /// ctrlCategories1 control.
+        /// txtRePass control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::OnlineAuctionSystem.UserControl.ctrlCategories ctrlCategories1;
+        protected global::DevExpress.Web.ASPxEditors.ASPxTextBox txtRePass;
         
         /// <summary>
-        /// ctrlPersonalMenu1 control.
+        /// cvPassword control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::OnlineAuctionSystem.UserControl.ctrlPersonalMenu ctrlPersonalMenu1;
+        protected global::System.Web.UI.WebControls.CompareValidator cvPassword;
         
         /// <summary>
-        /// ContentPlaceHolder1 control.
+        /// btnCancle control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder ContentPlaceHolder1;
+        protected global::DevExpress.Web.ASPxEditors.ASPxButton btnCancle;
+        
+        /// <summary>
+        /// btnUpdate control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::DevExpress.Web.ASPxEditors.ASPxButton btnUpdate;
     }
 }

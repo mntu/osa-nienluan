@@ -76,15 +76,6 @@ namespace OnlineAuctionSystem {
         protected global::DevExpress.Web.ASPxEditors.ASPxTextBox txtPhone;
         
         /// <summary>
-        /// revPhone control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RegularExpressionValidator revPhone;
-        
-        /// <summary>
         /// rfvPhone control.
         /// </summary>
         /// <remarks>
@@ -92,6 +83,15 @@ namespace OnlineAuctionSystem {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvPhone;
+        
+        /// <summary>
+        /// revPhone control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator revPhone;
         
         /// <summary>
         /// txtAddress1 control.

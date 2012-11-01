@@ -17,6 +17,7 @@ namespace OnlineAuctionSystem
                 ctrlLoginSuccess1.Visible = false;
                 lkRegister.Visible = true;
                 lkPersonal.Visible = false;
+                lkFeedback.Visible = false;
             }
             else
             {
@@ -24,6 +25,7 @@ namespace OnlineAuctionSystem
                 ctrlLoginSuccess1.Visible = true;
                 lkRegister.Visible = false;
                 lkPersonal.Visible = true;
+                lkFeedback.Visible = true;
             }
         }
     }

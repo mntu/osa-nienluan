@@ -41,7 +41,7 @@
                 <dx:ASPxButton ID="btnNext1" runat="server" CssFilePath="~/App_Themes/Aqua/{0}/styles.css"
                                     CssPostfix="Aqua" 
                         SpriteCssFilePath="~/App_Themes/Aqua/{0}/sprite.css" Text="Tiếp Tục"
-                                    OnClick="btnNext1_Click">
+                                    OnClick="btnNext1_Click" Width="100px">
                                 </dx:ASPxButton>
                                 </div>
                 </div>
@@ -324,7 +324,7 @@
                                 <dx:ASPxButton ID="btnRegister" runat="server" 
                                     CssFilePath="~/App_Themes/Aqua/{0}/styles.css" CssPostfix="Aqua" 
                                     SpriteCssFilePath="~/App_Themes/Aqua/{0}/sprite.css" Text="Đăng Ký" 
-                                    OnClick="btnRegister_Click">
+                                    OnClick="btnRegister_Click" Width="100px">
                                 </dx:ASPxButton>
                             </td>
                         </tr>
