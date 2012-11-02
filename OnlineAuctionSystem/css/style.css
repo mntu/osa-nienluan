@@ -1275,6 +1275,7 @@ input, select, textarea
     font-style: normal;
     font-weight: bold;
     font-size: 12px;
+    width: 87px;
 }
 
 div.art-block select

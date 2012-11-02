@@ -96,7 +96,7 @@
                                             </ul>--%>
                                         </li>
                                         <li><a href="#">Bán Hàng</a> </li>
-                                        <li id="lkFeedback" runat="server"><a href="#">Góp Ý</a> </li>
+                                        <li id="lkFeedback" runat="server"><a href="Feedback.aspx">Góp Ý</a> </li>
                                         <li><a href="#">Liên Hệ</a> </li>
                                     </ul>
                                 </div>
