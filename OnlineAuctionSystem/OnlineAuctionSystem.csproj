@@ -41,6 +41,7 @@
     <Reference Include="DevExpress.Web.ASPxEditors.v11.1, Version=11.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
     </Reference>
+    <Reference Include="DevExpress.Web.ASPxGridView.v11.1, Version=11.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Web.ASPxHtmlEditor.v11.1, Version=11.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
     </Reference>
@@ -64,10 +65,12 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="AddCreditCard.aspx" />
     <Content Include="Admin\Default.aspx" />
     <Content Include="ChangePassword.aspx" />
     <Content Include="ChangeProfile.aspx" />
     <Content Include="container.swf" />
+    <Content Include="CreditCard.aspx" />
     <Content Include="Default.aspx" />
     <Content Include="expressInstall.swf" />
     <Content Include="Feedback.aspx" />
@@ -79,6 +82,8 @@
     <Content Include="images\Bottom_texture.jpg" />
     <Content Include="images\button.png" />
     <Content Include="images\content-header.png" />
+    <Content Include="images\Delete.png" />
+    <Content Include="images\edit.png" />
     <Content Include="images\flash.swf" />
     <Content Include="images\footer.png" />
     <Content Include="images\footerbullets.png" />
@@ -125,6 +130,13 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddCreditCard.aspx.cs">
+      <DependentUpon>AddCreditCard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AddCreditCard.aspx.designer.cs">
+      <DependentUpon>AddCreditCard.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Admin\Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -145,6 +157,13 @@
     </Compile>
     <Compile Include="ChangeProfile.aspx.designer.cs">
       <DependentUpon>ChangeProfile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CreditCard.aspx.cs">
+      <DependentUpon>CreditCard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CreditCard.aspx.designer.cs">
+      <DependentUpon>CreditCard.aspx</DependentUpon>
     </Compile>
     <Compile Include="DAL\BaseDAL.cs" />
     <Compile Include="DAL\CardTypesDAL.cs" />
@@ -252,6 +271,7 @@
     <Content Include="UserMasterPage.Master" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Themes\Theme1\Skin1.skin" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

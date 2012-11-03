@@ -38,7 +38,16 @@ namespace OnlineAuctionSystem.DAL
             }
             catch { return null; }
         }
-
+        public DataTable SelectByUsername(string username)
+        {
+            try
+            {
+                string sql = "select CardNum,ExpireDate,TypeId,TypeName,Username from CreditCards a,CardTypes b where CardType=TypeId and Username='{0}'";
+                sql = String.Format(sql, username);
+                return ExecuteQuery(sql);
+            }
+            catch { return null; }
+        }
         public int Insert(object obj)
         {
             try
