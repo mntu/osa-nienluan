@@ -27,10 +27,6 @@
                         <asp:BoundField DataField="TypeName" HeaderText="Loại Thẻ" 
                             SortExpression="TypeName" >
                         </asp:BoundField>
-                        <asp:CommandField ButtonType="Image" SelectImageUrl="~/images/edit.png" 
-                            ShowSelectButton="True" HeaderText="Sủa">
-                        <ControlStyle Width="16px" />
-                        </asp:CommandField>
                         <asp:TemplateField ShowHeader="False" HeaderText="Xóa">
                             <ItemTemplate>
                                 <asp:ImageButton ID="ImageButton1" runat="server" CausesValidation="False" 

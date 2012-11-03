@@ -5,12 +5,32 @@
     <dx:ASPxRoundPanel ID="ASPxRoundPanel1" runat="server" 
         CssFilePath="~/App_Themes/Aqua/{0}/styles.css" CssPostfix="Aqua" 
         GroupBoxCaptionOffsetY="-28px" 
-        SpriteCssFilePath="~/App_Themes/Aqua/{0}/sprite.css" Width="200px">
+        SpriteCssFilePath="~/App_Themes/Aqua/{0}/sprite.css" Width="100%" 
+        HeaderText="Thông tin chung">
         <ContentPaddings Padding="14px" />
+        <HeaderStyle Font-Bold="True" />
         <PanelCollection>
             <dx:PanelContent runat="server" SupportsDisabledAttribute="True">
-             <asp:GridView ID="gvCreditCard" runat="server" AutoGenerateColumns="True">
-                </asp:GridView>         
+                <div style="float:left;width:50%">
+                    
+                    <p><asp:Label ID="lblFullname" runat="server" Text="Label" Font-Size="14pt"></asp:Label>
+                    <br /></p>
+                    <p><asp:Label ID="lblEmail" runat="server" Text="Label" Font-Size="14pt"></asp:Label>
+                    <br /></p>
+                    <p><asp:Label ID="lblPhone" runat="server" Text="Label" Font-Size="14pt"></asp:Label>
+                    <br /></p>
+                    <p><asp:Label ID="lblCreditCard" runat="server" Text="Label" Font-Size="14pt"></asp:Label>
+                    <br /></p>
+                    <p><asp:Label ID="lblAddress" runat="server" Text="Label" Font-Size="14pt"></asp:Label>
+                    
+                </div>
+                <div>
+                <p><asp:Label ID="lblProductSell" runat="server" Text="Label" Font-Size="14pt"></asp:Label>
+                <br /></p>
+                <p><asp:Label ID="lblProductList" runat="server" Text="Label" Font-Size="14pt"></asp:Label>
+                <br /></p>
+                <p><asp:Label ID="lblProductWin" runat="server" Text="Label" Font-Size="14pt"></asp:Label></p>
+                </div>
             </dx:PanelContent>
         </PanelCollection>
     </dx:ASPxRoundPanel>
