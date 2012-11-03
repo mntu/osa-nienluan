@@ -18,7 +18,18 @@ namespace OnlineAuctionSystem.DAL
         {
             return ExecuteQuery("select * from Listings");
         }
-
+        public DataTable SelectByUsername(string username)
+        {
+            string sql = "select * from Listings where Username='{0}'";
+            sql = String.Format(sql, username);
+            return ExecuteQuery(sql);
+        }
+        public DataTable SelectWinByUsername(string username)
+        {
+            string sql = "select * from Listings where Username='{0}' and Status=1";
+            sql = String.Format(sql, username);
+            return ExecuteQuery(sql);
+        }
         public DataTable Select(int proid)
         {
             try

@@ -18,7 +18,12 @@ namespace OnlineAuctionSystem.DAL
         {
             return ExecuteQuery("select * from Products");
         }
-
+        public DataTable SelectByUsername(string username)
+        {
+            string sql = "select * from Products where Username='{0}'";
+            sql = String.Format(sql,username);
+            return ExecuteQuery(sql);
+        }
         public object Select(int id)
         {
             try
