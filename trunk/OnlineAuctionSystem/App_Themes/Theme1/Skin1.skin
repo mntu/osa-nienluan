@@ -1,0 +1,32 @@
+﻿<%--
+Default skin template. The following skins are provided as examples only.
+
+1. Named control skin. The SkinId should be uniquely defined because
+   duplicate SkinId's per control type are not allowed in the same theme.
+
+<asp:GridView runat="server" SkinId="gridviewSkin" BackColor="White" >
+   <AlternatingRowStyle BackColor="Blue" />
+</asp:GridView>
+
+2. Default skin. The SkinId is not defined. Only one default 
+   control skin per control type is allowed in the same theme.
+
+<asp:Image runat="server" ImageUrl="~/images/image1.jpg" />
+--%>
+<asp:GridView runat="server" BorderColor="#99CCFF" BorderStyle="Solid" 
+                    BorderWidth="1px" CellPadding="4" CellSpacing="1" ForeColor="#333333" 
+                    GridLines="None"  >
+                    <AlternatingRowStyle BackColor="White" />
+                    <EditRowStyle BackColor="#2461BF" />
+                    <FooterStyle CssClass="dxrpHeader_Aqua" Font-Bold="True" ForeColor="White" />
+                    <HeaderStyle CssClass="dxrpHeader_Aqua" Font-Bold="True" 
+                        HorizontalAlign="Center" VerticalAlign="Middle" />
+                    <PagerStyle CssClass="dxrpHeader_Aqua" ForeColor="Gray" 
+                        HorizontalAlign="Center" />
+                    <RowStyle BackColor="#EFF3FB" />
+                    <SelectedRowStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" />
+                    <SortedAscendingCellStyle BackColor="#F5F7FB" />
+                    <SortedAscendingHeaderStyle BackColor="#6D95E1" />
+                    <SortedDescendingCellStyle BackColor="#E9EBEF" />
+                    <SortedDescendingHeaderStyle BackColor="#4870BE" />
+                </asp:GridView>        
