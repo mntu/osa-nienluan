@@ -55,7 +55,7 @@ namespace OnlineAuctionSystem.DAL
                 CreditCards o = (CreditCards)obj;
                 string sql="INSERT INTO CreditCards(CardNum,CardType,ExpireDate,Username) ";
                 sql += "VALUES('{0}',{1},'{2}','{3}')";
-                sql = String.Format(sql,o.CardNum,o.CardType,o.ExpireDate,o.Username);
+                sql = String.Format(sql,o.CardNum,o.CardType,o.ExpireDate.ToString("dd-MMM-yyyy"),o.Username);
                 return ExecuteNonQuery(sql);
             }
             catch { return -1; }
