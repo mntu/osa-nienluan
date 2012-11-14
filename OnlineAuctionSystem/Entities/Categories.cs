@@ -9,5 +9,6 @@ namespace OnlineAuctionSystem.Entities
     {
         public int CateId { get; set; }
         public string CateName { get; set; }
+        public float Fee { get; set; }
     }
 }

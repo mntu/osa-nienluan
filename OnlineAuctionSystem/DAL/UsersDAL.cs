@@ -99,5 +99,15 @@ namespace OnlineAuctionSystem.DAL
             }
             catch { return 0; }
         }
+        public void ChangeStatus(string username,bool online)
+        {
+            try
+            {
+                string sql = "update Users set [Online]='{0}' where Username='{1}'";
+                sql = String.Format(sql, online, username);
+                ExecuteNonQuery(sql);
+            }
+            catch { return; }
+        }
     }
 }

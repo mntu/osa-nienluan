@@ -4,11 +4,12 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-
+using OnlineAuctionSystem.DAL;
 namespace OnlineAuctionSystem.UserControl
 {
     public partial class ctrlLoginSuccess : System.Web.UI.UserControl
     {
+
         protected void Page_Load(object sender, EventArgs e)
         {
             if (Session["user"] != null)
@@ -21,8 +22,17 @@ namespace OnlineAuctionSystem.UserControl
 
         protected void btnLogout_Click(object sender, EventArgs e)
         {
-            Session["user"] = null;
-            Session["admin"] = null;
+            UsersDAL _dal = new UsersDAL();
+            if (Session["user"] != null)
+            {
+                _dal.ChangeStatus(Session["user"].ToString(), false);
+                Session["user"] = null;
+            }
+            if (Session["admin"] != null)
+            {
+                _dal.ChangeStatus(Session["admin"].ToString(), false);
+                Session["admin"] = null;
+            }
             Response.Redirect("Default.aspx");
         }
     }
