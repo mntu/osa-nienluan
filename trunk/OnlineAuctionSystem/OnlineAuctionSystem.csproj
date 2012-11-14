@@ -66,7 +66,50 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="AddCreditCard.aspx" />
+    <Content Include="Admin\AdminControl\ctrlPersonalMenu.ascx" />
+    <Content Include="Admin\ChangePassword.aspx" />
+    <Content Include="Admin\ChangeProfile.aspx" />
+    <Content Include="Admin\container.swf" />
+    <Content Include="Admin\css\style.css" />
+    <Content Include="Admin\css\style.ie6.css" />
+    <Content Include="Admin\css\style.ie7.css" />
     <Content Include="Admin\Default.aspx" />
+    <Content Include="Admin\expressInstall.swf" />
+    <Content Include="Admin\images\01.png" />
+    <Content Include="Admin\images\02.png" />
+    <Content Include="Admin\images\03.png" />
+    <Content Include="Admin\images\abc-logo.png" />
+    <Content Include="Admin\images\blockcontentbullets.png" />
+    <Content Include="Admin\images\Bottom_texture.jpg" />
+    <Content Include="Admin\images\button.png" />
+    <Content Include="Admin\images\content-header.png" />
+    <Content Include="Admin\images\Delete.png" />
+    <Content Include="Admin\images\edit.png" />
+    <Content Include="Admin\images\flash.swf" />
+    <Content Include="Admin\images\footer.png" />
+    <Content Include="Admin\images\footerbullets.png" />
+    <Content Include="Admin\images\footer_b.png" />
+    <Content Include="Admin\images\header-object.png" />
+    <Content Include="Admin\images\header.jpg" />
+    <Content Include="Admin\images\header.png" />
+    <Content Include="Admin\images\menuitem.png" />
+    <Content Include="Admin\images\nav.png" />
+    <Content Include="Admin\images\page_gl.png" />
+    <Content Include="Admin\images\postbullets.png" />
+    <Content Include="Admin\images\postquote.png" />
+    <Content Include="Admin\images\preview.jpg" />
+    <Content Include="Admin\images\rssicon.png" />
+    <Content Include="Admin\images\sheet.png" />
+    <Content Include="Admin\images\sheet_b.png" />
+    <Content Include="Admin\images\sheet_t.png" />
+    <Content Include="Admin\images\spacer.gif" />
+    <Content Include="Admin\images\subitem.png" />
+    <Content Include="Admin\images\vmenublockheader.png" />
+    <Content Include="Admin\images\vmenuitem.png" />
+    <Content Include="Admin\images\VS.png" />
+    <Content Include="Admin\js\jquery.js" />
+    <Content Include="Admin\js\script.js" />
+    <Content Include="Admin\js\swfobject.js" />
     <Content Include="ChangePassword.aspx" />
     <Content Include="ChangeProfile.aspx" />
     <Content Include="container.swf" />
@@ -138,6 +181,34 @@
     </Compile>
     <Compile Include="AddCreditCard.aspx.designer.cs">
       <DependentUpon>AddCreditCard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\AdminControl\ctrlPersonalMenu.ascx.cs">
+      <DependentUpon>ctrlPersonalMenu.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\AdminControl\ctrlPersonalMenu.ascx.designer.cs">
+      <DependentUpon>ctrlPersonalMenu.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\AdminMasterPage.Master.cs">
+      <DependentUpon>AdminMasterPage.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\AdminMasterPage.Master.designer.cs">
+      <DependentUpon>AdminMasterPage.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\ChangePassword.aspx.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\ChangePassword.aspx.designer.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\ChangeProfile.aspx.cs">
+      <DependentUpon>ChangeProfile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\ChangeProfile.aspx.designer.cs">
+      <DependentUpon>ChangeProfile.aspx</DependentUpon>
     </Compile>
     <Compile Include="Admin\Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
@@ -274,6 +345,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_Themes\Theme1\Skin1.skin" />
+    <Content Include="Admin\AdminMasterPage.Master" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

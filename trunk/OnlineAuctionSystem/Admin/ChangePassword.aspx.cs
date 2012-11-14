@@ -6,7 +6,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using OnlineAuctionSystem.DAL;
 using OnlineAuctionSystem.Entities;
-namespace OnlineAuctionSystem
+namespace OnlineAuctionSystem.Admin
 {
     public partial class ChangePassword : System.Web.UI.Page
     {
@@ -14,15 +14,13 @@ namespace OnlineAuctionSystem
         Users user;
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (Session["user"] == null) Response.Redirect("Default.aspx");
-            Master.FindControl("ctrlCategories1").Visible = false;
-            Master.FindControl("ctrlPersonalMenu1").Visible = true;
-            user = (Users)_dal.Select(Session["user"].ToString());
+            if (Session["admin"] == null) Response.Redirect("~/Default.aspx");
+            user = (Users)_dal.Select(Session["admin"].ToString());
         }
 
         protected void btnCancle_Click(object sender, EventArgs e)
         {
-            Response.Redirect("Personal.aspx");
+            Response.Redirect("./Default.aspx");
         }
 
         protected void btnUpdate_Click(object sender, EventArgs e)

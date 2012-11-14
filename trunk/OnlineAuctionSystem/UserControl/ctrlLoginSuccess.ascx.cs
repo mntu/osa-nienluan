@@ -13,6 +13,8 @@ namespace OnlineAuctionSystem.UserControl
         {
             if (Session["user"] != null)
                 lblUsername.Text = Session["user"].ToString();
+            else if (Session["admin"] != null)
+                lblUsername.Text = Session["admin"].ToString();
             else
                 lblUsername.Text = "Guest";
         }
@@ -20,6 +22,7 @@ namespace OnlineAuctionSystem.UserControl
         protected void btnLogout_Click(object sender, EventArgs e)
         {
             Session["user"] = null;
+            Session["admin"] = null;
             Response.Redirect("Default.aspx");
         }
     }
