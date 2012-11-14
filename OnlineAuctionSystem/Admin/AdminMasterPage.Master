@@ -1,0 +1,133 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="AdminMasterPage.master.cs" Inherits="OnlineAuctionSystem.Admin.AdminMasterPage" %>
+
+<%@ Register Src="../UserControl/ctrlLogin.ascx" TagName="ctrlLogin" TagPrefix="uc1" %>
+<%@ Register Src="../UserControl/ctrlLoginSuccess.ascx" TagName="ctrlLoginSuccess" TagPrefix="uc2" %>
+<%@ Register src="AdminControl/ctrlPersonalMenu.ascx" tagname="ctrlPersonalMenu" tagprefix="uc3" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"[]>
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US" xml:lang="en">
+<head>
+    <!--
+    Created by Artisteer v3.1.0.48375
+    Base template (without user's data) checked by http://validator.w3.org : "This page is valid XHTML 1.0 Transitional"
+    -->
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Admin Control Panel</title>
+    <link rel="stylesheet" href="css/style.css" type="text/css" media="screen" />
+    <!--[if IE 6]><link rel="stylesheet" href="../css/style.ie6.css" type="text/css" media="screen" /><![endif]-->
+    <!--[if IE 7]><link rel="stylesheet" href="../css/style.ie7.css" type="text/css" media="screen" /><![endif]-->
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div id="art-page-background-glare-wrapper">
+        <div id="art-page-background-glare">
+        </div>
+    </div>
+    <div id="art-main">
+        <div class="cleared reset-box">
+        </div>
+        <div class="art-box art-sheet">
+            <div class="art-box-body art-sheet-body">
+                <div class="art-header">
+                    <div class="art-headerobject">
+                    </div>
+                    <script type="text/javascript" src="js/swfobject.js"></script>
+                    <script type="text/javascript">
+                        jQuery((function (swf) {
+                            return function () {
+                                swf.switchOffAutoHideShow();
+                                swf.registerObject("art-flash-object", "9.0.0", "expressInstall.swf");
+                            }
+                        })(swfobject));
+                    </script>
+                    <div id="art-flash-area">
+                        <div id="art-flash-container">
+                            <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="1006" height="260"
+                                id="art-flash-object">
+                                <param name="movie" value="container.swf" />
+                                <param name="quality" value="high" />
+                                <param name="scale" value="default" />
+                                <param name="wmode" value="transparent" />
+                                <param name="flashvars" value="color1=0xFFFFFF&amp;alpha1=.50&amp;framerate1=12&amp;loop=true&amp;wmode=transparent&amp;clip=images/flash.swf&amp;radius=7&amp;clipx=-17&amp;clipy=0&amp;initalclipw=900&amp;initalcliph=225&amp;clipw=1040&amp;cliph=260&amp;width=1006&amp;height=260&amp;textblock_width=0&amp;textblock_align=no&amp;hasTopCorners=true&amp;hasBottomCorners=true" />
+                                <param name="swfliveconnect" value="true" />
+                                <!--[if !IE]>-->
+                                <object type="application/x-shockwave-flash" data="container.swf" width="1006" height="260">
+                                    <param name="quality" value="high" />
+                                    <param name="scale" value="default" />
+                                    <param name="wmode" value="transparent" />
+                                    <param name="flashvars" value="color1=0xFFFFFF&amp;alpha1=.50&amp;framerate1=12&amp;loop=true&amp;wmode=transparent&amp;clip=images/flash.swf&amp;radius=7&amp;clipx=-17&amp;clipy=0&amp;initalclipw=900&amp;initalcliph=225&amp;clipw=1040&amp;cliph=260&amp;width=1006&amp;height=260&amp;textblock_width=0&amp;textblock_align=no&amp;hasTopCorners=true&amp;hasBottomCorners=true" />
+                                    <param name="swfliveconnect" value="true" />
+                                    <!--<![endif]-->
+                                    <div class="art-flash-alt">
+                                        <a href="http://www.adobe.com/go/getflashplayer">
+                                            <img src="http://www.adobe.com/images/shared/download_buttons/get_flash_player.gif"
+                                                alt="Get Adobe Flash player" /></a></div>
+                                    <!--[if !IE]>-->
+                                </object>
+                                <!--<![endif]-->
+                            </object>
+                        </div>
+                    </div>
+                    <div class="art-logo1">
+                        <img src="images/abc-logo.png"></img>
+                    </div>
+                    <div class="art-logo">
+                        <h1 class="art-logo-name">
+                            <a href="#">Sàn Đấu Giá Trực Tuyến</a></h1>
+                        <h2 class="art-logo-text">
+                            Uy tín, chất lượng, giá cả hợp lý</h2>
+                    </div>
+                    <div class="art-bar art-nav">
+                        <div class="art-nav-outer">
+                            <div class="art-nav-wrapper">
+                                <div class="art-nav-inner">
+                                    <ul class="art-hmenu">
+                                        <li><a href="Default.aspx" class="active">Trang Chủ</a> </li>
+                                        <li><a href="ViewCategories.aspx">Loại Hàng</a></li>
+                                        <li><a href="ViewProducts.aspx">Sản Phẩm</a> </li>
+                                        <li><a href="ViewFeedbacks.aspx">Góp Ý</a> </li>
+                                        <li><a href="ViewUsers.aspx">Người Dùng</a> </li>
+                                    </ul>
+                                </div>
+                                <div class="login">
+                                    <uc1:ctrlLogin ID="ctrlLogin1" runat="server" />
+                                    <uc2:ctrlLoginSuccess ID="ctrlLoginSuccess1" runat="server" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="art-layout-wrapper">
+                    <div class="art-content-layout">
+                        <div class="art-content-layout-row">
+                            <div class="art-layout-cell art-sidebar1">
+                                <uc3:ctrlPersonalMenu ID="ctrlPersonalMenu1" runat="server" />
+                            </div>
+                            <div class="art-layout-cell art-content">
+                                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                                </asp:ContentPlaceHolder>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="art-footer">
+                    <div class="art-footer-body">
+                        <div class="art-footer-text">
+                            <p>
+                                <a href="#">Link1</a> | <a href="#">Link2</a> | <a href="#">Link3</a></p>
+                            <p>
+                                Copyright © 2012. All Rights Reserved.</p>
+                        </div>
+                        <div class="cleared">
+                        </div>
+                    </div>
+                </div>
+                <div class="cleared">
+                </div>
+            </div>
+        </div>
+    </div>
+    </form>
+</body>
+</html>

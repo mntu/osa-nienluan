@@ -7,11 +7,11 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace OnlineAuctionSystem.Admin
+namespace OnlineAuctionSystem.Admin.AdminControl
 {
 
 
-    public partial class Default
+    public partial class ctrlPersonalMenu
     {
     }
 }
