@@ -30,6 +30,7 @@ namespace OnlineAuctionSystem.DAL
                     Categories obj = new Categories();
                     obj.CateId = Convert.ToInt32(tmp.Rows[0]["CateId"]);
                     obj.CateName = tmp.Rows[0]["CateName"] + "";
+                    obj.Fee =Convert.ToInt32(tmp.Rows[0]["Fee"]);
                     return obj;
                 }
                 return null;
@@ -42,8 +43,8 @@ namespace OnlineAuctionSystem.DAL
             try
             {
                 Categories o = (Categories)obj;
-                string sql = "INSERT INTO Categories(CateName) VALUES(N'{0}')";
-                sql = String.Format(sql, o.CateName);
+                string sql = "INSERT INTO Categories(CateName,Fee) VALUES(N'{0}',{1})";
+                sql = String.Format(sql, o.CateName,o.Fee);
                 return ExecuteNonQuery(sql);
             }
             catch { return -1; }
@@ -54,8 +55,8 @@ namespace OnlineAuctionSystem.DAL
             try
             {
                 Categories o = (Categories)obj;
-                string sql = "UPDATE Categories SET CateName=N'{0}' WHERE CateId={0}";
-                sql = String.Format(sql, o.CateName,o.CateId);
+                string sql = "UPDATE Categories SET CateName=N'{0}',Fee={1} WHERE CateId={2}";
+                sql = String.Format(sql, o.CateName,o.Fee,o.CateId);
                 return ExecuteNonQuery(sql);
             }
             catch { return -1; }

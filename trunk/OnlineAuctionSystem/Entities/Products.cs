@@ -11,7 +11,6 @@ namespace OnlineAuctionSystem.Entities
         public string ProName { get; set; }
         public string Description { get; set; }
         public decimal StarPrice { get; set; }
-        public string ImageURL { get; set; }
         public int Amount { get; set; }
         public int Duration { get; set; }
         public DateTime DatePosted { get; set; }

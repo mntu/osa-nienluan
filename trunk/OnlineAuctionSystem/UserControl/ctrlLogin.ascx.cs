@@ -23,11 +23,13 @@ namespace OnlineAuctionSystem.UserControl
             }
             else if (_dal.CheckLogin(txtUsername.Text, txtPassword.Text) == 1)
             {
+                _dal.ChangeStatus(txtUsername.Text, true);
                 Session["admin"] = txtUsername.Text;
                 Response.Redirect("Admin/Default.aspx");
             }
             else
             {
+                _dal.ChangeStatus(txtUsername.Text, true);
                 Session["user"] = txtUsername.Text;
                 Response.Redirect(Request.RawUrl);
             }
