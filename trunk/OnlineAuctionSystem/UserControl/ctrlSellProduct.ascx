@@ -10,14 +10,12 @@
     Namespace="DevExpress.Web.ASPxUploadControl" TagPrefix="dx" %>
 <div id="divCateId" runat="server" align="center">
     <div style="width:250px;text-align:left;">Loại Sản Phẩm - Mức phí<br />
-    <asp:ListBox ID="listCate" runat="server" 
-        onselectedindexchanged="listCate_SelectedIndexChanged" Rows="10" Width="250px" 
-            AutoPostBack="True">
+    <asp:ListBox ID="listCate" runat="server" Rows="10" Width="250px">
     </asp:ListBox>
-    <dx:ASPxButton ID="btnNext" runat="server" CssFilePath="~/App_Themes/Aqua/{0}/styles.css"
+    <div align="center"><dx:ASPxButton ID="btnNext" runat="server" CssFilePath="~/App_Themes/Aqua/{0}/styles.css"
         CssPostfix="Aqua" OnClick="btnNext_Click" SpriteCssFilePath="~/App_Themes/Aqua/{0}/sprite.css"
         Text="Tiếp Tục" Width="100px">
-    </dx:ASPxButton>
+    </dx:ASPxButton></div>
     </div>
 </div>
 <div id="divProduct" runat="server" align="left">
@@ -102,18 +100,24 @@
                 Hình ảnh(*):
             </td>
             <td colspan="2">
-                <dx:ASPxUploadControl ID="uploadImage" runat="server" CssFilePath="~/App_Themes/Aqua/{0}/styles.css"
-                    CssPostfix="Aqua" ShowUploadButton="True" FileInputCount="5" 
-                    ShowProgressPanel="True" onfileuploadcomplete="uploadImage_FileUploadComplete">
-                    <ValidationSettings AllowedFileExtensions=".jpg, .jpeg, .jpe, .gif" GeneralErrorText="Lỗi upload thất bại"
-                        MaxFileSize="2097152" MaxFileSizeErrorText="Kích thước ảnh quá lớn" NotAllowedFileExtensionErrorText="Phần mở rộng không hợp lệ">
-                    </ValidationSettings>
-                </dx:ASPxUploadControl>
-                <dx:ASPxLabel ID="lblAllowebMimeType" runat="server" Text="Loại ảnh: jpeg, gif">
+                <asp:FileUpload ID="FileUpload1" runat="server" />
+                <br />
+                <asp:FileUpload ID="FileUpload2" runat="server" />
+                <br />
+                <asp:FileUpload ID="FileUpload3" runat="server" />
+                <br />
+                <asp:FileUpload ID="FileUpload4" runat="server" />
+                <br />
+                <asp:FileUpload ID="FileUpload5" runat="server" />
+                <br />
+                <dx:ASPxLabel ID="lblAllowebMimeType" runat="server" 
+                    Text="Loại ảnh: jpg,jpe,jpeg">
                 </dx:ASPxLabel>
                 <br />
-                <dx:ASPxLabel ID="lblMaxFileSize" runat="server" Text="Kích thước tối đa: 2Mb">
+                <dx:ASPxLabel ID="lblMaxFileSize" runat="server" Text="Kích thước tối đa: 1Mb">
                 </dx:ASPxLabel>
+                <br />
+                <asp:Label ID="lblImage" runat="server" ForeColor="Red"></asp:Label>
             </td>
             <td>
                 &nbsp;
@@ -169,9 +173,9 @@
             <td colspan="2">
                 <dx:ASPxComboBox ID="cmbDuration" runat="server" CssFilePath="~/App_Themes/Aqua/{0}/styles.css"
                     CssPostfix="Aqua" LoadingPanelImagePosition="Top" ShowShadow="False" SpriteCssFilePath="~/App_Themes/Aqua/{0}/sprite.css"
-                    ValueType="System.String" Width="200px">
+                    ValueType="System.String" Width="200px" SelectedIndex="0">
                     <Items>
-                        <dx:ListEditItem Text="1 ngày" Value="1" />
+                        <dx:ListEditItem Text="1 ngày" Value="1" Selected="True" />
                         <dx:ListEditItem Text="3 ngày" Value="3" />
                         <dx:ListEditItem Text="5 ngày" Value="5" />
                         <dx:ListEditItem Text="7 ngày" Value="7" />
