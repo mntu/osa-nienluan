@@ -20,18 +20,18 @@ namespace OnlineAuctionSystem.UserControl
         string UploadDirectory = "~/ProductImg";
         protected void Page_Load(object sender, EventArgs e)
         {
-            divCateId.Visible = true;
-            divProduct.Visible = false;
             if (!IsPostBack)
             {
+                divCateId.Visible = true;
+                divProduct.Visible = false;
                 DataTable tmp = _dalCate.Select();
-                if(tmp!=null&& tmp.Rows.Count>0)
+                if (tmp != null && tmp.Rows.Count > 0)
                 {
-                    for(int i=0;i<tmp.Rows.Count;i++)
+                    for (int i = 0; i < tmp.Rows.Count; i++)
                     {
-                        ListItem item=new ListItem();
-                        item.Text= tmp.Rows[i]["CateName"].ToString()+" - "+tmp.Rows[i]["Fee"]+"%";
-                        item.Value=tmp.Rows[i]["CateID"]+"";
+                        ListItem item = new ListItem();
+                        item.Text = tmp.Rows[i]["CateName"].ToString() + " - " + tmp.Rows[i]["Fee"] + "%";
+                        item.Value = tmp.Rows[i]["CateID"] + "";
                         listCate.Items.Add(item);
                         listCate.SelectedIndex = 0;
                     }
@@ -44,6 +44,7 @@ namespace OnlineAuctionSystem.UserControl
         {
             divCateId.Visible = false;
             divProduct.Visible = true;
+            lblCateName.Text = listCate.SelectedItem.Text.Split('-')[0];
         }
 
         protected void btnBack_Click(object sender, EventArgs e)
@@ -51,52 +52,98 @@ namespace OnlineAuctionSystem.UserControl
             divCateId.Visible = true;
             divProduct.Visible = false;
         }
-        protected void uploadImage_FileUploadComplete(object sender, DevExpress.Web.ASPxUploadControl.FileUploadCompleteEventArgs e)
+
+        protected bool CheckImage()
         {
-            try
+            if (FileUpload1.FileName != "")
             {
-                e.CallbackData = SavePostedFiles(e.UploadedFile);
+                if (!(FileUpload1.FileName.EndsWith(".jpg") || FileUpload1.FileName.EndsWith(".jpeg") || FileUpload1.FileName.EndsWith(".jpe")))
+                {
+                    lblImage.Text = "Tập tin ảnh thứ 1 không hợp lệ!";
+                    return false;
+                }
             }
-            catch (Exception ex)
+            if (FileUpload2.FileName != "")
             {
-                e.IsValid = false;
-                e.ErrorText = ex.Message;
+                if (!(FileUpload2.FileName.EndsWith(".jpg") || FileUpload2.FileName.EndsWith(".jpeg") || FileUpload2.FileName.EndsWith(".jpe")))
+                {
+                    lblImage.Text = "Tập tin ảnh thứ 2 không hợp lệ!";
+                    return false;
+                }
             }
+            if (FileUpload3.FileName != "")
+            {
+                if (!(FileUpload3.FileName.EndsWith(".jpg") || FileUpload3.FileName.EndsWith(".jpeg") || FileUpload3.FileName.EndsWith(".jpe")))
+                {
+                    lblImage.Text = "Tập tin ảnh thứ 3 không hợp lệ!";
+                    return false;
+                }
+            }
+            if (FileUpload4.FileName != "")
+            {
+                if (!(FileUpload4.FileName.EndsWith(".jpg") || FileUpload4.FileName.EndsWith(".jpeg") || FileUpload4.FileName.EndsWith(".jpe")))
+                {
+                    lblImage.Text = "Tập tin ảnh thứ 4 không hợp lệ!";
+                    return false;
+                }
+            }
+            if (FileUpload5.FileName != "")
+            {
+                if (!(FileUpload5.FileName.EndsWith(".jpg") || FileUpload5.FileName.EndsWith(".jpeg") || FileUpload5.FileName.EndsWith(".jpe")))
+                {
+                    lblImage.Text = "Tập tin ảnh thứ 5 không hợp lệ!";
+                    return false;
+                }
+            }
+            else if (FileUpload1.FileContent.Length > (1024 * 1024)
+                || FileUpload2.FileContent.Length > (1024 * 1024)
+                || FileUpload3.FileContent.Length > (1024 * 1024)
+                || FileUpload4.FileContent.Length > (1024 * 1024)
+                || FileUpload5.FileContent.Length > (1024 * 1024))
+            {
+                lblImage.Text = "Kích thước tập tin lớn hơn 1MB";
+                return false;
+            }
+            return true;
         }
-        string SavePostedFiles(UploadedFile uploadedFile)
+        protected void UploadImages()
         {
-            UploadDirectory += "/" + Session["user"].ToString() + "/" + _dalPro.NewProId() + "/";
-            if (!uploadedFile.IsValid)
-                return string.Empty;
-
-            FileInfo fileInfo = new FileInfo(uploadedFile.FileName);
-            string resFileName = MapPath(UploadDirectory) + fileInfo.Name;
-            uploadedFile.SaveAs(resFileName);
-
-            string fileLabel = fileInfo.Name;
-            string fileLength = uploadedFile.ContentLength / 1024 + "K";
-            return string.Format("{0} ({1})|{2}", fileLabel, fileLength, fileInfo.Name);
+            string path = MapPath(@"..\ProductImg") + @"\" + Session["user"].ToString() + @"\" + _dalPro.NewProId();
+            if (!Directory.Exists(path))
+            {
+                Directory.CreateDirectory(path);
+            }
+            if (FileUpload1.FileName != "")
+                FileUpload1.SaveAs(path + @"\" + FileUpload1.FileName);
+            if (FileUpload2.FileName != "")
+                FileUpload2.SaveAs(path + @"\" + FileUpload2.FileName);
+            if (FileUpload3.FileName != "")
+                FileUpload3.SaveAs(path + @"\" + FileUpload3.FileName);
+            if (FileUpload4.FileName != "")
+                FileUpload4.SaveAs(path + @"\" + FileUpload4.FileName);
+            if (FileUpload5.FileName != "")
+                FileUpload5.SaveAs(path + @"\" + FileUpload5.FileName);
         }
-
         protected void btnCreate_Click(object sender, EventArgs e)
         {
-            Products obj = new Products();
-            obj.ProName = txtProName.Text;
-            obj.Description = txtDescription.Html;
-            obj.StarPrice = Convert.ToDecimal(txtStartPrice.Text);
-            obj.Amount = Convert.ToInt32(txtAmount.Text);
-            obj.NumView = 1;
-            obj.Duration = (int)cmbDuration.SelectedItem.Value;
-            obj.Status = true;
-            obj.CateId = cateId;
-            obj.Username = Session["user"].ToString();
-            if (_dalPro.Insert(obj) > 0) Response.Redirect("YourProduct.aspx");
-        }
-
-        protected void listCate_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            cateId = Convert.ToInt32(listCate.SelectedItem.Value);
-            lblCateName.Text = listCate.SelectedItem.Text.Split('-')[0];
+            if (CheckImage())
+            {
+                Products obj = new Products();
+                obj.ProName = txtProName.Text;
+                obj.Description = txtDescription.Html;
+                obj.StarPrice = Convert.ToDecimal(txtStartPrice.Text);
+                obj.Amount = Convert.ToInt32(txtAmount.Text);
+                obj.NumView = 1;
+                obj.Duration = Convert.ToInt32(cmbDuration.SelectedItem.Value);
+                obj.Status = true;
+                obj.CateId = Convert.ToInt32(listCate.Items[listCate.SelectedIndex].Value);
+                obj.Username = Session["user"].ToString();
+                if (_dalPro.Insert(obj) > 0)
+                {
+                    UploadImages();
+                    Response.Redirect("YourProduct.aspx");
+                }
+            }
         }
     }
 }
