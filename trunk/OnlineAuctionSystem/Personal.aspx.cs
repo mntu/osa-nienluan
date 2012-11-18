@@ -16,7 +16,6 @@ namespace OnlineAuctionSystem
         UsersDAL _dalUser = new UsersDAL();
         ProductsDAL _dalPro = new ProductsDAL();
         ListingsDAL _dalList = new ListingsDAL();
-        DataTable tmp;
         protected void Page_Load(object sender, EventArgs e)
         {
             Master.FindControl("ctrlCategories1").Visible = false;

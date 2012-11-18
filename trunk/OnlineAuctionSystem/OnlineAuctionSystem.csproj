@@ -114,7 +114,6 @@
     <Content Include="ChangeProfile.aspx" />
     <Content Include="container.swf" />
     <Content Include="CreditCard.aspx" />
-    <Content Include="Default.aspx" />
     <Content Include="expressInstall.swf" />
     <Content Include="Feedback.aspx" />
     <Content Include="Global.asax" />
@@ -155,6 +154,7 @@
     <Content Include="Login.aspx" />
     <Content Include="PasswordRecover.aspx" />
     <Content Include="Personal.aspx" />
+    <Content Include="ProductImg\NoImage.jpg" />
     <Content Include="Register.aspx" />
     <Content Include="SellProduct.aspx" />
     <Content Include="Sql\osa.sql" />
@@ -167,6 +167,8 @@
     <Content Include="UserControl\ctrlLoginSuccess.ascx" />
     <Content Include="UserControl\ctrlPersonalMenu.ascx" />
     <Content Include="UserControl\ctrlSellProduct.ascx" />
+    <Content Include="UserControl\ctrlViewProducts.ascx" />
+    <Content Include="Default.aspx" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -259,13 +261,6 @@
     <Compile Include="Entities\Products.cs" />
     <Compile Include="Entities\Roles.cs" />
     <Compile Include="Entities\Users.cs" />
-    <Compile Include="Default.aspx.cs">
-      <DependentUpon>Default.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Default.aspx.designer.cs">
-      <DependentUpon>Default.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Feedback.aspx.cs">
       <DependentUpon>Feedback.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -352,12 +347,26 @@
     <Compile Include="UserControl\ctrlSellProduct.ascx.designer.cs">
       <DependentUpon>ctrlSellProduct.ascx</DependentUpon>
     </Compile>
+    <Compile Include="UserControl\ctrlViewProducts.ascx.cs">
+      <DependentUpon>ctrlViewProducts.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\ctrlViewProducts.ascx.designer.cs">
+      <DependentUpon>ctrlViewProducts.ascx</DependentUpon>
+    </Compile>
     <Compile Include="UserMasterPage.Master.cs">
       <DependentUpon>UserMasterPage.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="UserMasterPage.Master.designer.cs">
       <DependentUpon>UserMasterPage.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
