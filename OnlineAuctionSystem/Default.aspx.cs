@@ -4,10 +4,12 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-
+using System.Data;
+using OnlineAuctionSystem.DAL;
+using OnlineAuctionSystem.UserControl;
 namespace OnlineAuctionSystem
 {
-    public partial class Default : System.Web.UI.Page
+    public partial class ViewProducts : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
