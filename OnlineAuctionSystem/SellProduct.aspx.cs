@@ -13,7 +13,7 @@ namespace OnlineAuctionSystem
         {
             Master.FindControl("ctrlCategories1").Visible = false;
             Master.FindControl("ctrlPersonalMenu1").Visible = true;
-            if (Session["user"] == null) Response.Redirect("Default.aspx");
+            if (Session["user"] == null) Response.Redirect("Login.aspx");
         }
     }
 }
