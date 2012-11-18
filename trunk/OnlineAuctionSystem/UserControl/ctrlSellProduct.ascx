@@ -97,21 +97,22 @@
         </tr>
         <tr>
             <td>
-                Hình ảnh(*):
+                Hình ảnh(*):<br />
+                <i>(Lưu ý: ảnh 1 là ảnh chính)</i>
             </td>
             <td colspan="2">
-                <asp:FileUpload ID="FileUpload1" runat="server" />
+                1.<asp:FileUpload ID="FileUpload1" runat="server" /> 
                 <br />
-                <asp:FileUpload ID="FileUpload2" runat="server" />
+                2.<asp:FileUpload ID="FileUpload2" runat="server" />
                 <br />
-                <asp:FileUpload ID="FileUpload3" runat="server" />
+                3.<asp:FileUpload ID="FileUpload3" runat="server" />
                 <br />
-                <asp:FileUpload ID="FileUpload4" runat="server" />
+                4.<asp:FileUpload ID="FileUpload4" runat="server" />
                 <br />
-                <asp:FileUpload ID="FileUpload5" runat="server" />
+                5.<asp:FileUpload ID="FileUpload5" runat="server" />
                 <br />
                 <dx:ASPxLabel ID="lblAllowebMimeType" runat="server" 
-                    Text="Loại ảnh: jpg,jpe,jpeg">
+                    Text="Loại ảnh: .jpg, .jpe, .jpeg">
                 </dx:ASPxLabel>
                 <br />
                 <dx:ASPxLabel ID="lblMaxFileSize" runat="server" Text="Kích thước tối đa: 1Mb">

@@ -16,8 +16,6 @@ namespace OnlineAuctionSystem.UserControl
     {
         CategoriesDAL _dalCate = new CategoriesDAL();
         ProductsDAL _dalPro = new ProductsDAL();
-        int cateId;
-        string UploadDirectory = "~/ProductImg";
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
@@ -55,6 +53,11 @@ namespace OnlineAuctionSystem.UserControl
 
         protected bool CheckImage()
         {
+            if (FileUpload1.FileName == "")
+            {
+                lblImage.Text = "Bạn phải upload 1 ảnh cho sản phẩm!";
+                return false;
+            }
             if (FileUpload1.FileName != "")
             {
                 if (!(FileUpload1.FileName.EndsWith(".jpg") || FileUpload1.FileName.EndsWith(".jpeg") || FileUpload1.FileName.EndsWith(".jpe")))
@@ -114,15 +117,15 @@ namespace OnlineAuctionSystem.UserControl
                 Directory.CreateDirectory(path);
             }
             if (FileUpload1.FileName != "")
-                FileUpload1.SaveAs(path + @"\" + FileUpload1.FileName);
+                FileUpload1.SaveAs(path + @"\" + "1.jpg");
             if (FileUpload2.FileName != "")
-                FileUpload2.SaveAs(path + @"\" + FileUpload2.FileName);
+                FileUpload2.SaveAs(path + @"\" + "2.jpg");
             if (FileUpload3.FileName != "")
-                FileUpload3.SaveAs(path + @"\" + FileUpload3.FileName);
+                FileUpload3.SaveAs(path + @"\" + "3.jpg");
             if (FileUpload4.FileName != "")
-                FileUpload4.SaveAs(path + @"\" + FileUpload4.FileName);
+                FileUpload4.SaveAs(path + @"\" + "4.jpg");
             if (FileUpload5.FileName != "")
-                FileUpload5.SaveAs(path + @"\" + FileUpload5.FileName);
+                FileUpload5.SaveAs(path + @"\" + "5.jpg");
         }
         protected void btnCreate_Click(object sender, EventArgs e)
         {
