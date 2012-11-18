@@ -107,10 +107,23 @@ namespace OnlineAuctionSystem.DAL
                 DataTable tmp = ExecuteQuery(sql);
                 string value=tmp.Rows[0][0].ToString();
                 if (value=="") return 1;
-                if (tmp != null && tmp.Rows.Count > 0) return Convert.ToInt32(tmp.Rows[0][0]) + 1;
+                if (tmp != null && tmp.Rows.Count > 0) return Convert.ToInt32(tmp.Rows[0][0]);
                 else return 0;
             }
             catch { return -1; }
+        }
+        public DateTime GetStartTime()
+        {
+            string sql = "select getdate()";
+            DataTable tmp = ExecuteQuery(sql);
+            return Convert.ToDateTime(tmp.Rows[0][0]);
+        }
+        public DateTime GetEndTime(int proId)
+        {
+            string sql = "select DatePosted,Duration from Products where ProId={0}";
+            sql = String.Format(sql, proId);
+            DataTable tmp = ExecuteQuery(sql);
+            return Convert.ToDateTime(tmp.Rows[0][0]).AddDays(Convert.ToDouble(tmp.Rows[0][1]));
         }
     }
 }

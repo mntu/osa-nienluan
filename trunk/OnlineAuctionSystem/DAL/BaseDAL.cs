@@ -4,7 +4,6 @@ using System.Linq;
 using System.Web;
 using System.Data.SqlClient;
 using System.Data;
-using System.Web;
 using System.Web.Configuration;
 namespace OnlineAuctionSystem.DAL
 {
