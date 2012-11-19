@@ -7,10 +7,10 @@
     lblProName.Text = proName;
     lblPrice.Text = price;
 %>
-<div style="float: left; width: 160px; margin: 5px; padding: 5px; border: 0.5px dashed #99CCFF;
+<div style="float: left; width: 170px; margin: 2px; padding: 5px; border: 0.5px dashed #99CCFF;
     display: block; text-align: center;">
     <div style="width: 100%; margin-bottom: 5px;">
-        <dx:ASPxLabel ID="lblProName" runat="server" Font-Bold="True" Font-Size="11pt" Width="190px"
+        <dx:ASPxLabel ID="lblProName" runat="server" Font-Bold="True" Font-Size="14px" Width="150px"
             Text="" Wrap="True">
         </dx:ASPxLabel>
     </div>
@@ -21,7 +21,7 @@
     <div id="<%=proId %>" style="width: 100%; margin-bottom: 5px;">
     </div>
     <div id="Div<%=proId %>" style="text-align:center">
-    <a href="ProductDetail.aspx?ProId=<%=proId %>"><button type="button">Đấu Giá</button></a>
+    <a href="ProductDetails.aspx?ProId=<%=proId %>"><button type="button">Đấu Giá</button></a>
     </div>
     <div id="timeOut<%=proId %>" style="color:red;font-weight:bold;">
     Đã Hết Giờ Đấu Giá
