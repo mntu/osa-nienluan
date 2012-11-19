@@ -114,6 +114,7 @@
     <Content Include="ChangeProfile.aspx" />
     <Content Include="container.swf" />
     <Content Include="CreditCard.aspx" />
+    <Content Include="css\jquery.ad-gallery.css" />
     <Content Include="expressInstall.swf" />
     <Content Include="Feedback.aspx" />
     <Content Include="Global.asax" />
@@ -121,6 +122,10 @@
     <Content Include="images\02.png" />
     <Content Include="images\03.png" />
     <Content Include="images\abc-logo.png" />
+    <Content Include="images\ad_next.png" />
+    <Content Include="images\ad_prev.png" />
+    <Content Include="images\ad_scroll_back.png" />
+    <Content Include="images\ad_scroll_forward.png" />
     <Content Include="images\blockcontentbullets.png" />
     <Content Include="images\Bottom_texture.jpg" />
     <Content Include="images\button.png" />
@@ -136,6 +141,7 @@
     <Content Include="images\header.png" />
     <Content Include="images\menuitem.png" />
     <Content Include="images\nav.png" />
+    <Content Include="images\opa75.png" />
     <Content Include="images\page_gl.png" />
     <Content Include="images\postbullets.png" />
     <Content Include="images\postquote.png" />
@@ -149,11 +155,14 @@
     <Content Include="images\vmenublockheader.png" />
     <Content Include="images\vmenuitem.png" />
     <Content Include="images\VS.png" />
+    <Content Include="js\jquery.ad-gallery.js" />
     <Content Include="js\jquery.js" />
+    <Content Include="js\jquery.min.js" />
     <Content Include="js\script.js" />
     <Content Include="Login.aspx" />
     <Content Include="PasswordRecover.aspx" />
     <Content Include="Personal.aspx" />
+    <Content Include="ProductDetails.aspx" />
     <Content Include="ProductImg\NoImage.jpg" />
     <Content Include="Register.aspx" />
     <Content Include="SellProduct.aspx" />
@@ -163,6 +172,7 @@
     <Content Include="css\style.ie7.css" />
     <Content Include="js\swfobject.js" />
     <Content Include="UserControl\ctrlCategories.ascx" />
+    <Content Include="UserControl\ctrlGallery.ascx" />
     <Content Include="UserControl\ctrlLogin.ascx" />
     <Content Include="UserControl\ctrlLoginSuccess.ascx" />
     <Content Include="UserControl\ctrlPersonalMenu.ascx" />
@@ -292,6 +302,13 @@
     <Compile Include="Personal.aspx.designer.cs">
       <DependentUpon>Personal.aspx</DependentUpon>
     </Compile>
+    <Compile Include="ProductDetails.aspx.cs">
+      <DependentUpon>ProductDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ProductDetails.aspx.designer.cs">
+      <DependentUpon>ProductDetails.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -318,6 +335,13 @@
     </Compile>
     <Compile Include="UserControl\ctrlCategories.ascx.designer.cs">
       <DependentUpon>ctrlCategories.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\ctrlGallery.ascx.cs">
+      <DependentUpon>ctrlGallery.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\ctrlGallery.ascx.designer.cs">
+      <DependentUpon>ctrlGallery.ascx</DependentUpon>
     </Compile>
     <Compile Include="UserControl\ctrlLogin.ascx.cs">
       <DependentUpon>ctrlLogin.ascx</DependentUpon>

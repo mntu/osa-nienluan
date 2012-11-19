@@ -55,7 +55,7 @@ namespace OnlineAuctionSystem.UserControl
         {
             if (FileUpload1.FileName == "")
             {
-                lblImage.Text = "Bạn phải upload 1 ảnh cho sản phẩm!";
+                lblImage.Text = "Bạn phải upload ảnh chính (ảnh 1) cho sản phẩm!";
                 return false;
             }
             if (FileUpload1.FileName != "")

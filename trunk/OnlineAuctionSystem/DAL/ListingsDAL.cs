@@ -40,7 +40,16 @@ namespace OnlineAuctionSystem.DAL
             }
             catch { return null; }
         }
-
+        public DataTable GetMaxPrice(int proid)
+        {
+            try
+            {
+                string sql = "select Max(CurrentPrice) from Listings where ProId={0}";
+                sql = String.Format(sql, proid);
+                return ExecuteQuery(sql);
+            }
+            catch { return null; }
+        }
         public int Insert(object obj)
         {
             try

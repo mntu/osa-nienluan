@@ -4,7 +4,7 @@
 <%@ Register Src="UserControl/ctrlLogin.ascx" TagName="ctrlLogin" TagPrefix="uc1" %>
 <%@ Register Src="UserControl/ctrlLoginSuccess.ascx" TagName="ctrlLoginSuccess" TagPrefix="uc2" %>
 <%@ Register Src="UserControl/ctrlCategories.ascx" TagName="ctrlCategories" TagPrefix="uc3" %>
-<%@ Register src="UserControl/ctrlPersonalMenu.ascx" tagname="ctrlPersonalMenu" tagprefix="uc4" %>
+<%@ Register Src="UserControl/ctrlPersonalMenu.ascx" TagName="ctrlPersonalMenu" TagPrefix="uc4" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"[]>
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US" xml:lang="en">
 <head>
@@ -19,6 +19,9 @@
     <!--[if IE 7]><link rel="stylesheet" href="css/style.ie7.css" type="text/css" media="screen" /><![endif]-->
     <script type="text/javascript" src="js/jquery.js"></script>
     <script type="text/javascript" src="js/script.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/jquery.ad-gallery.css">
+  <script type="text/javascript" src="js/jquery.min.js"></script>
+  <script type="text/javascript" src="js/jquery.ad-gallery.js"></script>
 </head>
 <body>
     <form id="form1" runat="server">
