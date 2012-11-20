@@ -22,15 +22,6 @@ namespace OnlineAuctionSystem {
         protected global::DevExpress.Web.ASPxRoundPanel.ASPxRoundPanel panel;
         
         /// <summary>
-        /// lblTimeOut control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblTimeOut;
-        
-        /// <summary>
         /// lblCurrentPrice control.
         /// </summary>
         /// <remarks>

@@ -13,12 +13,12 @@
                 ctrlViewProducts1.proName = tmp.Rows[i]["ProName"] + "";
                 string str = Convert.ToInt64(tmp.Rows[i]["StartPrice"]) + "";
                 string price = "";
-                for(int j=0;j<str.Length;j++)
+                for(int j=str.Length-1,k=0;j>=0;j--,k++)
                 {
-                    if(j%3==0)
-                        price += str[j] + " ";
+                    if(k%3==0&&k>0)
+                        price = str[j] + "." +price;
                     else
-                        price += str[j] + "";
+                        price = str[j] + price;
                 }
                 price += " VNĐ";
                 ctrlViewProducts1.price = price;

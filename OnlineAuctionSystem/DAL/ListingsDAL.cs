@@ -40,15 +40,18 @@ namespace OnlineAuctionSystem.DAL
             }
             catch { return null; }
         }
-        public DataTable GetMaxPrice(int proid)
+        public decimal GetMaxPrice(int proid)
         {
             try
             {
                 string sql = "select Max(CurrentPrice) from Listings where ProId={0}";
                 sql = String.Format(sql, proid);
-                return ExecuteQuery(sql);
+                DataTable tmp = ExecuteQuery(sql);
+                string value = tmp.Rows[0][0].ToString();
+                if (value == "") return 0;
+                else return Convert.ToDecimal(tmp.Rows[0][0]);
             }
-            catch { return null; }
+            catch { return 0; }
         }
         public int Insert(object obj)
         {
@@ -56,7 +59,7 @@ namespace OnlineAuctionSystem.DAL
             {
                 Listings o = (Listings)obj;
                 string sql = "INSERT INTO Listings(ProId,Username,TimePosted,CurrentPrice,[Status]) ";
-                sql += "VALUES({0},'{1}',DEFAULT,{2},{3})";
+                sql += "VALUES({0},'{1}',DEFAULT,{2},0)";
                 sql=String.Format(sql,o.ProId,o.Username,o.CurrentPrice,o.Status);
                 return ExecuteNonQuery(sql);
             }

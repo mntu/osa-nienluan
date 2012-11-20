@@ -16,7 +16,9 @@ namespace OnlineAuctionSystem.DAL
 
         public DataTable Select()
         {
-            return ExecuteQuery("select * from Products");
+            UpdateStatus();
+            UpdateListing();
+            return ExecuteQuery("select * from Products where Status=1");
         }
         public DataTable SelectByUsername(string username)
         {
@@ -77,7 +79,18 @@ namespace OnlineAuctionSystem.DAL
             }
             catch { return -1; }
         }
-
+        public int UpdateNumView(object obj)
+        {
+            try
+            {
+                Products o = (Products)obj;
+                string sql = "UPDATE Products SET NumView={0} ";
+                sql += "WHERE ProId={1}";
+                sql = String.Format(sql,o.NumView, o.ProId);
+                return ExecuteNonQuery(sql);
+            }
+            catch { return -1; }
+        }
         public int Delete(int id)
         {
             try
@@ -124,6 +137,38 @@ namespace OnlineAuctionSystem.DAL
             sql = String.Format(sql, proId);
             DataTable tmp = ExecuteQuery(sql);
             return Convert.ToDateTime(tmp.Rows[0][0]).AddDays(Convert.ToDouble(tmp.Rows[0][1]));
+        }
+
+        public void UpdateStatus()
+        {
+            string sql = "update Products set Status=0 where Status=1 and datediff(ss,GETDATE(),dateadd(dd,Duration,DatePosted))<=0";
+            ExecuteNonQuery(sql);
+        }
+
+        public void UpdateListing()
+        {
+            string sql = "select ProId from Products where Status=0";
+            DataTable tmp = ExecuteQuery(sql);
+            if (tmp != null && tmp.Rows.Count > 0)
+            {
+                ListingsDAL _dal = new ListingsDAL();
+                for (int i = 0; i < tmp.Rows.Count; i++)
+                {
+                    int proId = Convert.ToInt32(tmp.Rows[i]["ProId"]);
+                    decimal maxPrice = _dal.GetMaxPrice(proId);
+                    sql = "select Username,TimePosted from Listings where ProId={0} and CurrentPrice={1} Order By TimePosted asc";
+                    sql = String.Format(sql, proId, maxPrice);
+                    DataTable tmp1 = ExecuteQuery(sql);
+                    if (tmp1 != null && tmp1.Rows.Count > 0)
+                    {
+                        string username = tmp1.Rows[0]["Username"] + "";
+                        string timePosted = tmp1.Rows[0]["TimePosted"] + "";
+                        sql = "update Listings set [Status]=1 where ProId={0} and Username='{1}' and TimePosted='{2}'";
+                        sql = String.Format(sql, proId, username, timePosted);
+                        ExecuteNonQuery(sql);
+                    }
+                }
+            }
         }
     }
 }
