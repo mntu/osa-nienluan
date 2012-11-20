@@ -14,6 +14,8 @@ namespace OnlineAuctionSystem
         ProductsDAL _dal = new ProductsDAL();
         ListingsDAL _dalList = new ListingsDAL();
         Products product = new Products();
+        public double seconds;
+        decimal currentPrice;
         protected void Page_Load(object sender, EventArgs e)
         {
             Master.FindControl("ctrlCategories1").Visible = false;
@@ -34,7 +36,7 @@ namespace OnlineAuctionSystem
             }
 
             product.NumView += 1;
-            _dal.Update(product);
+            _dal.UpdateNumView(product);
 
             lblProId.Text = product.ProId + "";
             lblProName.Text = product.ProName;
@@ -45,31 +47,53 @@ namespace OnlineAuctionSystem
             lblUsername.Text = (Session["user"].ToString()==product.Username) ? "chính bạn" : product.Username;
             lblDescription.Text = product.Description;
 
-            this.ctrlGallery1.CheckImageUrl = MapPath("ProductImg") + @"\" + Session["user"].ToString() + @"\" + product.ProId;
-            this.ctrlGallery1.ImageUrl = Session["user"].ToString() + "/" + product.ProId + "/";
+            this.ctrlGallery1.CheckImageUrl = MapPath("ProductImg") + @"\" + product.Username + @"\" + product.ProId;
+            this.ctrlGallery1.ImageUrl = product.Username + "/" + product.ProId + "/";
 
-            DataTable tmp = _dalList.GetMaxPrice(product.ProId);
-            string value = tmp.Rows[0][0].ToString();
-            if (value == "") lblCurrentPrice.Text=lblStartPrice.Text;
-            else lblCurrentPrice.Text = ConvertPrice(Convert.ToDecimal(tmp.Rows[0][0]));
+            seconds = (_dal.GetEndTime(product.ProId) - _dal.GetStartTime()).TotalSeconds;
+            currentPrice = _dalList.GetMaxPrice(product.ProId);
+            if (currentPrice == 0)
+            {
+                currentPrice = product.StarPrice;
+                lblCurrentPrice.Text = lblStartPrice.Text;
+            }
+            lblCurrentPrice.Text = ConvertPrice(currentPrice);
         }
-        protected string ConvertPrice(Decimal price)
+        protected string ConvertPrice(decimal price)
         {
             string str = Convert.ToInt64(price).ToString();
             string res="";
-            for (int i = 0; i < str.Length; i++)
+            for (int i = str.Length-1,j=0; i >= 0; i--,j++)
             {
-                if (i % 3 == 0)
-                    res += str[i] + " ";
+                if (j % 3 == 0 && j>0)
+                    res = str[i]+"." + res;
                 else
-                    res += str[i];
+                    res = str[i]+res;
             }
             res += " VNĐ";
             return res;
         }
         protected void btnSubmit_Click(object sender, EventArgs e)
         {
-
+            decimal newPrice=Convert.ToDecimal(txtNewPrice.Text);
+            if (newPrice <= currentPrice)
+            {
+                lblError.Visible = true;
+                lblError.Text = "Giá của bạn phải lớn hơn giá hiện tại!";
+                txtNewPrice.Focus();
+            }
+            else
+            {
+                lblError.Visible = false;
+                Listings listing = new Listings();
+                listing.ProId = product.ProId;
+                listing.Username = Session["user"].ToString();
+                listing.CurrentPrice = newPrice;
+                if (_dalList.Insert(listing) > 0)
+                {
+                    Response.Redirect(Request.RawUrl);
+                }
+            }
         }
     }
 }
