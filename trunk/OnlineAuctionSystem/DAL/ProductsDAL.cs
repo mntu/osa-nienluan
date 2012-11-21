@@ -20,9 +20,17 @@ namespace OnlineAuctionSystem.DAL
             UpdateListing();
             return ExecuteQuery("select * from Products where Status=1");
         }
+        public DataTable SelectByCate(int cateId)
+        {
+            UpdateStatus();
+            UpdateListing();
+            string sql = "select * from Products where CateId={0} and Status=1";
+            sql = String.Format(sql, cateId);
+            return ExecuteQuery(sql);
+        }
         public DataTable SelectByUsername(string username)
         {
-            string sql = "select * from Products where Username='{0}'";
+            string sql = "select *,(CASE [Status] WHEN 1 THEN N'Đang Đấu Giá' ELSE N'Đã Kết Thúc' END) as [Status1] from Products where Username='{0}'";
             sql = String.Format(sql,username);
             return ExecuteQuery(sql);
         }
