@@ -131,6 +131,7 @@
     <Content Include="images\button.png" />
     <Content Include="images\content-header.png" />
     <Content Include="images\Delete.png" />
+    <Content Include="images\Details.png" />
     <Content Include="images\edit.png" />
     <Content Include="images\flash.swf" />
     <Content Include="images\footer.png" />
@@ -179,6 +180,7 @@
     <Content Include="UserControl\ctrlSellProduct.ascx" />
     <Content Include="UserControl\ctrlViewProducts.ascx" />
     <Content Include="Default.aspx" />
+    <Content Include="UserControl\ctrlYourProduct.ascx" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -188,6 +190,7 @@
     <Content Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
+    <Content Include="YourProduct.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AddCreditCard.aspx.cs">
@@ -378,6 +381,13 @@
     <Compile Include="UserControl\ctrlViewProducts.ascx.designer.cs">
       <DependentUpon>ctrlViewProducts.ascx</DependentUpon>
     </Compile>
+    <Compile Include="UserControl\ctrlYourProduct.ascx.cs">
+      <DependentUpon>ctrlYourProduct.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\ctrlYourProduct.ascx.designer.cs">
+      <DependentUpon>ctrlYourProduct.ascx</DependentUpon>
+    </Compile>
     <Compile Include="UserMasterPage.Master.cs">
       <DependentUpon>UserMasterPage.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -391,6 +401,13 @@
     </Compile>
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="YourProduct.aspx.cs">
+      <DependentUpon>YourProduct.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="YourProduct.aspx.designer.cs">
+      <DependentUpon>YourProduct.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
