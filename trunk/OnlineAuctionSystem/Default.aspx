@@ -20,17 +20,7 @@
                 ctrlViewProducts1.ID = "ctrlViewProduct" + i;
                 ctrlViewProducts1.proId = Convert.ToInt32(tmp.Rows[i]["ProId"]);
                 ctrlViewProducts1.proName = tmp.Rows[i]["ProName"] + "";
-                string str = Convert.ToInt64(tmp.Rows[i]["StartPrice"]) + "";
-                string price = "";
-                for (int j = str.Length - 1, k = 0; j >= 0; j--, k++)
-                {
-                    if (k % 3 == 0 && k > 0)
-                        price = str[j] + "." + price;
-                    else
-                        price = str[j] + price;
-                }
-                price += " VNĐ";
-                ctrlViewProducts1.price = price;
+                ctrlViewProducts1.price = _dal.ConvertPrice(Convert.ToDecimal(tmp.Rows[i]["StartPrice"]));
                 ctrlViewProducts1.imgUrl = @"~/ProductImg/" + tmp.Rows[i]["Username"] + @"/" + ctrlViewProducts1.proId + @"/1.jpg";
                 ctrlViewProducts1.seconds = (_dal.GetEndTime(ctrlViewProducts1.proId) - _dal.GetStartTime()).TotalSeconds;
                 %>
@@ -41,7 +31,7 @@
         else
         { 
             %>
-            <div align="center">Xin lỗi, Hiện tại không có sản phẩm cho loại này!</div>
+            <div style="text-align:center;">Xin lỗi, Hiện tại không có sản phẩm cho loại này!</div>
             <%
         }
      %>

@@ -18,7 +18,7 @@
             <ItemStyle HorizontalAlign="Center" Width="100px" />
             </asp:BoundField>
             <asp:BoundField DataField="ProName" HeaderText="Tên Sản Phẩm" />
-            <asp:BoundField DataField="DatePosted" DataFormatString="{0:dd/MM/yyyy hh:mm:ss}"
+            <asp:BoundField DataField="DatePosted" DataFormatString="{0:dd/MM/yyyy HH:mm:ss}"
                 HeaderText="Ngày Đăng" />
             <asp:BoundField DataField="Status1" HeaderText="Trạng Thái" />
             <asp:CommandField ButtonType="Image" HeaderText="Chi Tiết" SelectImageUrl="~/images/Details.png"
@@ -42,11 +42,11 @@
     <dx:ASPxRoundPanel ID="panelDetail" runat="server" CssFilePath="~/App_Themes/Aqua/{0}/styles.css"
         CssPostfix="Aqua" GroupBoxCaptionOffsetY="-28px" SpriteCssFilePath="~/App_Themes/Aqua/{0}/sprite.css"
         Width="100%" HeaderText="Chi tiết sản phẩm">
-        <ContentPaddings Padding="14px" />
-        <ContentPaddings Padding="14px"></ContentPaddings>
+        <ContentPaddings Padding="14px" PaddingBottom="10px" PaddingLeft="10px" 
+            PaddingRight="10px" PaddingTop="10px"></ContentPaddings>
         <PanelCollection>
             <dx:PanelContent runat="server" SupportsDisabledAttribute="True">
-                <div>
+                <div style="text-align:center;padding-left:10px;">
                     <uc1:ctrlGallery ID="ctrlGallery1" runat="server" />
                 </div>
                 <div>
@@ -150,17 +150,18 @@
     <dx:ASPxRoundPanel ID="panelListing" runat="server" CssFilePath="~/App_Themes/Aqua/{0}/styles.css"
         CssPostfix="Aqua" GroupBoxCaptionOffsetY="-28px" SpriteCssFilePath="~/App_Themes/Aqua/{0}/sprite.css"
         Width="100%" HeaderText="Thông tin đấu giá">
-        <ContentPaddings Padding="14px" />
+        <ContentPaddings PaddingBottom="2px" PaddingLeft="2px" PaddingRight="2px" 
+            PaddingTop="5px" />
         <ContentPaddings Padding="14px"></ContentPaddings>
         <PanelCollection>
             <dx:PanelContent runat="server" SupportsDisabledAttribute="True">
                 <asp:GridView ID="gvListing" runat="server" AutoGenerateColumns="False" 
-                    Width="100%" PageSize="15" 
+                    Width="100%" PageSize="20" 
                     OnPageIndexChanging="gvListing_PageIndexChanging" AllowPaging="True" 
                     EmptyDataText="Chưa có người trả giá cho sản phẩm này">
                     <Columns>
-                        <asp:BoundField DataField="CurrentPrice" HeaderText="Giá Đấu"></asp:BoundField>
-                        <asp:BoundField DataField="TimePosted" DataFormatString="{0:dd/MM/yyyy hh:mm:ss}"
+                        <asp:BoundField DataField="CurrentPrice1" HeaderText="Giá Đấu"></asp:BoundField>
+                        <asp:BoundField DataField="TimePosted" DataFormatString="{0:dd/MM/yyyy HH:mm:ss}"
                             HeaderText="Thời Gian"></asp:BoundField>
                         <asp:BoundField DataField="Username" HeaderText="Đăng Bởi"></asp:BoundField>
                     </Columns>

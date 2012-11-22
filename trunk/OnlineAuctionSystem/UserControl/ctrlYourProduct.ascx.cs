@@ -13,7 +13,6 @@ namespace OnlineAuctionSystem.UserControl
 {
     public partial class ctrlYourProduct : System.Web.UI.UserControl
     {
-        SqlConnection con;
         ProductsDAL _product = new ProductsDAL();
         ListingsDAL _list = new ListingsDAL();
         CategoriesDAL _cate = new CategoriesDAL();
@@ -38,12 +37,13 @@ namespace OnlineAuctionSystem.UserControl
                 int index = gvProducts.Rows[0].DataItemIndex; ;
                 lblProId.Text = dtProduct.Rows[index]["ProId"] + "";
                 lblProName.Text = dtProduct.Rows[index]["ProName"] + "";
-                lblStartPrice.Text = ConvertPrice(Convert.ToDecimal(dtProduct.Rows[index]["StartPrice"]));
-                lblDatePosted.Text = Convert.ToDateTime(dtProduct.Rows[index]["DatePosted"]).ToString("dd/MM/yyyy hh:mm:ss");
+                lblStartPrice.Text = _product.ConvertPrice(Convert.ToDecimal(dtProduct.Rows[index]["StartPrice"]));
+                lblDatePosted.Text = Convert.ToDateTime(dtProduct.Rows[index]["DatePosted"]).ToString("dd/MM/yyyy HH:mm:ss");
                 lblDuration.Text = dtProduct.Rows[index]["Duration"] + " ngày";
                 lblAmount.Text = dtProduct.Rows[index]["Amount"] + "";
                 lblNumview.Text = dtProduct.Rows[index]["NumView"] + "";
                 lblDescription.Text = dtProduct.Rows[index]["Description"] + "";
+                btnEdit.PostBackUrl = "~/EditProduct.aspx?ProId=" + dtProduct.Rows[index]["ProId"] + "";
 
                 Categories cate = (Categories)_cate.Select(Convert.ToInt32(dtProduct.Rows[index]["CateId"]));
                 lblCateName.Text = cate.CateName;
@@ -56,27 +56,21 @@ namespace OnlineAuctionSystem.UserControl
                 RefreshListing();
             }
         }
-        protected string ConvertPrice(decimal price)
-        {
-            string str = Convert.ToInt64(price).ToString();
-            string res = "";
-            for (int i = str.Length - 1, j = 0; i >= 0; i--, j++)
-            {
-                if (j % 3 == 0 && j > 0)
-                    res = str[i] + "." + res;
-                else
-                    res = str[i] + res;
-            }
-            res += " VNĐ";
-            return res;
-        }
+
         protected void RefreshListing()
         {
             if (dtListing != null && dtListing.Rows.Count > 0)
             {
-                gvListing.DataSource = dtListing;
-                gvListing.DataBind();
+                DataColumn col = new DataColumn("CurrentPrice1", dtListing.Columns["Username"].DataType);
+                dtListing.Columns.Add(col);
+                for (int i = 0; i < dtListing.Rows.Count; i++)
+                {
+                    dtListing.Rows[i]["CurrentPrice1"] = _product.ConvertPrice(Convert.ToDecimal(dtListing.Rows[0]["CurrentPrice"]));
+                }
             }
+            gvListing.DataSource = dtListing;
+            gvListing.DataBind();
+            gvListing.SelectedIndex = -1;
         }
 
         protected void gvProducts_SelectedIndexChanging(object sender, GridViewSelectEventArgs e)
@@ -84,8 +78,8 @@ namespace OnlineAuctionSystem.UserControl
             int index = gvProducts.Rows[e.NewSelectedIndex].DataItemIndex;
             lblProId.Text = dtProduct.Rows[index]["ProId"] + "";
             lblProName.Text = dtProduct.Rows[index]["ProName"] + "";
-            lblStartPrice.Text = ConvertPrice(Convert.ToDecimal(dtProduct.Rows[index]["StartPrice"]));
-            lblDatePosted.Text = Convert.ToDateTime(dtProduct.Rows[index]["DatePosted"]).ToString("dd/MM/yyyy hh:mm:ss");
+            lblStartPrice.Text = _product.ConvertPrice(Convert.ToDecimal(dtProduct.Rows[index]["StartPrice"]));
+            lblDatePosted.Text = Convert.ToDateTime(dtProduct.Rows[index]["DatePosted"]).ToString("dd/MM/yyyy HH:mm:ss");
             lblDuration.Text = dtProduct.Rows[index]["Duration"] + " ngày";
             lblAmount.Text = dtProduct.Rows[index]["Amount"] + "";
             lblNumview.Text = dtProduct.Rows[index]["NumView"] + "";
@@ -100,8 +94,7 @@ namespace OnlineAuctionSystem.UserControl
             this.ctrlGallery1.ImageUrl = Session["user"].ToString() + "/" + lblProId.Text + "/";
 
             dtListing = _list.Select(Convert.ToInt32(dtProduct.Rows[index]["ProId"]));
-            gvListing.DataSource = dtListing;
-            gvListing.DataBind();
+            RefreshListing();
         }
 
         protected void gvProducts_PageIndexChanging(object sender, GridViewPageEventArgs e)
@@ -115,7 +108,8 @@ namespace OnlineAuctionSystem.UserControl
             int index = gvProducts.Rows[e.RowIndex].DataItemIndex;
             if (_product.Delete(Convert.ToInt32(dtProduct.Rows[index]["ProId"])) > 0)
             {
-                Response.Redirect("YourProduct.aspx");
+                _product.DeleteDirectory(MapPath(@"..\ProductImg") + @"\" + Session["user"].ToString() + @"\" + lblProId.Text);
+                Response.Redirect("YourProduct.aspx?username=" + Session["user"].ToString());
             }
         }
 

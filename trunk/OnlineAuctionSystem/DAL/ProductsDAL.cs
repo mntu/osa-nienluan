@@ -31,7 +31,7 @@ namespace OnlineAuctionSystem.DAL
         public DataTable SelectByUsername(string username)
         {
             string sql = "select *,(CASE [Status] WHEN 1 THEN N'Đang Đấu Giá' ELSE N'Đã Kết Thúc' END) as [Status1] from Products where Username='{0}'";
-            sql = String.Format(sql,username);
+            sql = String.Format(sql, username);
             return ExecuteQuery(sql);
         }
         public object Select(int id)
@@ -69,7 +69,7 @@ namespace OnlineAuctionSystem.DAL
                 Products o = (Products)obj;
                 string sql = "INSERT INTO Products(ProName,[Description],StartPrice,Amount,Duration,DatePosted,NumView,[Status],CateId,Username) ";
                 sql += "VALUES(N'{0}',N'{1}',{2},{3},{4},DEFAULT,{5},'{6}',{7},'{8}')";
-                sql = String.Format(sql,o.ProName,o.Description,o.StarPrice,o.Amount,o.Duration,o.NumView,o.Status,o.CateId,o.Username);
+                sql = String.Format(sql, o.ProName, o.Description, o.StarPrice, o.Amount, o.Duration, o.NumView, o.Status, o.CateId, o.Username);
                 return ExecuteNonQuery(sql);
             }
             catch { return -1; }
@@ -80,9 +80,9 @@ namespace OnlineAuctionSystem.DAL
             try
             {
                 Products o = (Products)obj;
-                string sql = "UPDATE Products SET ProName=N'{0}',[Description]=N'{1}',StartPrice={2},Amount={3},Duration={4},DatePosted=getDate(),NumView={5},[Status]='{6}',CateId={7},Username='{8}' ";
+                string sql = "UPDATE Products SET ProName=N'{0}',[Description]=N'{1}',StartPrice={2},Amount={3},Duration={4},NumView={5},[Status]='{6}',CateId={7},Username='{8}' ";
                 sql += "WHERE ProId={9}";
-                sql = String.Format(sql, o.ProName, o.Description, o.StarPrice, o.Amount, o.Duration, o.NumView, o.Status, o.CateId, o.Username,o.ProId);
+                sql = String.Format(sql, o.ProName, o.Description, o.StarPrice, o.Amount, o.Duration, o.NumView, o.Status, o.CateId, o.Username, o.ProId);
                 return ExecuteNonQuery(sql);
             }
             catch { return -1; }
@@ -94,7 +94,7 @@ namespace OnlineAuctionSystem.DAL
                 Products o = (Products)obj;
                 string sql = "UPDATE Products SET NumView={0} ";
                 sql += "WHERE ProId={1}";
-                sql = String.Format(sql,o.NumView, o.ProId);
+                sql = String.Format(sql, o.NumView, o.ProId);
                 return ExecuteNonQuery(sql);
             }
             catch { return -1; }
@@ -126,8 +126,8 @@ namespace OnlineAuctionSystem.DAL
             {
                 string sql = "select Max(ProId) from Products";
                 DataTable tmp = ExecuteQuery(sql);
-                string value=tmp.Rows[0][0].ToString();
-                if (value=="") return 1;
+                string value = tmp.Rows[0][0].ToString();
+                if (value == "") return 1;
                 if (tmp != null && tmp.Rows.Count > 0) return Convert.ToInt32(tmp.Rows[0][0]);
                 else return 0;
             }
@@ -177,6 +177,29 @@ namespace OnlineAuctionSystem.DAL
                     }
                 }
             }
+        }
+        public bool DeleteDirectory(string path)
+        {
+            try
+            {
+                System.IO.Directory.Delete(path, true);
+                return true;
+            }
+            catch { return false; }
+        }
+        public string ConvertPrice(decimal price)
+        {
+            string str = Convert.ToInt64(price).ToString();
+            string res = "";
+            for (int i = str.Length - 1, j = 0; i >= 0; i--, j++)
+            {
+                if (j % 3 == 0 && j > 0)
+                    res = str[i] + "." + res;
+                else
+                    res = str[i] + res;
+            }
+            res += " VNĐ";
+            return res;
         }
     }
 }

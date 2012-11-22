@@ -40,7 +40,7 @@ namespace OnlineAuctionSystem
 
             lblProId.Text = product.ProId + "";
             lblProName.Text = product.ProName;
-            lblStartPrice.Text = ConvertPrice(product.StarPrice);
+            lblStartPrice.Text = _dal.ConvertPrice(product.StarPrice);
             lblAmount.Text = product.Amount + "";
             lblDatePosted.Text = product.DatePosted.ToString("dd-MM-yyyy hh:mm:ss");
             lblNumview.Text = product.NumView + "";
@@ -57,21 +57,7 @@ namespace OnlineAuctionSystem
                 currentPrice = product.StarPrice;
                 lblCurrentPrice.Text = lblStartPrice.Text;
             }
-            lblCurrentPrice.Text = ConvertPrice(currentPrice);
-        }
-        protected string ConvertPrice(decimal price)
-        {
-            string str = Convert.ToInt64(price).ToString();
-            string res="";
-            for (int i = str.Length-1,j=0; i >= 0; i--,j++)
-            {
-                if (j % 3 == 0 && j>0)
-                    res = str[i]+"." + res;
-                else
-                    res = str[i]+res;
-            }
-            res += " VNĐ";
-            return res;
+            lblCurrentPrice.Text = _dal.ConvertPrice(currentPrice);
         }
         protected void btnSubmit_Click(object sender, EventArgs e)
         {
