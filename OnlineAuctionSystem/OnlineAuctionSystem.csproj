@@ -115,6 +115,7 @@
     <Content Include="container.swf" />
     <Content Include="CreditCard.aspx" />
     <Content Include="css\jquery.ad-gallery.css" />
+    <Content Include="EditProduct.aspx" />
     <Content Include="expressInstall.swf" />
     <Content Include="Feedback.aspx" />
     <Content Include="Global.asax" />
@@ -173,6 +174,7 @@
     <Content Include="css\style.ie7.css" />
     <Content Include="js\swfobject.js" />
     <Content Include="UserControl\ctrlCategories.ascx" />
+    <Content Include="UserControl\ctrlEditProduct.ascx" />
     <Content Include="UserControl\ctrlGallery.ascx" />
     <Content Include="UserControl\ctrlLogin.ascx" />
     <Content Include="UserControl\ctrlLoginSuccess.ascx" />
@@ -266,6 +268,13 @@
     <Compile Include="DAL\ProductsDAL.cs" />
     <Compile Include="DAL\RolesDAL.cs" />
     <Compile Include="DAL\UsersDAL.cs" />
+    <Compile Include="EditProduct.aspx.cs">
+      <DependentUpon>EditProduct.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EditProduct.aspx.designer.cs">
+      <DependentUpon>EditProduct.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Entities\CardTypes.cs" />
     <Compile Include="Entities\Categories.cs" />
     <Compile Include="Entities\CreditCards.cs" />
@@ -338,6 +347,13 @@
     </Compile>
     <Compile Include="UserControl\ctrlCategories.ascx.designer.cs">
       <DependentUpon>ctrlCategories.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\ctrlEditProduct.ascx.cs">
+      <DependentUpon>ctrlEditProduct.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\ctrlEditProduct.ascx.designer.cs">
+      <DependentUpon>ctrlEditProduct.ascx</DependentUpon>
     </Compile>
     <Compile Include="UserControl\ctrlGallery.ascx.cs">
       <DependentUpon>ctrlGallery.ascx</DependentUpon>

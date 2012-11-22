@@ -1,5 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="ctrlSellProduct.ascx.cs"
-    Inherits="OnlineAuctionSystem.UserControl.ctrlSellProduct" %>
+﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="ctrlEditProduct.ascx.cs" Inherits="OnlineAuctionSystem.UserControl.ctrlEditProduct" %>
 <%@ Register Assembly="DevExpress.Web.ASPxEditors.v11.1, Version=11.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a"
     Namespace="DevExpress.Web.ASPxEditors" TagPrefix="dx" %>
 <%@ Register Assembly="DevExpress.Web.ASPxHtmlEditor.v11.1, Version=11.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a"
@@ -8,16 +7,6 @@
     Namespace="DevExpress.Web.ASPxSpellChecker" TagPrefix="dx" %>
 <%@ Register Assembly="DevExpress.Web.v11.1, Version=11.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a"
     Namespace="DevExpress.Web.ASPxUploadControl" TagPrefix="dx" %>
-<div id="divCateId" runat="server" align="center">
-    <div style="width:250px;text-align:left;">Loại Sản Phẩm - Mức phí<br />
-    <asp:ListBox ID="listCate" runat="server" Rows="10" Width="250px">
-    </asp:ListBox>
-    <div align="center"><dx:ASPxButton ID="btnNext" runat="server" CssFilePath="~/App_Themes/Aqua/{0}/styles.css"
-        CssPostfix="Aqua" OnClick="btnNext_Click" SpriteCssFilePath="~/App_Themes/Aqua/{0}/sprite.css"
-        Text="Tiếp Tục" Width="100px">
-    </dx:ASPxButton></div>
-    </div>
-</div>
 <div id="divProduct" runat="server" align="left">
     <table align="center">
         <tr>
@@ -25,8 +14,24 @@
                 Loại sản phẩm:
             </td>
             <td colspan="2">
-                <dx:ASPxLabel ID="lblCateName" runat="server">
-                </dx:ASPxLabel>
+                <dx:ASPxComboBox ID="cmbCate" runat="server" 
+                    CssFilePath="~/App_Themes/Aqua/{0}/styles.css" CssPostfix="Aqua" 
+                    LoadingPanelImagePosition="Top" ShowShadow="False" 
+                    SpriteCssFilePath="~/App_Themes/Aqua/{0}/sprite.css" ValueType="System.String">
+                    <LoadingPanelImage Url="~/App_Themes/Aqua/Editors/Loading.gif">
+                    </LoadingPanelImage>
+                    <DropDownButton>
+                        <Image>
+                            <SpriteProperties HottrackedCssClass="dxEditors_edtDropDownHover_Aqua" 
+                                PressedCssClass="dxEditors_edtDropDownPressed_Aqua" />
+                        </Image>
+                    </DropDownButton>
+                    <ValidationSettings>
+                        <ErrorFrameStyle ImageSpacing="4px">
+                            <ErrorTextPaddings PaddingLeft="4px" />
+                        </ErrorFrameStyle>
+                    </ValidationSettings>
+                </dx:ASPxComboBox>
             </td>
             <td>
             </td>
@@ -95,22 +100,15 @@
                 </dx:ASPxHtmlEditor>
             </td>
         </tr>
-        <tr>
+        <tr id="rowImage" runat="server">
             <td>
                 Hình ảnh(*):<br />
-                <i>(Lưu ý: ảnh 1 là ảnh chính)</i>
-            </td>
+                &nbsp;</td>
             <td colspan="2">
-                1.<asp:FileUpload ID="FileUpload1" runat="server" /> 
-                <br />
-                2.<asp:FileUpload ID="FileUpload2" runat="server" />
-                <br />
-                3.<asp:FileUpload ID="FileUpload3" runat="server" />
-                <br />
-                4.<asp:FileUpload ID="FileUpload4" runat="server" />
-                <br />
-                5.<asp:FileUpload ID="FileUpload5" runat="server" />
-                <br />
+                <div><asp:FileUpload ID="FileUpload2" runat="server" Visible="False" /></div>
+                <div> <asp:FileUpload ID="FileUpload3" runat="server" Visible="False" /></div>
+                <div><asp:FileUpload ID="FileUpload4" runat="server" Visible="False" /></div>
+                <div><asp:FileUpload ID="FileUpload5" runat="server" Visible="False" /></div>
                 <dx:ASPxLabel ID="lblAllowebMimeType" runat="server" 
                     Text="Loại ảnh: .jpg, .jpe, .jpeg">
                 </dx:ASPxLabel>
@@ -169,52 +167,19 @@
         </tr>
         <tr>
             <td>
-                Thời gian bán:
-            </td>
-            <td colspan="2">
-                <dx:ASPxComboBox ID="cmbDuration" runat="server" CssFilePath="~/App_Themes/Aqua/{0}/styles.css"
-                    CssPostfix="Aqua" LoadingPanelImagePosition="Top" ShowShadow="False" SpriteCssFilePath="~/App_Themes/Aqua/{0}/sprite.css"
-                    ValueType="System.String" Width="200px" SelectedIndex="0">
-                    <Items>
-                        <dx:ListEditItem Text="1 ngày" Value="1" Selected="True" />
-                        <dx:ListEditItem Text="3 ngày" Value="3" />
-                        <dx:ListEditItem Text="5 ngày" Value="5" />
-                        <dx:ListEditItem Text="7 ngày" Value="7" />
-                        <dx:ListEditItem Text="10 ngày" Value="10" />
-                    </Items>
-                    <LoadingPanelImage Url="~/App_Themes/Aqua/Editors/Loading.gif">
-                    </LoadingPanelImage>
-                    <DropDownButton>
-                        <Image>
-                            <SpriteProperties HottrackedCssClass="dxEditors_edtDropDownHover_Aqua" PressedCssClass="dxEditors_edtDropDownPressed_Aqua" />
-                        </Image>
-                    </DropDownButton>
-                    <ValidationSettings>
-                        <ErrorFrameStyle ImageSpacing="4px">
-                            <ErrorTextPaddings PaddingLeft="4px" />
-                        </ErrorFrameStyle>
-                    </ValidationSettings>
-                </dx:ASPxComboBox>
-            </td>
-            <td>
-                &nbsp;
-            </td>
-        </tr>
-        <tr>
-            <td>
                 &nbsp;
             </td>
             <td width="120px">
                 <dx:ASPxButton ID="btnBack" runat="server" CssFilePath="~/App_Themes/Aqua/{0}/styles.css"
                     CssPostfix="Aqua" SpriteCssFilePath="~/App_Themes/Aqua/{0}/sprite.css" 
-                    Text="Trở Lại" onclick="btnBack_Click" Width="100px" 
-                    CausesValidation="False">
+                    Text="Trở Lại" Width="100px" 
+                    CausesValidation="False" PostBackUrl="~/YourProduct.aspx">
                 </dx:ASPxButton>
             </td>
             <td>
-                <dx:ASPxButton ID="btnCreate" runat="server" CssFilePath="~/App_Themes/Aqua/{0}/styles.css"
+                <dx:ASPxButton ID="btnUpdate" runat="server" CssFilePath="~/App_Themes/Aqua/{0}/styles.css"
                     CssPostfix="Aqua" SpriteCssFilePath="~/App_Themes/Aqua/{0}/sprite.css" 
-                    Text="Hoàn Tất" onclick="btnCreate_Click" Width="100px">
+                    Text="Cập Nhật" onclick="btnCreate_Click" Width="100px">
                 </dx:ASPxButton>
             </td>
             <td>
