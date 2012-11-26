@@ -51,6 +51,7 @@ namespace OnlineAuctionSystem.DAL
                     obj.Amount = Convert.ToInt32(tmp.Rows[0]["Amount"]);
                     obj.Duration = Convert.ToInt32(tmp.Rows[0]["Duration"]);
                     obj.DatePosted = Convert.ToDateTime(tmp.Rows[0]["DatePosted"]);
+                    obj.Fee = Convert.ToDouble(tmp.Rows[0]["Fee"]);
                     obj.NumView = Convert.ToInt64(tmp.Rows[0]["NumView"]);
                     obj.Status = Convert.ToBoolean(tmp.Rows[0]["Status"]);
                     obj.CateId = Convert.ToInt32(tmp.Rows[0]["CateId"]);
@@ -67,9 +68,9 @@ namespace OnlineAuctionSystem.DAL
             try
             {
                 Products o = (Products)obj;
-                string sql = "INSERT INTO Products(ProName,[Description],StartPrice,Amount,Duration,DatePosted,NumView,[Status],CateId,Username) ";
-                sql += "VALUES(N'{0}',N'{1}',{2},{3},{4},DEFAULT,{5},'{6}',{7},'{8}')";
-                sql = String.Format(sql, o.ProName, o.Description, o.StarPrice, o.Amount, o.Duration, o.NumView, o.Status, o.CateId, o.Username);
+                string sql = "INSERT INTO Products(ProName,[Description],StartPrice,Amount,Duration,DatePosted,NumView,[Status],CateId,Username,Fee) ";
+                sql += "VALUES(N'{0}',N'{1}',{2},{3},{4},DEFAULT,{5},'{6}',{7},'{8}',{9})";
+                sql = String.Format(sql, o.ProName, o.Description, o.StarPrice, o.Amount, o.Duration, o.NumView, o.Status, o.CateId, o.Username,o.Fee);
                 return ExecuteNonQuery(sql);
             }
             catch { return -1; }
@@ -80,9 +81,9 @@ namespace OnlineAuctionSystem.DAL
             try
             {
                 Products o = (Products)obj;
-                string sql = "UPDATE Products SET ProName=N'{0}',[Description]=N'{1}',StartPrice={2},Amount={3},Duration={4},NumView={5},[Status]='{6}',CateId={7},Username='{8}' ";
-                sql += "WHERE ProId={9}";
-                sql = String.Format(sql, o.ProName, o.Description, o.StarPrice, o.Amount, o.Duration, o.NumView, o.Status, o.CateId, o.Username, o.ProId);
+                string sql = "UPDATE Products SET ProName=N'{0}',[Description]=N'{1}',StartPrice={2},Amount={3},Duration={4},NumView={5},[Status]='{6}',CateId={7},Username='{8}',Fee={9} ";
+                sql += "WHERE ProId={10}";
+                sql = String.Format(sql, o.ProName, o.Description, o.StarPrice, o.Amount, o.Duration, o.NumView, o.Status, o.CateId, o.Username,o.Fee, o.ProId);
                 return ExecuteNonQuery(sql);
             }
             catch { return -1; }

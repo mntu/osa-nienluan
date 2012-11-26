@@ -141,6 +141,26 @@ namespace OnlineAuctionSystem.UserControl
                 obj.Status = true;
                 obj.CateId = Convert.ToInt32(listCate.Items[listCate.SelectedIndex].Value);
                 obj.Username = Session["user"].ToString();
+                float cateFee = ((Categories)_dalCate.Select(obj.CateId)).Fee;
+                switch (obj.Duration)
+                {
+                    case 1:
+                        obj.Fee =  + 1;
+                        break;
+                    case 3:
+                        obj.Fee = + 2.5;
+                        break;
+                    case 5:
+                        obj.Fee = +4;
+                        break;
+                    case 7:
+                        obj.Fee = +5;
+                        break;
+                    default:
+                        obj.Fee = +7;
+                        break;
+                }
+
                 if (_dalPro.Insert(obj) > 0)
                 {
                     UploadImages();

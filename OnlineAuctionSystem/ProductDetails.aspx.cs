@@ -46,7 +46,7 @@ namespace OnlineAuctionSystem
             lblNumview.Text = product.NumView + "";
             lblUsername.Text = (Session["user"].ToString()==product.Username) ? "chính bạn" : product.Username;
             lblDescription.Text = product.Description;
-
+            
             this.ctrlGallery1.CheckImageUrl = MapPath("ProductImg") + @"\" + product.Username + @"\" + product.ProId;
             this.ctrlGallery1.ImageUrl = product.Username + "/" + product.ProId + "/";
 

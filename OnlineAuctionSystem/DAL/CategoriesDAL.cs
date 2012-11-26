@@ -30,7 +30,7 @@ namespace OnlineAuctionSystem.DAL
                     Categories obj = new Categories();
                     obj.CateId = Convert.ToInt32(tmp.Rows[0]["CateId"]);
                     obj.CateName = tmp.Rows[0]["CateName"] + "";
-                    obj.Fee =Convert.ToInt32(tmp.Rows[0]["Fee"]);
+                    obj.Fee =(float)Convert.ToDouble(tmp.Rows[0]["Fee"]);
                     return obj;
                 }
                 return null;
