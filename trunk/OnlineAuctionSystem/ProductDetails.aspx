@@ -180,6 +180,7 @@
                         minute=minute<10 ? "0" + minute : minute;
                         second=second<10 ? "0" + second : second;
                         var remain=day + " ngày   "+hour + ":"+minute+":"+second;
+                        if(day<=0) remain= hour + " giờ "+minute+" phút "+second+" giây";
                         leave=leave-1;
                         if(leave<=0) 
                         {

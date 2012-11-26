@@ -14,6 +14,7 @@ namespace OnlineAuctionSystem.Entities
         public int Amount { get; set; }
         public int Duration { get; set; }
         public DateTime DatePosted { get; set; }
+        public double Fee { get; set; }
         public long NumView { get; set; }
         public bool Status { get; set; }
         public int CateId { get; set; }

@@ -176,11 +176,11 @@
                     CssPostfix="Aqua" LoadingPanelImagePosition="Top" ShowShadow="False" SpriteCssFilePath="~/App_Themes/Aqua/{0}/sprite.css"
                     ValueType="System.String" Width="200px" SelectedIndex="0">
                     <Items>
-                        <dx:ListEditItem Text="1 ngày" Value="1" Selected="True" />
-                        <dx:ListEditItem Text="3 ngày" Value="3" />
-                        <dx:ListEditItem Text="5 ngày" Value="5" />
-                        <dx:ListEditItem Text="7 ngày" Value="7" />
-                        <dx:ListEditItem Text="10 ngày" Value="10" />
+                        <dx:ListEditItem Text="1 ngày - 1%" Value="1" Selected="True" />
+                        <dx:ListEditItem Text="3 ngày - 2.5%" Value="3" />
+                        <dx:ListEditItem Text="5 ngày - 3%" Value="5" />
+                        <dx:ListEditItem Text="7 ngày - 5%" Value="7" />
+                        <dx:ListEditItem Text="10 ngày - 7%" Value="10" />
                     </Items>
                     <LoadingPanelImage Url="~/App_Themes/Aqua/Editors/Loading.gif">
                     </LoadingPanelImage>

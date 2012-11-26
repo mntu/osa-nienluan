@@ -41,18 +41,20 @@ function CounterTimer()
     minute=minute<10 ? "0" + minute : minute;
     second=second<10 ? "0" + second : second;
     var remain=day + " ngày   "+hour + ":"+minute+":"+second;
+    if(day<=0) remain= hour + " giờ "+minute+" phút "+second+" giây";
     leave<%=proId %>=leave<%=proId %>-1;
     document.getElementById("<%=proId %>").innerHTML=remain;
     if(leave<%=proId %><=0) 
     {
     document.getElementById("Div<%=proId %>").style.display="none";
     document.getElementById("timeOut<%=proId %>").style.display="block";
+    document.getElementById("<%=proId %>").style.display="none";
     }
     else
     {
     document.getElementById("Div<%=proId %>").style.display="block";
     document.getElementById("timeOut<%=proId %>").style.display="none";
-    document.getElementById("<%=proId %>").style.display="none";
+    document.getElementById("<%=proId %>").style.display="block";
     }
 }
 </script>

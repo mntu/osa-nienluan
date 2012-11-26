@@ -17,6 +17,7 @@ namespace OnlineAuctionSystem.UserControl
         ListingsDAL _list = new ListingsDAL();
         CategoriesDAL _cate = new CategoriesDAL();
         DataTable dtProduct, dtListing;
+        public double seconds;
         protected void Page_Load(object sender, EventArgs e)
         {
             dtProduct = _product.SelectByUsername(Session["user"].ToString());
@@ -35,19 +36,19 @@ namespace OnlineAuctionSystem.UserControl
             {
 
                 int index = gvProducts.Rows[0].DataItemIndex; ;
+                seconds = (_product.GetEndTime(Convert.ToInt32(dtProduct.Rows[index]["ProId"])) - _product.GetStartTime()).TotalSeconds;
                 lblProId.Text = dtProduct.Rows[index]["ProId"] + "";
                 lblProName.Text = dtProduct.Rows[index]["ProName"] + "";
                 lblStartPrice.Text = _product.ConvertPrice(Convert.ToDecimal(dtProduct.Rows[index]["StartPrice"]));
                 lblDatePosted.Text = Convert.ToDateTime(dtProduct.Rows[index]["DatePosted"]).ToString("dd/MM/yyyy HH:mm:ss");
-                lblDuration.Text = dtProduct.Rows[index]["Duration"] + " ngày";
                 lblAmount.Text = dtProduct.Rows[index]["Amount"] + "";
                 lblNumview.Text = dtProduct.Rows[index]["NumView"] + "";
                 lblDescription.Text = dtProduct.Rows[index]["Description"] + "";
                 btnEdit.PostBackUrl = "~/EditProduct.aspx?ProId=" + dtProduct.Rows[index]["ProId"] + "";
-
-                Categories cate = (Categories)_cate.Select(Convert.ToInt32(dtProduct.Rows[index]["CateId"]));
+                btnGiaHan.PostBackUrl = "~/ExtendTime.aspx?ProId=" + dtProduct.Rows[index]["ProId"] + "";
+                    Categories cate = (Categories)_cate.Select(Convert.ToInt32(dtProduct.Rows[index]["CateId"]));
                 lblCateName.Text = cate.CateName;
-                lblFee.Text = cate.Fee + "%";
+                lblFee.Text = dtProduct.Rows[index]["Fee"] + "%";
 
                 this.ctrlGallery1.CheckImageUrl = MapPath(@"..\ProductImg") + @"\" + Session["user"].ToString() + @"\" + lblProId.Text;
                 this.ctrlGallery1.ImageUrl = Session["user"].ToString() + "/" + lblProId.Text + "/";
@@ -76,19 +77,19 @@ namespace OnlineAuctionSystem.UserControl
         protected void gvProducts_SelectedIndexChanging(object sender, GridViewSelectEventArgs e)
         {
             int index = gvProducts.Rows[e.NewSelectedIndex].DataItemIndex;
+            seconds = (_product.GetEndTime(Convert.ToInt32(dtProduct.Rows[index]["ProId"])) - _product.GetStartTime()).TotalSeconds;
             lblProId.Text = dtProduct.Rows[index]["ProId"] + "";
             lblProName.Text = dtProduct.Rows[index]["ProName"] + "";
             lblStartPrice.Text = _product.ConvertPrice(Convert.ToDecimal(dtProduct.Rows[index]["StartPrice"]));
             lblDatePosted.Text = Convert.ToDateTime(dtProduct.Rows[index]["DatePosted"]).ToString("dd/MM/yyyy HH:mm:ss");
-            lblDuration.Text = dtProduct.Rows[index]["Duration"] + " ngày";
             lblAmount.Text = dtProduct.Rows[index]["Amount"] + "";
             lblNumview.Text = dtProduct.Rows[index]["NumView"] + "";
             lblDescription.Text = dtProduct.Rows[index]["Description"] + "";
             btnEdit.PostBackUrl = "~/EditProduct.aspx?ProId=" + dtProduct.Rows[index]["ProId"] + "";
-
+            btnGiaHan.PostBackUrl = "~/ExtendTime.aspx?ProId=" + dtProduct.Rows[index]["ProId"] + "";
             Categories cate = (Categories)_cate.Select(Convert.ToInt32(dtProduct.Rows[index]["CateId"]));
             lblCateName.Text = cate.CateName;
-            lblFee.Text = cate.Fee + "%";
+            lblFee.Text = dtProduct.Rows[index]["Fee"] + "%";
 
             this.ctrlGallery1.CheckImageUrl = MapPath(@"..\ProductImg") + @"\" + Session["user"].ToString() + @"\" + lblProId.Text;
             this.ctrlGallery1.ImageUrl = Session["user"].ToString() + "/" + lblProId.Text + "/";
