@@ -4,11 +4,12 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-
+using OnlineAuctionSystem.DAL;
 namespace OnlineAuctionSystem
 {
     public partial class UserMasterPage : System.Web.UI.MasterPage
     {
+        ProductsDAL _dal = new ProductsDAL();
         protected void Page_Load(object sender, EventArgs e)
         {
             if (Session["user"] == null)
@@ -27,6 +28,8 @@ namespace OnlineAuctionSystem
                 lkPersonal.Visible = true;
                 lkFeedback.Visible = true;
             }
+            _dal.UpdateStatus();
+            _dal.UpdateListing();
         }
     }
 }
