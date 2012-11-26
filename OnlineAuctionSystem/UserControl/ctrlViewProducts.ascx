@@ -52,6 +52,7 @@ function CounterTimer()
     {
     document.getElementById("Div<%=proId %>").style.display="block";
     document.getElementById("timeOut<%=proId %>").style.display="none";
+    document.getElementById("<%=proId %>").style.display="none";
     }
 }
 </script>
