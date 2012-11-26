@@ -145,19 +145,19 @@ namespace OnlineAuctionSystem.UserControl
                 switch (obj.Duration)
                 {
                     case 1:
-                        obj.Fee =  + 1;
+                        obj.Fee = cateFee + 1;
                         break;
                     case 3:
-                        obj.Fee = + 2.5;
+                        obj.Fee = cateFee + 2.5;
                         break;
                     case 5:
-                        obj.Fee = +4;
+                        obj.Fee = cateFee + 4;
                         break;
                     case 7:
-                        obj.Fee = +5;
+                        obj.Fee = cateFee + 5;
                         break;
                     default:
-                        obj.Fee = +7;
+                        obj.Fee = cateFee + 7;
                         break;
                 }
 
