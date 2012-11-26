@@ -45,8 +45,7 @@ namespace OnlineAuctionSystem.UserControl
                 lblNumview.Text = dtProduct.Rows[index]["NumView"] + "";
                 lblDescription.Text = dtProduct.Rows[index]["Description"] + "";
                 btnEdit.PostBackUrl = "~/EditProduct.aspx?ProId=" + dtProduct.Rows[index]["ProId"] + "";
-                btnGiaHan.PostBackUrl = "~/ExtendTime.aspx?ProId=" + dtProduct.Rows[index]["ProId"] + "";
-                    Categories cate = (Categories)_cate.Select(Convert.ToInt32(dtProduct.Rows[index]["CateId"]));
+                Categories cate = (Categories)_cate.Select(Convert.ToInt32(dtProduct.Rows[index]["CateId"]));
                 lblCateName.Text = cate.CateName;
                 lblFee.Text = dtProduct.Rows[index]["Fee"] + "%";
 
@@ -86,7 +85,6 @@ namespace OnlineAuctionSystem.UserControl
             lblNumview.Text = dtProduct.Rows[index]["NumView"] + "";
             lblDescription.Text = dtProduct.Rows[index]["Description"] + "";
             btnEdit.PostBackUrl = "~/EditProduct.aspx?ProId=" + dtProduct.Rows[index]["ProId"] + "";
-            btnGiaHan.PostBackUrl = "~/ExtendTime.aspx?ProId=" + dtProduct.Rows[index]["ProId"] + "";
             Categories cate = (Categories)_cate.Select(Convert.ToInt32(dtProduct.Rows[index]["CateId"]));
             lblCateName.Text = cate.CateName;
             lblFee.Text = dtProduct.Rows[index]["Fee"] + "%";
