@@ -43,6 +43,7 @@ namespace OnlineAuctionSystem.UserControl
             divCateId.Visible = false;
             divProduct.Visible = true;
             lblCateName.Text = listCate.SelectedItem.Text.Split('-')[0];
+            panel.DefaultButton = "btnCreate";
         }
 
         protected void btnBack_Click(object sender, EventArgs e)

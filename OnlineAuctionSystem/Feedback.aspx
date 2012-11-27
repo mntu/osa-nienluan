@@ -14,7 +14,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <dx:ASPxRoundPanel ID="panel" runat="server" CssFilePath="~/App_Themes/Aqua/{0}/styles.css"
         CssPostfix="Aqua" GroupBoxCaptionOffsetY="-28px" HeaderText="Góp Ý" SpriteCssFilePath="~/App_Themes/Aqua/{0}/sprite.css"
-        Width="100%">
+        Width="100%" DefaultButton="btnSend">
         <ContentPaddings Padding="14px" />
         <HeaderStyle Font-Bold="True" />
         <PanelCollection>

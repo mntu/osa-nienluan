@@ -6,8 +6,10 @@
     <dx:ASPxRoundPanel ID="panel" runat="server" 
         CssFilePath="~/App_Themes/Aqua/{0}/styles.css" CssPostfix="Aqua" 
         GroupBoxCaptionOffsetY="-28px" HeaderText="Thêm thẻ thanh toán" 
-        SpriteCssFilePath="~/App_Themes/Aqua/{0}/sprite.css" Width="100%">
+        SpriteCssFilePath="~/App_Themes/Aqua/{0}/sprite.css" Width="100%" 
+        DefaultButton="btnAdd">
         <ContentPaddings Padding="14px" />
+        <HeaderStyle Font-Bold="True" />
         <PanelCollection>
             <dx:PanelContent runat="server" SupportsDisabledAttribute="True">
             <div align="center">

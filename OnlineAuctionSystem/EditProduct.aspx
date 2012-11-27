@@ -6,7 +6,8 @@
     <dx:ASPxRoundPanel ID="panel" runat="server" 
         CssFilePath="~/App_Themes/Aqua/{0}/styles.css" CssPostfix="Aqua" 
         GroupBoxCaptionOffsetY="-28px" HeaderText="Cập nhật thông tin sản phẩm" 
-        SpriteCssFilePath="~/App_Themes/Aqua/{0}/sprite.css" Width="100%">
+        SpriteCssFilePath="~/App_Themes/Aqua/{0}/sprite.css" Width="100%" 
+        DefaultButton="btnUpdate">
         <contentpaddings padding="14px" />
         <HeaderStyle Font-Bold="True" />
         <PanelCollection>
