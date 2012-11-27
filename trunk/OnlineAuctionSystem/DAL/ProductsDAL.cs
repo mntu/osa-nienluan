@@ -18,19 +18,19 @@ namespace OnlineAuctionSystem.DAL
         {
             UpdateStatus();
             UpdateListing();
-            return ExecuteQuery("select * from Products where Status=1");
+            return ExecuteQuery("select * from Products where Status=1 order by ProId desc");
         }
         public DataTable SelectByCate(int cateId)
         {
             UpdateStatus();
             UpdateListing();
-            string sql = "select * from Products where CateId={0} and Status=1";
+            string sql = "select * from Products where CateId={0} and Status=1 order by ProId desc";
             sql = String.Format(sql, cateId);
             return ExecuteQuery(sql);
         }
         public DataTable SelectByUsername(string username)
         {
-            string sql = "select *,(CASE [Status] WHEN 1 THEN N'Đang Đấu Giá' ELSE N'Đã Kết Thúc' END) as [Status1] from Products where Username='{0}'";
+            string sql = "select *,(CASE [Status] WHEN 1 THEN N'Đang Đấu Giá' ELSE N'Đã Kết Thúc' END) as [Status1] from Products where Username='{0}' order by ProId desc";
             sql = String.Format(sql, username);
             return ExecuteQuery(sql);
         }
@@ -171,9 +171,9 @@ namespace OnlineAuctionSystem.DAL
                     if (tmp1 != null && tmp1.Rows.Count > 0)
                     {
                         string username = tmp1.Rows[0]["Username"] + "";
-                        string timePosted = tmp1.Rows[0]["TimePosted"] + "";
+                        DateTime timePosted = Convert.ToDateTime(tmp1.Rows[0]["TimePosted"]);
                         sql = "update Listings set [Status]=1 where ProId={0} and Username='{1}' and TimePosted='{2}'";
-                        sql = String.Format(sql, proId, username, timePosted);
+                        sql = String.Format(sql, proId, username, timePosted.ToString("yyyy/MM/dd HH:mm:ss.fff"));
                         ExecuteNonQuery(sql);
                     }
                 }

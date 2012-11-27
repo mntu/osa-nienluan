@@ -20,13 +20,13 @@ namespace OnlineAuctionSystem.DAL
         }
         public DataTable SelectByUsername(string username)
         {
-            string sql = "select * from Listings where Username='{0}'";
+            string sql = "select distinct ProId from Listings where Username='{0}'";
             sql = String.Format(sql, username);
             return ExecuteQuery(sql);
         }
         public DataTable SelectWinByUsername(string username)
         {
-            string sql = "select * from Listings where Username='{0}' and Status=1";
+            string sql = "select a.ProId,ProName,StartPrice,Amount,DatePosted,a.Username,[Description],TimePosted,CurrentPrice from Products a,Listings b where a.ProId=b.ProId and b.Username='{0}' and b.Status=1";
             sql = String.Format(sql, username);
             return ExecuteQuery(sql);
         }

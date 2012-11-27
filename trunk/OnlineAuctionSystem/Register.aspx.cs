@@ -28,6 +28,7 @@ namespace OnlineAuctionSystem
         {
             divTerm.Visible = false;
             divPersonInfo.Visible = true;
+            panel.DefaultButton = "btnRegister";
         }
 
         protected void chkAccept_CheckedChanged(object sender, EventArgs e)

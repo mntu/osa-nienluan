@@ -11,7 +11,8 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <dx:ASPxRoundPanel ID="panel" runat="server" CssFilePath="~/App_Themes/Aqua/{0}/styles.css"
         CssPostfix="Aqua" GroupBoxCaptionOffsetY="-28px" HeaderText="Đấu giá sản phẩm"
-        SpriteCssFilePath="~/App_Themes/Aqua/{0}/sprite.css" Width="100%">
+        SpriteCssFilePath="~/App_Themes/Aqua/{0}/sprite.css" Width="100%" 
+        DefaultButton="btnSubmit">
         <ContentPaddings Padding="10px" PaddingBottom="5px" />
         <HeaderStyle Font-Bold="True" />
         <PanelCollection>

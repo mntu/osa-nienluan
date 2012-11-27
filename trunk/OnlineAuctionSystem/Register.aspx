@@ -10,7 +10,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <dx:ASPxRoundPanel ID="panel" runat="server" CssFilePath="~/App_Themes/Aqua/{0}/styles.css"
         CssPostfix="Aqua" GroupBoxCaptionOffsetY="-28px" SpriteCssFilePath="~/App_Themes/Aqua/{0}/sprite.css"
-        Width="100%" HeaderText="Đăng ký thành viên">
+        Width="100%" HeaderText="Đăng ký thành viên" DefaultButton="btnNext">
         <ContentPaddings Padding="14px"></ContentPaddings>
         <ContentPaddings Padding="14px" />
         <HeaderStyle Font-Bold="True" />

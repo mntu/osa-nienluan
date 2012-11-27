@@ -9,8 +9,9 @@
     Namespace="DevExpress.Web.ASPxEditors" TagPrefix="dx" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <dx:ASPxRoundPanel ID="panel" runat="server" CssFilePath="~/App_Themes/Aqua/{0}/styles.css"
-        CssPostfix="Aqua" GroupBoxCaptionOffsetY="-28px" HeaderText="Quên Mật Khẩu" SpriteCssFilePath="~/App_Themes/Aqua/{0}/sprite.css"
-        Width="100%">
+        CssPostfix="Aqua" GroupBoxCaptionOffsetY="-28px" 
+        HeaderText="Quên Mật Khẩu" SpriteCssFilePath="~/App_Themes/Aqua/{0}/sprite.css"
+        Width="100%" DefaultButton="btnSubmit">
         <ContentPaddings Padding="14px" />
         <HeaderStyle Font-Bold="True" />
         <PanelCollection>

@@ -11,7 +11,8 @@
     <asp:GridView ID="gvProducts" runat="server" AutoGenerateColumns="False" Width="100%"
         OnPageIndexChanging="gvProducts_PageIndexChanging" OnRowDeleting="gvProducts_RowDeleting"
         OnSelectedIndexChanging="gvProducts_SelectedIndexChanging" AllowPaging="True"
-        EmptyDataText="Bạn chưa bán sản phẩm nào!" PageSize="5" SelectedIndex="0">
+        EmptyDataText="Xin lỗi, hiện tại bạn chưa bán sản phẩm nào!" PageSize="5" 
+        SelectedIndex="0">
         <Columns>
             <asp:BoundField DataField="ProId" HeaderText="Mã Sản Phẩm">
                 <ItemStyle HorizontalAlign="Center" Width="100px" />
@@ -34,7 +35,7 @@
                 <ItemStyle HorizontalAlign="Center" Width="50px" />
             </asp:TemplateField>
         </Columns>
-        <EmptyDataRowStyle Font-Bold="True" Font-Size="13pt" ForeColor="Red" />
+        <EmptyDataRowStyle Font-Bold="False" HorizontalAlign="Center" />
     </asp:GridView>
 </div>
 <div style="float: left; width: 50%">

@@ -31,10 +31,10 @@ namespace OnlineAuctionSystem.UserControl
         {
             gvProducts.DataSource = dtProduct;
             gvProducts.DataBind();
-            gvListing.SelectedIndex = 0;
             if (dtProduct != null && dtProduct.Rows.Count > 0)
             {
-
+                panelDetail.Visible = true;
+                panelListing.Visible = true;
                 int index = gvProducts.Rows[0].DataItemIndex; ;
                 seconds = (_product.GetEndTime(Convert.ToInt32(dtProduct.Rows[index]["ProId"])) - _product.GetStartTime()).TotalSeconds;
                 lblProId.Text = dtProduct.Rows[index]["ProId"] + "";
@@ -54,6 +54,11 @@ namespace OnlineAuctionSystem.UserControl
 
                 dtListing = _list.Select(Convert.ToInt32(dtProduct.Rows[index]["ProId"]));
                 RefreshListing();
+            }
+            else
+            {
+                panelDetail.Visible = false;
+                panelListing.Visible = false;
             }
         }
 

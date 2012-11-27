@@ -13,7 +13,7 @@
     </div>--%>
     <dx:ASPxRoundPanel ID="panelLogin" runat="server" CssFilePath="~/App_Themes/Aqua/{0}/styles.css"
         CssPostfix="Aqua" GroupBoxCaptionOffsetY="-28px" HeaderText="Đăng Nhập" SpriteCssFilePath="~/App_Themes/Aqua/{0}/sprite.css"
-        Width="100%">
+        Width="100%" DefaultButton="btnLogin">
         <ContentPaddings Padding="14px" />
         <HeaderStyle Font-Bold="True" />
         <PanelCollection>
