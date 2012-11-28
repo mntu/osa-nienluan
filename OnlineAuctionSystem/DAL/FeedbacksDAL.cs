@@ -16,7 +16,7 @@ namespace OnlineAuctionSystem.DAL
 
         public DataTable Select()
         {
-            return ExecuteQuery("select * from Feedbacks");
+            return ExecuteQuery("select * from Feedbacks order by FeedBackId desc");
         }
 
         public object Select(int id)

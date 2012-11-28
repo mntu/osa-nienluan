@@ -10,9 +10,13 @@ namespace OnlineAuctionSystem.DAL
     {
         public int Count()
         {
-            return Select().Rows.Count;
+            return SelectCustomer().Rows.Count;
         }
 
+        public DataTable SelectCustomer()
+        {
+            return ExecuteQuery("select * from Users where RoleId=2");
+        }
         public DataTable Select()
         {
             return ExecuteQuery("select * from Users");

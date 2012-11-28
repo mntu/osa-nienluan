@@ -1745,3 +1745,18 @@ div.art-footer img
 {
     text-decoration: underline;
 }
+.link
+{
+    text-decoration:none;
+    color:Black;    
+}
+.link:hover
+{
+    text-decoration:none;
+    color:Black;    
+}
+.link:visited
+{
+    text-decoration:none;
+    color:Black;    
+}

@@ -11,9 +11,14 @@ namespace OnlineAuctionSystem.DAL
 
         public int Count()
         {
-            return Select().Rows.Count;
+            return SelectAll().Rows.Count;
         }
-
+        public DataTable SelectAll()
+        {
+            UpdateStatus();
+            UpdateListing();
+            return ExecuteQuery("select * from Products order by ProId desc");
+        }
         public DataTable Select()
         {
             UpdateStatus();
