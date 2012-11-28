@@ -87,7 +87,7 @@
                                         <li><a href="ViewCategories.aspx">Loại Hàng</a></li>
                                         <li><a href="ViewProducts.aspx">Sản Phẩm</a> </li>
                                         <li><a href="ViewFeedbacks.aspx">Góp Ý</a> </li>
-                                        <li><a href="ViewUsers.aspx">Người Dùng</a> </li>
+                                        <li><a href="ViewCustomers.aspx">Khách Hàng</a> </li>
                                     </ul>
                                 </div>
                                 <div class="login">

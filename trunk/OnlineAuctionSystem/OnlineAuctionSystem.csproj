@@ -67,6 +67,7 @@
   <ItemGroup>
     <Content Include="AddCreditCard.aspx" />
     <Content Include="Admin\AdminControl\ctrlPersonalMenu.ascx" />
+    <Content Include="Admin\AdminControl\ctrlViewFeedbacks.ascx" />
     <Content Include="Admin\ChangePassword.aspx" />
     <Content Include="Admin\ChangeProfile.aspx" />
     <Content Include="Admin\container.swf" />
@@ -92,6 +93,11 @@
     <Content Include="Admin\images\header-object.png" />
     <Content Include="Admin\images\header.jpg" />
     <Content Include="Admin\images\header.png" />
+    <Content Include="Admin\images\icon-catetogories.png" />
+    <Content Include="Admin\images\icon-customer.png" />
+    <Content Include="Admin\images\icon-feedback.png" />
+    <Content Include="Admin\images\icon-product.png" />
+    <Content Include="Admin\images\icon-user.png" />
     <Content Include="Admin\images\menuitem.png" />
     <Content Include="Admin\images\nav.png" />
     <Content Include="Admin\images\page_gl.png" />
@@ -110,6 +116,7 @@
     <Content Include="Admin\js\jquery.js" />
     <Content Include="Admin\js\script.js" />
     <Content Include="Admin\js\swfobject.js" />
+    <Content Include="Admin\ViewFeedbacks.aspx" />
     <Content Include="ChangePassword.aspx" />
     <Content Include="ChangeProfile.aspx" />
     <Content Include="container.swf" />
@@ -213,6 +220,13 @@
     <Compile Include="Admin\AdminControl\ctrlPersonalMenu.ascx.designer.cs">
       <DependentUpon>ctrlPersonalMenu.ascx</DependentUpon>
     </Compile>
+    <Compile Include="Admin\AdminControl\ctrlViewFeedbacks.ascx.cs">
+      <DependentUpon>ctrlViewFeedbacks.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\AdminControl\ctrlViewFeedbacks.ascx.designer.cs">
+      <DependentUpon>ctrlViewFeedbacks.ascx</DependentUpon>
+    </Compile>
     <Compile Include="Admin\AdminMasterPage.Master.cs">
       <DependentUpon>AdminMasterPage.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -240,6 +254,13 @@
     </Compile>
     <Compile Include="Admin\Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\ViewFeedbacks.aspx.cs">
+      <DependentUpon>ViewFeedbacks.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\ViewFeedbacks.aspx.designer.cs">
+      <DependentUpon>ViewFeedbacks.aspx</DependentUpon>
     </Compile>
     <Compile Include="ChangePassword.aspx.cs">
       <DependentUpon>ChangePassword.aspx</DependentUpon>
