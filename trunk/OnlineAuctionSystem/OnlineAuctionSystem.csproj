@@ -131,6 +131,7 @@
     <Content Include="Admin\ViewProducts.aspx" />
     <Content Include="ChangePassword.aspx" />
     <Content Include="ChangeProfile.aspx" />
+    <Content Include="Contact.aspx" />
     <Content Include="container.swf" />
     <Content Include="CreditCard.aspx" />
     <Content Include="css\jquery.ad-gallery.css" />
@@ -349,6 +350,13 @@
     </Compile>
     <Compile Include="ChangeProfile.aspx.designer.cs">
       <DependentUpon>ChangeProfile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Contact.aspx.cs">
+      <DependentUpon>Contact.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Contact.aspx.designer.cs">
+      <DependentUpon>Contact.aspx</DependentUpon>
     </Compile>
     <Compile Include="CreditCard.aspx.cs">
       <DependentUpon>CreditCard.aspx</DependentUpon>

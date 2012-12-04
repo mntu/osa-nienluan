@@ -100,7 +100,7 @@
                                         </li>
                                         <li><a href="SellProduct.aspx">Bán Hàng</a> </li>
                                         <li id="lkFeedback" runat="server"><a href="Feedback.aspx">Góp Ý</a> </li>
-                                        <li><a href="#">Liên Hệ</a> </li>
+                                        <li><a href="Contact.aspx">Liên Hệ</a> </li>
                                     </ul>
                                 </div>
                                 <div class="login">
