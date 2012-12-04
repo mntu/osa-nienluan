@@ -67,12 +67,16 @@
   <ItemGroup>
     <Content Include="AddCreditCard.aspx" />
     <Content Include="Admin\AddAccount.aspx" />
+    <Content Include="Admin\AdminControl\ctrlGallery.ascx" />
     <Content Include="Admin\AdminControl\ctrlPersonalMenu.ascx" />
     <Content Include="Admin\AdminControl\ctrlViewAccount.ascx" />
     <Content Include="Admin\AdminControl\ctrlViewFeedbacks.ascx" />
+    <Content Include="Admin\AdminControl\ctrlViewCustomer.ascx" />
+    <Content Include="Admin\AdminControl\ctrlViewProducts.ascx" />
     <Content Include="Admin\ChangePassword.aspx" />
     <Content Include="Admin\ChangeProfile.aspx" />
     <Content Include="Admin\container.swf" />
+    <Content Include="Admin\css\jquery.ad-gallery.css" />
     <Content Include="Admin\css\style.css" />
     <Content Include="Admin\css\style.ie6.css" />
     <Content Include="Admin\css\style.ie7.css" />
@@ -116,11 +120,15 @@
     <Content Include="Admin\images\vmenublockheader.png" />
     <Content Include="Admin\images\vmenuitem.png" />
     <Content Include="Admin\images\VS.png" />
+    <Content Include="Admin\js\jquery.ad-gallery.js" />
     <Content Include="Admin\js\jquery.js" />
+    <Content Include="Admin\js\jquery.min.js" />
     <Content Include="Admin\js\script.js" />
     <Content Include="Admin\js\swfobject.js" />
     <Content Include="Admin\ViewAccount.aspx" />
+    <Content Include="Admin\ViewCustomers.aspx" />
     <Content Include="Admin\ViewFeedbacks.aspx" />
+    <Content Include="Admin\ViewProducts.aspx" />
     <Content Include="ChangePassword.aspx" />
     <Content Include="ChangeProfile.aspx" />
     <Content Include="container.swf" />
@@ -195,7 +203,6 @@
     <Content Include="UserControl\ctrlSellProduct.ascx" />
     <Content Include="UserControl\ctrlViewProducts.ascx" />
     <Content Include="Default.aspx" />
-    <Content Include="UserControl\ctrlWinProduct.ascx" />
     <Content Include="UserControl\ctrlYourProduct.ascx" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
@@ -224,6 +231,13 @@
     <Compile Include="Admin\AddAccount.aspx.designer.cs">
       <DependentUpon>AddAccount.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Admin\AdminControl\ctrlGallery.ascx.cs">
+      <DependentUpon>ctrlGallery.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\AdminControl\ctrlGallery.ascx.designer.cs">
+      <DependentUpon>ctrlGallery.ascx</DependentUpon>
+    </Compile>
     <Compile Include="Admin\AdminControl\ctrlPersonalMenu.ascx.cs">
       <DependentUpon>ctrlPersonalMenu.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -244,6 +258,20 @@
     </Compile>
     <Compile Include="Admin\AdminControl\ctrlViewFeedbacks.ascx.designer.cs">
       <DependentUpon>ctrlViewFeedbacks.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\AdminControl\ctrlViewCustomer.ascx.cs">
+      <DependentUpon>ctrlViewCustomer.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\AdminControl\ctrlViewCustomer.ascx.designer.cs">
+      <DependentUpon>ctrlViewCustomer.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\AdminControl\ctrlViewProducts.ascx.cs">
+      <DependentUpon>ctrlViewProducts.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\AdminControl\ctrlViewProducts.ascx.designer.cs">
+      <DependentUpon>ctrlViewProducts.ascx</DependentUpon>
     </Compile>
     <Compile Include="Admin\AdminMasterPage.Master.cs">
       <DependentUpon>AdminMasterPage.Master</DependentUpon>
@@ -287,12 +315,26 @@
     <Compile Include="Admin\ViewAccount.aspx.designer.cs">
       <DependentUpon>ViewAccount.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Admin\ViewCustomers.aspx.cs">
+      <DependentUpon>ViewCustomers.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\ViewCustomers.aspx.designer.cs">
+      <DependentUpon>ViewCustomers.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Admin\ViewFeedbacks.aspx.cs">
       <DependentUpon>ViewFeedbacks.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Admin\ViewFeedbacks.aspx.designer.cs">
       <DependentUpon>ViewFeedbacks.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\ViewProducts.aspx.cs">
+      <DependentUpon>ViewProducts.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\ViewProducts.aspx.designer.cs">
+      <DependentUpon>ViewProducts.aspx</DependentUpon>
     </Compile>
     <Compile Include="ChangePassword.aspx.cs">
       <DependentUpon>ChangePassword.aspx</DependentUpon>
@@ -460,13 +502,6 @@
     </Compile>
     <Compile Include="UserControl\ctrlViewProducts.ascx.designer.cs">
       <DependentUpon>ctrlViewProducts.ascx</DependentUpon>
-    </Compile>
-    <Compile Include="UserControl\ctrlWinProduct.ascx.cs">
-      <DependentUpon>ctrlWinProduct.ascx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="UserControl\ctrlWinProduct.ascx.designer.cs">
-      <DependentUpon>ctrlWinProduct.ascx</DependentUpon>
     </Compile>
     <Compile Include="UserControl\ctrlYourProduct.ascx.cs">
       <DependentUpon>ctrlYourProduct.ascx</DependentUpon>

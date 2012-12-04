@@ -17,7 +17,7 @@ namespace OnlineAuctionSystem.DAL
         {
             UpdateStatus();
             UpdateListing();
-            return ExecuteQuery("select * from Products order by ProId desc");
+            return ExecuteQuery("select *,(CASE [Status] WHEN 1 THEN N'Đang Đấu Giá' ELSE N'Đã Kết Thúc' END) as [Status1] from Products order by ProId desc");
         }
         public DataTable Select()
         {
@@ -29,8 +29,16 @@ namespace OnlineAuctionSystem.DAL
         {
             UpdateStatus();
             UpdateListing();
-            string sql = "select * from Products where CateId={0} and Status=1 order by ProId desc";
+            string sql = "select *,(CASE [Status] WHEN 1 THEN N'Đang Đấu Giá' ELSE N'Đã Kết Thúc' END) as [Status1] from Products where CateId={0} and Status=1 order by ProId desc";
             sql = String.Format(sql, cateId);
+            return ExecuteQuery(sql);
+        }
+        public DataTable FindProduct(string key)
+        { 
+            UpdateStatus();
+            UpdateListing();
+            string sql = "select *,(CASE [Status] WHEN 1 THEN N'Đang Đấu Giá' ELSE N'Đã Kết Thúc' END) as [Status1] from Products where ProName like N'%{0}%' and Status=1 order by ProId desc ";
+            sql = String.Format(sql, key);
             return ExecuteQuery(sql);
         }
         public DataTable SelectByUsername(string username)
