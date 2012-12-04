@@ -35,7 +35,7 @@ namespace OnlineAuctionSystem
             if (dtProduct != null && dtProduct.Rows.Count > 0)
             {
                 panelDetail.Visible = true;
-                int index=gvProduct.Rows[0].DataItemIndex;
+                int index = gvProduct.Rows[0].DataItemIndex;
                 lblProId.Text = dtProduct.Rows[index]["ProId"] + "";
                 lblProName.Text = dtProduct.Rows[index]["ProName"] + "";
                 lblStartPrice.Text = _dalPro.ConvertPrice(Convert.ToDecimal(dtProduct.Rows[index]["StartPrice"]));
@@ -46,6 +46,10 @@ namespace OnlineAuctionSystem
 
                 this.ctrlGallery1.CheckImageUrl = MapPath(@"ProductImg") + @"\" + lblUsername.Text + @"\" + lblProId.Text;
                 this.ctrlGallery1.ImageUrl = lblUsername.Text + "/" + lblProId.Text + "/";
+            }
+            else
+            {
+                panelDetail.Visible = false;
             }
         }
 

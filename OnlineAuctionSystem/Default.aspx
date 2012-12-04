@@ -4,7 +4,12 @@
     <%
         OnlineAuctionSystem.DAL.ProductsDAL _dal = new OnlineAuctionSystem.DAL.ProductsDAL();
         System.Data.DataTable tmp;
-        if (Request.QueryString["CateId"] == null)
+        if (Request.QueryString["key"] != null)
+        {
+            if (Request.QueryString["key"] == "") tmp = _dal.Select();
+            else tmp = _dal.FindProduct(Request.QueryString["key"]);
+        }
+        else if (Request.QueryString["CateId"] == null)
         {
            tmp = _dal.Select();
         }

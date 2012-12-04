@@ -7,7 +7,8 @@
         EmptyDataText="Xin lỗi, hiện tại chưa có góp ý nào!" 
         onpageindexchanging="gvFeedback_PageIndexChanging" 
         onrowdeleting="gvFeedback_RowDeleting" 
-        onselectedindexchanging="gvFeedback_SelectedIndexChanging">
+        onselectedindexchanging="gvFeedback_SelectedIndexChanging" 
+        SelectedIndex="0">
         <Columns>
             <asp:BoundField DataField="FeedBackId" HeaderText="ID" Visible="False" />
             <asp:BoundField DataField="Title" HeaderText="Tiêu Đề" />

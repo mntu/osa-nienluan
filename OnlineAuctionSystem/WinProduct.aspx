@@ -20,7 +20,8 @@
                 <asp:GridView ID="gvProduct" runat="server" AllowPaging="True" 
                     AutoGenerateColumns="False" PageSize="5" Width="100%" 
                     OnPageIndexChanging="gvProduct_PageIndexChanging" 
-                    OnSelectedIndexChanging="gvProduct_SelectedIndexChanging">
+                    OnSelectedIndexChanging="gvProduct_SelectedIndexChanging" 
+                    EmptyDataText="Xin lỗi, hiện tại bạn chưa thắng được sản phẳm nào!">
                     <Columns>
                         <asp:BoundField DataField="ProId" HeaderText="Mã Sản Phẩm" >
                         <ItemStyle HorizontalAlign="Center" Width="100px" />
@@ -35,6 +36,7 @@
                         <ItemStyle HorizontalAlign="Center" Width="85px" />
                         </asp:CommandField>
                     </Columns>
+                    <EmptyDataRowStyle HorizontalAlign="Center" />
                 </asp:GridView>
         </div>
                 <dx:ASPxRoundPanel ID="panelDetail" runat="server" CssFilePath="~/App_Themes/Aqua/{0}/styles.css"

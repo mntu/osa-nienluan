@@ -1,5 +1,7 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="ctrlCategories.ascx.cs"
     Inherits="OnlineAuctionSystem.UserControl.ctrlCategories" %>
+<%@ Register Assembly="DevExpress.Web.ASPxEditors.v11.1, Version=11.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a"
+    Namespace="DevExpress.Web.ASPxEditors" TagPrefix="dx" %>
 <div class="art-box art-vmenublock">
     <div class="art-box-body art-vmenublock-body">
         <div class="art-bar art-vmenublockheader">
@@ -18,13 +20,13 @@
                     %>
                     <li><a href="Default.aspx?CateId=<%=tmp.Rows[i]["CateId"] %>" class="active">
                         <%=tmp.Rows[i]["CateName"]%></a> </li>
-                    <% }
+                        <% }
                            else
                            {
                     %>
                     <li><a href="Default.aspx?CateId=<%=tmp.Rows[i]["CateId"] %>">
                         <%=tmp.Rows[i]["CateName"]%></a> </li>
-                    <%
+                        <%
                            }
                        }
                     %>
@@ -37,10 +39,26 @@
     <div class="art-box-body art-block-body">
         <div class="art-box art-blockcontent">
             <div class="art-box-body art-blockcontent-body">
-                <div>
-                    <input type="text" value="" name="email" id="s" style="width: 95%;" />
-                    <input type="button" name="search" class="art-button" value="Tìm Kiếm" />
-                </div>
+            <table width="100%">
+                <tr>
+                    <td>
+                        <dx:ASPxTextBox ID="txtKey" runat="server" Width="100%" 
+                            CssFilePath="~/App_Themes/Aqua/{0}/styles.css" CssPostfix="Aqua" 
+                            NullText="Nhập từ khóa...." 
+                            SpriteCssFilePath="~/App_Themes/Aqua/{0}/sprite.css">
+                            <ValidationSettings>
+                                <ErrorFrameStyle ImageSpacing="4px">
+                                    <ErrorTextPaddings PaddingLeft="4px" />
+                                </ErrorFrameStyle>
+                            </ValidationSettings>
+                        </dx:ASPxTextBox>
+                    </td>
+                    <td><asp:Button
+                        ID="btnSearch" runat="server" Text="Tìm Kiếm" CssClass="art-button" 
+                            onclick="btnSearch_Click" /></td>
+                </tr>
+            </table>
+                    
             </div>
         </div>
     </div>

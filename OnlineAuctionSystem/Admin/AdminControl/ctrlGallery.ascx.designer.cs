@@ -11,7 +11,7 @@ namespace OnlineAuctionSystem.UserControl
 {
 
 
-    public partial class ctrlWinProduct
+    public partial class ctrlGallery
     {
     }
 }

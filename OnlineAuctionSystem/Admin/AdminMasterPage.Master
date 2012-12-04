@@ -17,6 +17,9 @@
     <!--[if IE 7]><link rel="stylesheet" href="../css/style.ie7.css" type="text/css" media="screen" /><![endif]-->
     <script type="text/javascript" src="js/jquery.js"></script>
     <script type="text/javascript" src="js/script.js"></script>
+        <link rel="stylesheet" type="text/css" href="css/jquery.ad-gallery.css">
+  <script type="text/javascript" src="js/jquery.min.js"></script>
+  <script type="text/javascript" src="js/jquery.ad-gallery.js"></script>
 </head>
 <body>
     <form id="form1" runat="server">
@@ -115,9 +118,11 @@
                     <div class="art-footer-body">
                         <div class="art-footer-text">
                             <p>
-                                <a href="#">Link1</a> | <a href="#">Link2</a> | <a href="#">Link3</a></p>
+                                Copyright © 2012. All Rights Reserved.
+                            </p>
                             <p>
-                                Copyright © 2012. All Rights Reserved.</p>
+                                Niên luận HTTT - Website Đấu Giá Sản Phẩm Trực Tuyến
+                            </p>
                         </div>
                         <div class="cleared">
                         </div>

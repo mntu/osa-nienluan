@@ -7,27 +7,27 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace OnlineAuctionSystem.UserControl {
+namespace OnlineAuctionSystem.Admin {
     
     
-    public partial class ctrlCategories {
+    public partial class ViewCustomers {
         
         /// <summary>
-        /// txtKey control.
+        /// panel control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::DevExpress.Web.ASPxEditors.ASPxTextBox txtKey;
+        protected global::DevExpress.Web.ASPxRoundPanel.ASPxRoundPanel panel;
         
         /// <summary>
-        /// btnSearch control.
+        /// ctrlViewCustomer1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnSearch;
+        protected global::OnlineAuctionSystem.Admin.AdminControl.ViewCustomer ctrlViewCustomer1;
     }
 }
