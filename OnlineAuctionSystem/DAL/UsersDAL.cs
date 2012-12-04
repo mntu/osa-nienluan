@@ -17,6 +17,10 @@ namespace OnlineAuctionSystem.DAL
         {
             return ExecuteQuery("select * from Users where RoleId=2");
         }
+        public DataTable SelectAccount()
+        {
+            return ExecuteQuery("select * from Users where RoleId=1 and Username!='admin'");
+        }
         public DataTable Select()
         {
             return ExecuteQuery("select * from Users");
@@ -112,6 +116,30 @@ namespace OnlineAuctionSystem.DAL
                 ExecuteNonQuery(sql);
             }
             catch { return; }
+        }
+        public bool CheckUsername(string username)
+        {
+            try
+            {
+                string sql = "select * from Users where Username='{0}'";
+                sql = String.Format(sql, username);
+                DataTable tmp = ExecuteQuery(sql);
+                if (tmp != null && tmp.Rows.Count > 0) return true;
+                return false;
+            }
+            catch { return false; }
+        }
+        public bool CheckEmail(string email)
+        {
+            try
+            {
+                string sql = "select * from Users where Email='{0}'";
+                sql = String.Format(sql, email);
+                DataTable tmp = ExecuteQuery(sql);
+                if (tmp != null && tmp.Rows.Count > 0) return true;
+                return false;
+            }
+            catch { return false; }
         }
     }
 }

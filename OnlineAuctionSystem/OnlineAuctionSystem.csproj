@@ -66,7 +66,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="AddCreditCard.aspx" />
+    <Content Include="Admin\AddAccount.aspx" />
     <Content Include="Admin\AdminControl\ctrlPersonalMenu.ascx" />
+    <Content Include="Admin\AdminControl\ctrlViewAccount.ascx" />
     <Content Include="Admin\AdminControl\ctrlViewFeedbacks.ascx" />
     <Content Include="Admin\ChangePassword.aspx" />
     <Content Include="Admin\ChangeProfile.aspx" />
@@ -75,6 +77,7 @@
     <Content Include="Admin\css\style.ie6.css" />
     <Content Include="Admin\css\style.ie7.css" />
     <Content Include="Admin\Default.aspx" />
+    <Content Include="Admin\EditAccount.aspx" />
     <Content Include="Admin\expressInstall.swf" />
     <Content Include="Admin\images\01.png" />
     <Content Include="Admin\images\02.png" />
@@ -116,6 +119,7 @@
     <Content Include="Admin\js\jquery.js" />
     <Content Include="Admin\js\script.js" />
     <Content Include="Admin\js\swfobject.js" />
+    <Content Include="Admin\ViewAccount.aspx" />
     <Content Include="Admin\ViewFeedbacks.aspx" />
     <Content Include="ChangePassword.aspx" />
     <Content Include="ChangeProfile.aspx" />
@@ -213,12 +217,26 @@
     <Compile Include="AddCreditCard.aspx.designer.cs">
       <DependentUpon>AddCreditCard.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Admin\AddAccount.aspx.cs">
+      <DependentUpon>AddAccount.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\AddAccount.aspx.designer.cs">
+      <DependentUpon>AddAccount.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Admin\AdminControl\ctrlPersonalMenu.ascx.cs">
       <DependentUpon>ctrlPersonalMenu.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Admin\AdminControl\ctrlPersonalMenu.ascx.designer.cs">
       <DependentUpon>ctrlPersonalMenu.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\AdminControl\ctrlViewAccount.ascx.cs">
+      <DependentUpon>ctrlViewAccount.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\AdminControl\ctrlViewAccount.ascx.designer.cs">
+      <DependentUpon>ctrlViewAccount.ascx</DependentUpon>
     </Compile>
     <Compile Include="Admin\AdminControl\ctrlViewFeedbacks.ascx.cs">
       <DependentUpon>ctrlViewFeedbacks.ascx</DependentUpon>
@@ -254,6 +272,20 @@
     </Compile>
     <Compile Include="Admin\Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\EditAccount.aspx.cs">
+      <DependentUpon>EditAccount.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\EditAccount.aspx.designer.cs">
+      <DependentUpon>EditAccount.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\ViewAccount.aspx.cs">
+      <DependentUpon>ViewAccount.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\ViewAccount.aspx.designer.cs">
+      <DependentUpon>ViewAccount.aspx</DependentUpon>
     </Compile>
     <Compile Include="Admin\ViewFeedbacks.aspx.cs">
       <DependentUpon>ViewFeedbacks.aspx</DependentUpon>

@@ -54,6 +54,12 @@ namespace OnlineAuctionSystem
             }
             else if (_dal.Select(txtUsername.Text) == null)
             {
+                if (_dal.CheckEmail(txtEmail1.Text))
+                {
+                    lblError.Text = "Lỗi: Email đã được sử dụng!";
+                    txtEmail1.Focus();
+                    return;
+                }
                 Users newuser = new Users();
                 newuser.Username = txtUsername.Text;
                 newuser.Password = txtPassword1.Text;
@@ -76,6 +82,7 @@ namespace OnlineAuctionSystem
             else
             {
                 lblError.Text = "Lỗi: Tài khoản đã được sử dụng, vui lòng chọn tài khoản khác!";
+                txtUsername.Focus();
             }
         }
     }
