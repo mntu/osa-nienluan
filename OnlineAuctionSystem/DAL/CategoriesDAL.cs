@@ -80,13 +80,19 @@ namespace OnlineAuctionSystem.DAL
         {
             try
             {
-                string sql = "DELETE FROM Categories WHERE CateId={0}";
-                sql = String.Format(sql, id);
-                return ExecuteNonQuery(sql);
+                if (!new ProductsDAL().CheckProOfCate(id))
+                {
+                    string sql = "DELETE FROM Categories WHERE CateId={0}";
+                    sql = String.Format(sql, id);
+                    return ExecuteNonQuery(sql);
+                }
+                else
+                {
+                    return -1;
+                }
             }
             catch { return -1; }
         }
-
 
         public object Select(string id)
         {

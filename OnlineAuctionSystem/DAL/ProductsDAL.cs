@@ -33,8 +33,21 @@ namespace OnlineAuctionSystem.DAL
             sql = String.Format(sql, cateId);
             return ExecuteQuery(sql);
         }
+        public bool CheckProOfCate(int cateId)
+        {
+            try
+            {
+                string sql = "SELECT * FROM Products WHERE CateId={0}";
+                sql = String.Format(sql, cateId);
+                DataTable tmp = ExecuteQuery(sql);
+                if (tmp != null && tmp.Rows.Count > 0)
+                    return true;
+                return false;
+            }
+            catch { return false; }
+        }
         public DataTable FindProduct(string key)
-        { 
+        {
             UpdateStatus();
             UpdateListing();
             string sql = "select *,(CASE [Status] WHEN 1 THEN N'Đang Đấu Giá' ELSE N'Đã Kết Thúc' END) as [Status1] from Products where ProName like N'%{0}%' and Status=1 order by ProId desc ";
@@ -83,7 +96,7 @@ namespace OnlineAuctionSystem.DAL
                 Products o = (Products)obj;
                 string sql = "INSERT INTO Products(ProName,[Description],StartPrice,Amount,Duration,DatePosted,NumView,[Status],CateId,Username,Fee) ";
                 sql += "VALUES(N'{0}',N'{1}',{2},{3},{4},DEFAULT,{5},'{6}',{7},'{8}',{9})";
-                sql = String.Format(sql, o.ProName, o.Description, o.StarPrice, o.Amount, o.Duration, o.NumView, o.Status, o.CateId, o.Username,o.Fee);
+                sql = String.Format(sql, o.ProName, o.Description, o.StarPrice, o.Amount, o.Duration, o.NumView, o.Status, o.CateId, o.Username, o.Fee);
                 return ExecuteNonQuery(sql);
             }
             catch { return -1; }
@@ -96,7 +109,7 @@ namespace OnlineAuctionSystem.DAL
                 Products o = (Products)obj;
                 string sql = "UPDATE Products SET ProName=N'{0}',[Description]=N'{1}',StartPrice={2},Amount={3},Duration={4},NumView={5},[Status]='{6}',CateId={7},Username='{8}',Fee={9} ";
                 sql += "WHERE ProId={10}";
-                sql = String.Format(sql, o.ProName, o.Description, o.StarPrice, o.Amount, o.Duration, o.NumView, o.Status, o.CateId, o.Username,o.Fee, o.ProId);
+                sql = String.Format(sql, o.ProName, o.Description, o.StarPrice, o.Amount, o.Duration, o.NumView, o.Status, o.CateId, o.Username, o.Fee, o.ProId);
                 return ExecuteNonQuery(sql);
             }
             catch { return -1; }
