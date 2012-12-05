@@ -142,7 +142,7 @@ namespace OnlineAuctionSystem.UserControl
                 obj.Status = true;
                 obj.CateId = Convert.ToInt32(listCate.Items[listCate.SelectedIndex].Value);
                 obj.Username = Session["user"].ToString();
-                float cateFee = ((Categories)_dalCate.Select(obj.CateId)).Fee;
+                double cateFee = ((Categories)_dalCate.Select(obj.CateId)).Fee;
                 switch (obj.Duration)
                 {
                     case 1:

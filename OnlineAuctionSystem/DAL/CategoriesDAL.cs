@@ -30,12 +30,25 @@ namespace OnlineAuctionSystem.DAL
                     Categories obj = new Categories();
                     obj.CateId = Convert.ToInt32(tmp.Rows[0]["CateId"]);
                     obj.CateName = tmp.Rows[0]["CateName"] + "";
-                    obj.Fee =(float)Convert.ToDouble(tmp.Rows[0]["Fee"]);
+                    obj.Fee = (float)Convert.ToDouble(tmp.Rows[0]["Fee"]);
                     return obj;
                 }
                 return null;
             }
             catch { return null; }
+        }
+
+        public bool CheckCateName(string cateName)
+        {
+            try
+            {
+                string sql = "select * from Categories where CateName='" + cateName + "'";                
+                DataTable tmp = ExecuteQuery(sql);
+                if (tmp != null && tmp.Rows.Count > 0)
+                    return true;
+                return false;
+            }
+            catch { return false; }
         }
 
         public int Insert(object obj)
@@ -44,7 +57,7 @@ namespace OnlineAuctionSystem.DAL
             {
                 Categories o = (Categories)obj;
                 string sql = "INSERT INTO Categories(CateName,Fee) VALUES(N'{0}',{1})";
-                sql = String.Format(sql, o.CateName,o.Fee);
+                sql = String.Format(sql, o.CateName, o.Fee);
                 return ExecuteNonQuery(sql);
             }
             catch { return -1; }
@@ -56,7 +69,7 @@ namespace OnlineAuctionSystem.DAL
             {
                 Categories o = (Categories)obj;
                 string sql = "UPDATE Categories SET CateName=N'{0}',Fee={1} WHERE CateId={2}";
-                sql = String.Format(sql, o.CateName,o.Fee,o.CateId);
+                sql = String.Format(sql, o.CateName, o.Fee, o.CateId);
                 return ExecuteNonQuery(sql);
             }
             catch { return -1; }
