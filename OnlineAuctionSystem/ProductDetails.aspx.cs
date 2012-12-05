@@ -18,8 +18,8 @@ namespace OnlineAuctionSystem
         decimal currentPrice;
         protected void Page_Load(object sender, EventArgs e)
         {
-            Master.FindControl("ctrlCategories1").Visible = false;
-            Master.FindControl("ctrlPersonalMenu1").Visible = true;
+            Master.FindControl("ctrlCategories1").Visible =true;
+            Master.FindControl("ctrlPersonalMenu1").Visible = false;
             if (Session["user"] == null) Response.Redirect("Login.aspx");
 
             if (Request.QueryString["ProId"] == null) Response.Redirect("Default.aspx");

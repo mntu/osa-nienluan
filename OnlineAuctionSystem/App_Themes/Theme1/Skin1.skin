@@ -21,7 +21,7 @@ Default skin template. The following skins are provided as examples only.
                     <FooterStyle CssClass="dxrpHeader_Aqua" Font-Bold="True" ForeColor="White" />
                     <HeaderStyle CssClass="dxrpHeader_Aqua" Font-Bold="True" 
                         HorizontalAlign="Center" VerticalAlign="Middle" />
-                    <PagerStyle CssClass="dxrpHeader_Aqua" ForeColor="Gray" 
+                    <PagerStyle Font-Bold="True" Font-Size="13pt" CssClass="dxrpHeader_Aqua" ForeColor="Blue" 
                         HorizontalAlign="Center" />
                     <RowStyle BackColor="#EFF3FB" />
                     <SelectedRowStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" />
@@ -29,5 +29,5 @@ Default skin template. The following skins are provided as examples only.
                     <SortedAscendingHeaderStyle BackColor="#6D95E1" />
                     <SortedDescendingCellStyle BackColor="#E9EBEF" />
                     <SortedDescendingHeaderStyle BackColor="#4870BE" />
-                    <PagerStyle Font-Bold="True" Font-Size="13pt" />
+                    
                 </asp:GridView>    

@@ -4,27 +4,33 @@
     Namespace="DevExpress.Web.ASPxEditors" TagPrefix="dx" %>
 <%
     imgImage.ImageUrl = this.imgUrl;
+
     lblProName.Text = proName;
     lblPrice.Text = price;
 %>
 <div style="float: left; width: 170px; margin: 2px; padding: 5px; border: 0.5px dashed #99CCFF;
     display: block; text-align: center;">
-    <div style="width: 100%; margin-bottom: 5px;">
+    <div style="width: 100%; margin-bottom: 5px; height: 40px; vertical-align: middle;">
+    <div>
         <dx:ASPxLabel ID="lblProName" runat="server" Font-Bold="True" Font-Size="14px" Width="150px"
             Text="" Wrap="True">
         </dx:ASPxLabel>
+        </div>
     </div>
-    <asp:Image ID="imgImage" runat="server" Height="150px" Width="150px" />
+    <div style="width: 100%; height: 150px; text-align: center">
+        <asp:Image ID="imgImage" runat="server" Height="100%" Width="100%" /></div>
     <div style="width: 100%; margin-top: 5px;">
         <asp:Label ID="lblPrice" runat="server" Font-Bold="True" ForeColor="Red"></asp:Label>
     </div>
     <div id="<%=proId %>" style="width: 100%; margin-bottom: 5px;">
     </div>
-    <div id="Div<%=proId %>" style="text-align:center">
-    <a href="ProductDetails.aspx?ProId=<%=proId %>"><button type="button">Đấu Giá</button></a>
+    <div id="Div<%=proId %>" style="text-align: center">
+        <a href="ProductDetails.aspx?ProId=<%=proId %>">
+            <button type="button">
+                Đấu Giá</button></a>
     </div>
-    <div id="timeOut<%=proId %>" style="color:red;font-weight:bold;">
-    Đã Hết Giờ Đấu Giá
+    <div id="timeOut<%=proId %>" style="color: red; font-weight: bold;">
+        Đã Hết Giờ Đấu Giá
     </div>
 </div>
 <script type="text/javascript">

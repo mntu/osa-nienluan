@@ -1760,3 +1760,18 @@ div.art-footer img
     text-decoration:none;
     color:Black;    
 }
+.lkPage
+{
+    text-decoration:none;
+    color:#0066FF;    
+}
+.lkPage:hover
+{
+    text-decoration:none;
+    color:#0066FF;    
+}
+.lkPage:visited
+{
+    text-decoration:none;
+    color:#0066FF;    
+}
