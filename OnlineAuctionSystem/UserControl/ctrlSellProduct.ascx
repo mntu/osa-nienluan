@@ -189,7 +189,7 @@
                                 <Items>
                                     <dx:ListEditItem Text="1 ngày - 1%" Value="1" Selected="True" />
                                     <dx:ListEditItem Text="3 ngày - 2.5%" Value="3" />
-                                    <dx:ListEditItem Text="5 ngày - 3%" Value="5" />
+                                    <dx:ListEditItem Text="5 ngày - 4%" Value="5" />
                                     <dx:ListEditItem Text="7 ngày - 5%" Value="7" />
                                     <dx:ListEditItem Text="10 ngày - 7%" Value="10" />
                                 </Items>
