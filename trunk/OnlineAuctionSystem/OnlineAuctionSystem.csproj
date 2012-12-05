@@ -71,6 +71,7 @@
     <Content Include="Admin\AdminControl\ctrlGallery.ascx" />
     <Content Include="Admin\AdminControl\ctrlPersonalMenu.ascx" />
     <Content Include="Admin\AdminControl\ctrlViewAccount.ascx" />
+    <Content Include="Admin\AdminControl\ctrlViewCategories.ascx" />
     <Content Include="Admin\AdminControl\ctrlViewFeedbacks.ascx" />
     <Content Include="Admin\AdminControl\ctrlViewCustomer.ascx" />
     <Content Include="Admin\AdminControl\ctrlViewProducts.ascx" />
@@ -83,6 +84,7 @@
     <Content Include="Admin\css\style.ie7.css" />
     <Content Include="Admin\Default.aspx" />
     <Content Include="Admin\EditAccount.aspx" />
+    <Content Include="Admin\EditCategory.aspx" />
     <Content Include="Admin\expressInstall.swf" />
     <Content Include="Admin\images\01.png" />
     <Content Include="Admin\images\02.png" />
@@ -127,6 +129,7 @@
     <Content Include="Admin\js\script.js" />
     <Content Include="Admin\js\swfobject.js" />
     <Content Include="Admin\ViewAccount.aspx" />
+    <Content Include="Admin\ViewCategories.aspx" />
     <Content Include="Admin\ViewCustomers.aspx" />
     <Content Include="Admin\ViewFeedbacks.aspx" />
     <Content Include="Admin\ViewProducts.aspx" />
@@ -265,6 +268,13 @@
     <Compile Include="Admin\AdminControl\ctrlViewAccount.ascx.designer.cs">
       <DependentUpon>ctrlViewAccount.ascx</DependentUpon>
     </Compile>
+    <Compile Include="Admin\AdminControl\ctrlViewCategories.ascx.cs">
+      <DependentUpon>ctrlViewCategories.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\AdminControl\ctrlViewCategories.ascx.designer.cs">
+      <DependentUpon>ctrlViewCategories.ascx</DependentUpon>
+    </Compile>
     <Compile Include="Admin\AdminControl\ctrlViewFeedbacks.ascx.cs">
       <DependentUpon>ctrlViewFeedbacks.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -321,12 +331,26 @@
     <Compile Include="Admin\EditAccount.aspx.designer.cs">
       <DependentUpon>EditAccount.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Admin\EditCategory.aspx.cs">
+      <DependentUpon>EditCategory.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\EditCategory.aspx.designer.cs">
+      <DependentUpon>EditCategory.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Admin\ViewAccount.aspx.cs">
       <DependentUpon>ViewAccount.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Admin\ViewAccount.aspx.designer.cs">
       <DependentUpon>ViewAccount.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\ViewCategories.aspx.cs">
+      <DependentUpon>ViewCategories.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\ViewCategories.aspx.designer.cs">
+      <DependentUpon>ViewCategories.aspx</DependentUpon>
     </Compile>
     <Compile Include="Admin\ViewCustomers.aspx.cs">
       <DependentUpon>ViewCustomers.aspx</DependentUpon>
