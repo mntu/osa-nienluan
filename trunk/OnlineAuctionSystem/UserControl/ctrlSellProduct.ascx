@@ -52,7 +52,8 @@
                         </td>
                         <td colspan="2">
                             <dx:ASPxTextBox ID="txtProName" runat="server" CssFilePath="~/App_Themes/Aqua/{0}/styles.css"
-                                CssPostfix="Aqua" SpriteCssFilePath="~/App_Themes/Aqua/{0}/sprite.css" Width="250px">
+                                CssPostfix="Aqua" SpriteCssFilePath="~/App_Themes/Aqua/{0}/sprite.css" 
+                                Width="250px" MaxLength="50">
                                 <ValidationSettings SetFocusOnError="True">
                                     <ErrorFrameStyle ImageSpacing="4px">
                                         <ErrorTextPaddings PaddingLeft="4px" />

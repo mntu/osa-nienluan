@@ -20,5 +20,23 @@ namespace OnlineAuctionSystem {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::OnlineAuctionSystem.UserControl.ctrlViewProducts ctrlViewProducts1;
+        
+        /// <summary>
+        /// ctrlViewProducts2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::OnlineAuctionSystem.UserControl.ctrlViewProducts ctrlViewProducts2;
+        
+        /// <summary>
+        /// ctrlViewProducts3 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::OnlineAuctionSystem.UserControl.ctrlViewProducts ctrlViewProducts3;
     }
 }
