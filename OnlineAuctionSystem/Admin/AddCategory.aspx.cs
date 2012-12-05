@@ -37,9 +37,7 @@ namespace OnlineAuctionSystem.Admin
                 txtCateName.Focus();
                 return;
             }
-            else
-                if (_dal.Insert(newCate) > 0)
-                    Response.Redirect("ViewCategories.aspx");
+            if (_dal.Insert(newCate) > 0) Response.Redirect("ViewCategories.aspx");
         }
     }
 }

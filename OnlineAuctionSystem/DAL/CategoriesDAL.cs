@@ -42,7 +42,8 @@ namespace OnlineAuctionSystem.DAL
         {
             try
             {
-                string sql = "select * from Categories where CateName='" + cateName + "'";                
+                string sql = "select * from Categories where CateName=N'{0}'";
+                sql = String.Format(sql, cateName);
                 DataTable tmp = ExecuteQuery(sql);
                 if (tmp != null && tmp.Rows.Count > 0)
                     return true;

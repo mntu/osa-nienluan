@@ -10,36 +10,34 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <dx:ASPxRoundPanel ID="rpAddCate" runat="server" CssFilePath="~/App_Themes/Aqua/{0}/styles.css"
         CssPostfix="Aqua" GroupBoxCaptionOffsetY="-28px" SpriteCssFilePath="~/App_Themes/Aqua/{0}/sprite.css"
-        Width="100%">
+        Width="100%" HeaderText="Thêm loại sản phẩm">
         <ContentPaddings Padding="14px" />
+        <HeaderStyle Font-Bold="True" />
         <PanelCollection>
             <dx:PanelContent runat="server" SupportsDisabledAttribute="True">
                 <table align="center">
                     <tr>
-                        <td style="width: 56px; height: 20px;">
-                            &nbsp;
+                        <td>
                         </td>
-                        <td colspan="2" style="height: 20px">
+                        <td colspan="2">
                             <asp:Label ID="lblError" runat="server" ForeColor="Red" Text="lblError"></asp:Label>
                         </td>
-                        <td style="width: 251px; height: 20px;">
-                            &nbsp;
+                        <td >
                         </td>
-                        <td style="height: 20px">
-                            &nbsp;
+                        <td >
                         </td>
                     </tr>
                     <tr>
-                        <td style="width: 56px">
+                        <td>
                             Tên loại:
                         </td>
                         <td colspan="2">
                             <dx:ASPxTextBox ID="txtCateName" runat="server" MaxLength="20" Width="210px">
                             </dx:ASPxTextBox>
                         </td>
-                        <td style="width: 251px">
+                        <td>
                             &nbsp;
-                            <asp:RequiredFieldValidator ID="rfvCateName" runat="server" Display="Dynamic"
+                            <asp:RequiredFieldValidator ID="rfvCateName" runat="server"
                                 ErrorMessage="Vui lòng nhập tên loại!" ForeColor="Red" 
                                 ControlToValidate="txtCateName"></asp:RequiredFieldValidator>
                         </td>
@@ -48,44 +46,43 @@
                         </td>
                     </tr>
                     <tr>
-                        <td style="width: 56px">
-                            Phí:
+                        <td>
+                            Mức phí:
                         </td>
                         <td colspan="2">
                             <dx:ASPxTextBox ID="txtFee" runat="server" Width="210px">
                             </dx:ASPxTextBox>
                         </td>
-                        <td style="width: 251px">
+                        <td>
                             &nbsp;
                             <asp:RequiredFieldValidator ID="rfvFee" runat="server" Display="Dynamic"
-                                ErrorMessage="Vui lòng nhập phí!" ForeColor="Red" 
+                                ErrorMessage="Vui lòng nhập mức phí!" ForeColor="Red" 
                                 ControlToValidate="txtFee"></asp:RequiredFieldValidator>
                             <asp:RegularExpressionValidator ID="revFee" runat="server" Display="Dynamic"
-                                ErrorMessage="Vui lòng nhập phí là số!" ForeColor="Red" 
-                                ValidationExpression="\d+" ControlToValidate="txtFee"></asp:RegularExpressionValidator>
+                                ErrorMessage="Mức phí là số!" ForeColor="Red" 
+                                ValidationExpression="\d+(.d+)*" ControlToValidate="txtFee"></asp:RegularExpressionValidator>
                         </td>
                         <td>
                             &nbsp;
                         </td>
                     </tr>
                     <tr>
-                        <td style="width: 56px">
+                        <td>
                             &nbsp;
                         </td>
                         <td>
                             <dx:ASPxButton ID="btnCancel" runat="server" CssFilePath="~/App_Themes/Aqua/{0}/styles.css"
                                 CssPostfix="Aqua" SpriteCssFilePath="~/App_Themes/Aqua/{0}/sprite.css" Text="Hủy bỏ"
-                                OnClick="btnCancel_Click" Width="100px">
+                                OnClick="btnCancel_Click" Width="100px" CausesValidation="False">
                             </dx:ASPxButton>
                         </td>
-                        <td style="width: 100px">
+                        <td>
                             <dx:ASPxButton ID="btnAddCate" runat="server" CssFilePath="~/App_Themes/Aqua/{0}/styles.css"
                                 CssPostfix="Aqua" SpriteCssFilePath="~/App_Themes/Aqua/{0}/sprite.css" Text="Thêm loại"
                                 OnClick="btnAddCate_Click" Width="100px">
                             </dx:ASPxButton>
                         </td>
-                        <td style="width: 251px">
-                            &nbsp;
+                        <td >
                         </td>
                     </tr>
                 </table>
