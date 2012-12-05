@@ -51,7 +51,19 @@ namespace OnlineAuctionSystem.DAL
             }
             catch { return false; }
         }
-
+        public bool CheckEditCateName(string oldName,string newName)
+        {
+            try
+            {
+                string sql = "select * from Categories where CateName=N'{0}' and CateId not in (select CateId from Categories where CateName=N'{1}')";
+                sql = String.Format(sql, newName,oldName);
+                DataTable tmp = ExecuteQuery(sql);
+                if (tmp != null && tmp.Rows.Count > 0)
+                    return true;
+                return false;
+            }
+            catch { return false; }
+        }
         public int Insert(object obj)
         {
             try

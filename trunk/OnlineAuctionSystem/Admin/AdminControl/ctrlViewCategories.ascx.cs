@@ -15,7 +15,6 @@ namespace OnlineAuctionSystem.Admin.AdminControl
         DataTable dtCate;
         protected void Page_Load(object sender, EventArgs e)
         {
-            lblError.Visible = false;
             if (Session["admin"] == null) Response.Redirect("../Default.aspx");
             dtCate = _dal.Select();
             if (!IsPostBack)
@@ -54,8 +53,7 @@ namespace OnlineAuctionSystem.Admin.AdminControl
             if (_dal.Delete(cateID) > 0) Response.Redirect("ViewCategories.aspx");
             else
             {
-                lblError.Visible = true;
-                lblError.Text = "Loại sản phẩm có tồn tại sản phẩm. Không thể xóa!";
+                Response.Write("<script language='javascript'>alert('Lỗi, Không thể xóa vì tồn tại sản phẩm thuộc loại này!')</script>");
             }
         }
     }

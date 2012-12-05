@@ -36,19 +36,17 @@ namespace OnlineAuctionSystem.Admin
 
         protected void btnEditCate_Click(object sender, EventArgs e)
         {
-            cate.CateName = txtCateName.Text;
-            cate.Fee = Convert.ToDouble(txtFee.Text);
-
-            if (_dal.CheckCateName(txtCateName.Text))
+            if (_dal.CheckEditCateName(cate.CateName, txtCateName.Text))
             {
                 lblError.Visible = true;
                 lblError.Text = "Tên loại đã tồn tại!";
                 txtCateName.Focus();
                 return;
             }
-            else
-                if (_dal.Update(cate) > 0)
-                    Response.Redirect("ViewCategories.aspx");
+            cate.CateName = txtCateName.Text;
+            cate.Fee = Convert.ToDouble(txtFee.Text);
+            if (_dal.Update(cate) > 0)
+                Response.Redirect("ViewCategories.aspx");
         }
     }
 }
