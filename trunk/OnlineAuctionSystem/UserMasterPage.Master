@@ -22,8 +22,14 @@
     <link rel="stylesheet" type="text/css" href="css/jquery.ad-gallery.css">
     <script type="text/javascript" src="js/jquery.min.js"></script>
     <script type="text/javascript" src="js/jquery.ad-gallery.js"></script>
+		<script language="javascript" src="js/adRotator.js"></script>
+		<script language="javascript">
+		    function Install() {
+		        adRotatorCreate('flBottom', 1500);
+		    }
+		</script>
 </head>
-<body>
+<body onload="Install()">
     <form id="form1" runat="server">
     <div id="art-page-background-glare-wrapper">
         <div id="art-page-background-glare">
@@ -117,6 +123,11 @@
                             <div class="art-layout-cell art-sidebar1">
                                 <uc3:ctrlCategories ID="ctrlCategories1" runat="server" ViewStateMode="Inherit" />
                                 <uc4:ctrlPersonalMenu ID="ctrlPersonalMenu1" runat="server" />
+                                <div style="padding:10px;">
+                                    <a href="#" id="flBottom">
+                                        <img src="images/CTU.png" id="flBottom_img" onmouseover="adStopRotate()" onmouseout="adRotate()" style="width:220px" />
+                                    </a>
+                                </div>
                             </div>
                             <div class="art-layout-cell art-content">
                                 <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
@@ -128,13 +139,12 @@
                 <div class="art-footer">
                     <div class="art-footer-body">
                         <div class="art-footer-text">
-                        <p>
+                            <p>
                                 Copyright © 2012. All Rights Reserved.
                             </p>
                             <p>
                                 Niên luận HTTT - Website Đấu Giá Sản Phẩm Trực Tuyến
                             </p>
-                            
                         </div>
                     </div>
                 </div>
