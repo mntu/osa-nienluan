@@ -67,6 +67,7 @@
   <ItemGroup>
     <Content Include="AddCreditCard.aspx" />
     <Content Include="Admin\AddAccount.aspx" />
+    <Content Include="Admin\AddCategory.aspx" />
     <Content Include="Admin\AdminControl\ctrlGallery.ascx" />
     <Content Include="Admin\AdminControl\ctrlPersonalMenu.ascx" />
     <Content Include="Admin\AdminControl\ctrlViewAccount.ascx" />
@@ -231,6 +232,13 @@
     </Compile>
     <Compile Include="Admin\AddAccount.aspx.designer.cs">
       <DependentUpon>AddAccount.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\AddCategory.aspx.cs">
+      <DependentUpon>AddCategory.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\AddCategory.aspx.designer.cs">
+      <DependentUpon>AddCategory.aspx</DependentUpon>
     </Compile>
     <Compile Include="Admin\AdminControl\ctrlGallery.ascx.cs">
       <DependentUpon>ctrlGallery.ascx</DependentUpon>
