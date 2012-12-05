@@ -10,7 +10,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <dx:ASPxRoundPanel ID="rpAddCate" runat="server" CssFilePath="~/App_Themes/Aqua/{0}/styles.css"
         CssPostfix="Aqua" GroupBoxCaptionOffsetY="-28px" SpriteCssFilePath="~/App_Themes/Aqua/{0}/sprite.css"
-        Width="100%" HeaderText="Thêm loại sản phẩm">
+        Width="100%" HeaderText="Thêm loại sản phẩm" DefaultButton="btnAddCate">
         <ContentPaddings Padding="14px" />
         <HeaderStyle Font-Bold="True" />
         <PanelCollection>
@@ -60,7 +60,7 @@
                                 ControlToValidate="txtFee"></asp:RequiredFieldValidator>
                             <asp:RegularExpressionValidator ID="revFee" runat="server" Display="Dynamic"
                                 ErrorMessage="Mức phí là số!" ForeColor="Red" 
-                                ValidationExpression="\d+(.d+)*" ControlToValidate="txtFee"></asp:RegularExpressionValidator>
+                                ValidationExpression="\d+(.\d+)*" ControlToValidate="txtFee"></asp:RegularExpressionValidator>
                         </td>
                         <td>
                             &nbsp;

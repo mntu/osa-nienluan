@@ -3,15 +3,12 @@
 <%@ Register Assembly="DevExpress.Web.ASPxEditors.v11.1, Version=11.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a"
     Namespace="DevExpress.Web.ASPxEditors" TagPrefix="dx" %>
 <dx:ASPxButton ID="btnAddCate" runat="server" CssFilePath="~/App_Themes/Aqua/{0}/styles.css"
-    CssPostfix="Aqua" SpriteCssFilePath="~/App_Themes/Aqua/{0}/sprite.css" Text="Thêm loại mới"
-    Width="101px" onclick="btnAddCate_Click">
+    CssPostfix="Aqua" SpriteCssFilePath="~/App_Themes/Aqua/{0}/sprite.css" Text="Thêm Loại Mới"
+    Width="120px" onclick="btnAddCate_Click">
 </dx:ASPxButton>
-<asp:Label ID="lblError" runat="server" ForeColor="Red"></asp:Label>
-<br />
 <br />
 <asp:GridView ID="gvCate" runat="server" AllowPaging="True" AutoGenerateColumns="False"
-    EmptyDataText="Xin lỗi, hiện tại không có loại nào khác!" Width="100%" 
-    HorizontalAlign="Left" onpageindexchanging="gvCate_PageIndexChanging" 
+    EmptyDataText="Xin lỗi, hiện tại chưa có loại sản phẩm nào!" Width="100%" onpageindexchanging="gvCate_PageIndexChanging" 
     onrowdeleting="gvCate_RowDeleting" 
     onselectedindexchanging="gvCate_SelectedIndexChanging">
     <Columns>
@@ -19,7 +16,7 @@
         <asp:BoundField DataField="CateName" HeaderText="Tên loại" >
         <ItemStyle HorizontalAlign="Left" />
         </asp:BoundField>
-        <asp:BoundField DataField="Fee" HeaderText="Phí" >
+        <asp:BoundField DataField="Fee" HeaderText="Mức Phí (%)" >
         <ItemStyle HorizontalAlign="Center" />
         </asp:BoundField>
         <asp:CommandField ButtonType="Image" HeaderText="Sửa"
