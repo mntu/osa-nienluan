@@ -116,12 +116,12 @@
 
                     <br />
                     <dx:ASPxHyperLink ID="lkBack" runat="server" 
-                        CssFilePath="~/App_Themes/Aqua/{0}/styles.css" CssPostfix="Aqua" 
+                        CssFilePath="~/App_Themes/Aqua/{0}/styles.css" 
                         Font-Bold="True" Font-Size="11pt" Text="Quay Lại" 
                         NavigateUrl="~/PasswordRecover.aspx" >
                     </dx:ASPxHyperLink>
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<dx:ASPxHyperLink ID="lkLogin" runat="server" 
-                        CssFilePath="~/App_Themes/Aqua/{0}/styles.css" CssPostfix="Aqua" 
+                        CssFilePath="~/App_Themes/Aqua/{0}/styles.css" 
                         Font-Bold="True" Font-Size="11pt" Text="Đăng Nhập" 
                         NavigateUrl="~/Login.aspx">
                     </dx:ASPxHyperLink>
