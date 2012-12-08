@@ -54,7 +54,7 @@
                             </td>
                             <td>
                                 <dx:ASPxHyperLink ID="lkLossPassword" runat="server" Text="Quên Mật Khẩu ?" 
-                                    CssFilePath="~/App_Themes/Aqua/{0}/styles.css" CssPostfix="Aqua" 
+                                    CssFilePath="~/App_Themes/Aqua/{0}/styles.css" 
                                     NavigateUrl="~/PasswordRecover.aspx">
                                 </dx:ASPxHyperLink>
                             </td>
