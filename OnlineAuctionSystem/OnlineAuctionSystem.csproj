@@ -75,6 +75,7 @@
     <Content Include="Admin\AdminControl\ctrlViewFeedbacks.ascx" />
     <Content Include="Admin\AdminControl\ctrlViewCustomer.ascx" />
     <Content Include="Admin\AdminControl\ctrlViewProducts.ascx" />
+    <Content Include="Admin\AdminControl\ViewCardType.ascx" />
     <Content Include="Admin\ChangePassword.aspx" />
     <Content Include="Admin\ChangeProfile.aspx" />
     <Content Include="Admin\container.swf" />
@@ -93,6 +94,7 @@
     <Content Include="Admin\images\blockcontentbullets.png" />
     <Content Include="Admin\images\Bottom_texture.jpg" />
     <Content Include="Admin\images\button.png" />
+    <Content Include="Admin\images\Cancel.png" />
     <Content Include="Admin\images\content-header.png" />
     <Content Include="Admin\images\Delete.png" />
     <Content Include="Admin\images\edit.png" />
@@ -115,6 +117,7 @@
     <Content Include="Admin\images\postquote.png" />
     <Content Include="Admin\images\preview.jpg" />
     <Content Include="Admin\images\rssicon.png" />
+    <Content Include="Admin\images\Save.png" />
     <Content Include="Admin\images\sheet.png" />
     <Content Include="Admin\images\sheet_b.png" />
     <Content Include="Admin\images\sheet_t.png" />
@@ -129,6 +132,7 @@
     <Content Include="Admin\js\script.js" />
     <Content Include="Admin\js\swfobject.js" />
     <Content Include="Admin\ViewAccount.aspx" />
+    <Content Include="Admin\ViewCardType.aspx" />
     <Content Include="Admin\ViewCategories.aspx" />
     <Content Include="Admin\ViewCustomers.aspx" />
     <Content Include="Admin\ViewFeedbacks.aspx" />
@@ -296,6 +300,13 @@
     <Compile Include="Admin\AdminControl\ctrlViewProducts.ascx.designer.cs">
       <DependentUpon>ctrlViewProducts.ascx</DependentUpon>
     </Compile>
+    <Compile Include="Admin\AdminControl\ViewCardType.ascx.cs">
+      <DependentUpon>ViewCardType.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\AdminControl\ViewCardType.ascx.designer.cs">
+      <DependentUpon>ViewCardType.ascx</DependentUpon>
+    </Compile>
     <Compile Include="Admin\AdminMasterPage.Master.cs">
       <DependentUpon>AdminMasterPage.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -344,6 +355,13 @@
     </Compile>
     <Compile Include="Admin\ViewAccount.aspx.designer.cs">
       <DependentUpon>ViewAccount.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\ViewCardType.aspx.cs">
+      <DependentUpon>ViewCardType.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\ViewCardType.aspx.designer.cs">
+      <DependentUpon>ViewCardType.aspx</DependentUpon>
     </Compile>
     <Compile Include="Admin\ViewCategories.aspx.cs">
       <DependentUpon>ViewCategories.aspx</DependentUpon>
