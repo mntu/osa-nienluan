@@ -11,7 +11,7 @@ namespace OnlineAuctionSystem.Admin
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (Session["admin"] == null || Session["admin"].ToString().ToLower() != "admin") Response.Redirect("../Default.aspx");
         }
     }
 }
