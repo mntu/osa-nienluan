@@ -48,7 +48,19 @@ namespace OnlineAuctionSystem.DAL
             }
             catch { return -1; }
         }
-
+        public bool CheckEditTypeName(string oldName, string newName)
+        {
+            try
+            {
+                string sql = "select * from CardTypes where TypeName=N'{0}' and TypeId not in (select TypeId from CardTypes where TypeName=N'{1}')";
+                sql = String.Format(sql, newName, oldName);
+                DataTable tmp = ExecuteQuery(sql);
+                if (tmp != null && tmp.Rows.Count > 0)
+                    return true;
+                return false;
+            }
+            catch { return false; }
+        }
         public int Update(object obj)
         {
             try
@@ -65,7 +77,11 @@ namespace OnlineAuctionSystem.DAL
         {
             try
             {
-                string sql = "DELETE FROM CardTypes WHERE TypeId={0}";
+                string sql = "select * from CreditCards where TypeId={0}";
+                sql = String.Format(sql,id);
+                DataTable tmp=ExecuteQuery(sql);
+                if (tmp != null && tmp.Rows.Count > 0) return -1;
+                sql = "DELETE FROM CardTypes WHERE TypeId={0}";
                 sql = String.Format(sql, id);
                 return ExecuteNonQuery(sql);
             }
@@ -73,9 +89,23 @@ namespace OnlineAuctionSystem.DAL
         }
 
 
-        public object Select(string id)
+        public object Select(string name)
         {
-            throw new NotImplementedException();
+            try
+            {
+                string sql = "select * from CardTypes where TypeName=N'{0}'";
+                sql = String.Format(sql, name);
+                DataTable tmp = ExecuteQuery(sql);
+                if (tmp != null && tmp.Rows.Count > 0)
+                {
+                    CardTypes obj = new CardTypes();
+                    obj.TypeId = Convert.ToInt32(tmp.Rows[0]["TypeId"]);
+                    obj.TypeName = tmp.Rows[0]["TypeName"] + "";
+                    return obj;
+                }
+                return null;
+            }
+            catch { return null; }
         }
 
         public int Delete(string id)

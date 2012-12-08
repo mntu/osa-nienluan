@@ -16,6 +16,7 @@
                         {
                     %>
                     <li><a href="ViewAccount.aspx">Tài Khoản Quản Trị</a></li>
+                    <li><a href="ViewCardType.aspx">Loại Thẻ Tín Dụng</a></li>
                     <% 
                         } 
                     %>

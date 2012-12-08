@@ -17,7 +17,7 @@ Default skin template. The following skins are provided as examples only.
                     BorderWidth="1px" CellPadding="4" CellSpacing="1" ForeColor="#333333" 
                     GridLines="None"  >
                     <AlternatingRowStyle BackColor="White" />
-                    <EditRowStyle BackColor="#2461BF" />
+                    <EditRowStyle BackColor="#99CCFF" />
                     <FooterStyle CssClass="dxrpHeader_Aqua" Font-Bold="True" ForeColor="White" />
                     <HeaderStyle CssClass="dxrpHeader_Aqua" Font-Bold="True" 
                         HorizontalAlign="Center" VerticalAlign="Middle" />
