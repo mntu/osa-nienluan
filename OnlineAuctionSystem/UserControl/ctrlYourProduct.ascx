@@ -1,11 +1,11 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="ctrlYourProduct.ascx.cs"
     Inherits="OnlineAuctionSystem.UserControl.ctrlYourProduct" %>
-<%@ Register Assembly="DevExpress.Web.v11.1, Version=11.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a"
+<%@ Register Assembly="DevExpress.Web.v12.1, Version=12.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a"
     Namespace="DevExpress.Web.ASPxRoundPanel" TagPrefix="dx" %>
-<%@ Register Assembly="DevExpress.Web.v11.1, Version=11.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a"
+<%@ Register Assembly="DevExpress.Web.v12.1, Version=12.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a"
     Namespace="DevExpress.Web.ASPxPanel" TagPrefix="dx" %>
 <%@ Register Src="ctrlGallery.ascx" TagName="ctrlGallery" TagPrefix="uc1" %>
-<%@ Register Assembly="DevExpress.Web.ASPxEditors.v11.1, Version=11.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a"
+<%@ Register Assembly="DevExpress.Web.ASPxEditors.v12.1, Version=12.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a"
     Namespace="DevExpress.Web.ASPxEditors" TagPrefix="dx" %>
 <div align="center">
     <asp:GridView ID="gvProducts" runat="server" AutoGenerateColumns="False" Width="100%"

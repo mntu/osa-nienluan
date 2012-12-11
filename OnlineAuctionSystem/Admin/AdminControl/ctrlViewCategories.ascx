@@ -1,6 +1,6 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="ctrlViewCategories.ascx.cs"
     Inherits="OnlineAuctionSystem.Admin.AdminControl.ctrlViewCategories" %>
-<%@ Register Assembly="DevExpress.Web.ASPxEditors.v11.1, Version=11.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a"
+<%@ Register Assembly="DevExpress.Web.ASPxEditors.v12.1, Version=12.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a"
     Namespace="DevExpress.Web.ASPxEditors" TagPrefix="dx" %>
 <dx:ASPxButton ID="btnAddCate" runat="server" CssFilePath="~/App_Themes/Aqua/{0}/styles.css"
     CssPostfix="Aqua" SpriteCssFilePath="~/App_Themes/Aqua/{0}/sprite.css" Text="Thêm Loại Mới"

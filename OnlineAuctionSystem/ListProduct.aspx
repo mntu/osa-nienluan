@@ -2,9 +2,9 @@
     CodeBehind="ListProduct.aspx.cs" Inherits="OnlineAuctionSystem.ListProduct" %>
 
 <%@ Register Src="UserControl/ctrlViewProducts.ascx" TagName="ctrlViewProducts" TagPrefix="uc1" %>
-<%@ Register Assembly="DevExpress.Web.v11.1, Version=11.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a"
+<%@ Register Assembly="DevExpress.Web.v12.1, Version=12.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a"
     Namespace="DevExpress.Web.ASPxRoundPanel" TagPrefix="dx" %>
-<%@ Register Assembly="DevExpress.Web.v11.1, Version=11.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a"
+<%@ Register Assembly="DevExpress.Web.v12.1, Version=12.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a"
     Namespace="DevExpress.Web.ASPxPanel" TagPrefix="dx" %>
     <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     
