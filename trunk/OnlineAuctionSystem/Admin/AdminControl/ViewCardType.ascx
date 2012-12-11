@@ -1,5 +1,5 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="ViewCardType.ascx.cs" Inherits="OnlineAuctionSystem.Admin.AdminControl.ViewCardType" %>
-<%@ Register assembly="DevExpress.Web.ASPxEditors.v11.1, Version=11.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" namespace="DevExpress.Web.ASPxEditors" tagprefix="dx" %>
+<%@ Register assembly="DevExpress.Web.ASPxEditors.v12.1, Version=12.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" namespace="DevExpress.Web.ASPxEditors" tagprefix="dx" %>
 <div>
     <table>
         <tr>

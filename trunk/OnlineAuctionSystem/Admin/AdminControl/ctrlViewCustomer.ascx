@@ -1,8 +1,8 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="ctrlViewCustomer.ascx.cs"
     Inherits="OnlineAuctionSystem.Admin.AdminControl.ViewCustomer" %>
-<%@ Register Assembly="DevExpress.Web.v11.1, Version=11.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a"
+<%@ Register Assembly="DevExpress.Web.v12.1, Version=12.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a"
     Namespace="DevExpress.Web.ASPxRoundPanel" TagPrefix="dx" %>
-<%@ Register Assembly="DevExpress.Web.v11.1, Version=11.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a"
+<%@ Register Assembly="DevExpress.Web.v12.1, Version=12.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a"
     Namespace="DevExpress.Web.ASPxPanel" TagPrefix="dx" %>
 <div style="width: 100%;">
     <asp:GridView ID="gvCustomer" runat="server" AutoGenerateColumns="False" Width="100%"

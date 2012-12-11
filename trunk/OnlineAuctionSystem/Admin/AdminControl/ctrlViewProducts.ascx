@@ -1,10 +1,10 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="ctrlViewProducts.ascx.cs"
     Inherits="OnlineAuctionSystem.Admin.AdminControl.ctrlViewProducts" %>
-<%@ Register Assembly="DevExpress.Web.v11.1, Version=11.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a"
+<%@ Register Assembly="DevExpress.Web.v12.1, Version=12.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a"
     Namespace="DevExpress.Web.ASPxRoundPanel" TagPrefix="dx" %>
-<%@ Register Assembly="DevExpress.Web.v11.1, Version=11.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a"
+<%@ Register Assembly="DevExpress.Web.v12.1, Version=12.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a"
     Namespace="DevExpress.Web.ASPxPanel" TagPrefix="dx" %>
-<%@ Register Assembly="DevExpress.Web.ASPxEditors.v11.1, Version=11.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a"
+<%@ Register Assembly="DevExpress.Web.ASPxEditors.v12.1, Version=12.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a"
     Namespace="DevExpress.Web.ASPxEditors" TagPrefix="dx" %>
 <%@ Register src="ctrlGallery.ascx" tagname="ctrlGallery" tagprefix="uc2" %>
 <div>
